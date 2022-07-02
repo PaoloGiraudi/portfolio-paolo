@@ -1,0 +1,22 @@
+html,
+body {
+  background-color: var(--color-white);
+  height: 100vh;
+  overflow: hidden;
+}
+
+#app {
+  display: flex;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+a,
+p,
+li {
+  color: var(--color-dark);
+  font-family: var(--main-font);
+}
