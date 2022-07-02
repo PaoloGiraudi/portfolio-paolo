@@ -20,3 +20,17 @@ li {
   color: var(--color-dark);
   font-family: var(--main-font);
 }
+
+a:focus-visible {
+  outline-color: var(--color-accent-light);
+  outline-style: solid;
+  outline-width: 2px;
+}
+
+.flow-h > * + * {
+  margin-left: var(--flow-spacing, 1rem);
+}
+
+.flow-v > * + * {
+  margin-top: var(--flow-spacing, 1rem);
+}

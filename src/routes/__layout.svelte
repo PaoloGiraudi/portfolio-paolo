@@ -1,13 +1,15 @@
 <script>
-  import Portrait from '$lib/components/portrait.svelte';
   import '../styles/variables.css';
   import '../styles/reset.css';
   import '../styles/global.css';
+  import Navbar from '$lib/components/navbar.svelte';
+  import Portrait from '$lib/components/portrait.svelte';
 </script>
 
 <main>
-  <Portrait />
+  <Navbar />
   <slot />
+  <Portrait />
 </main>
 
 <style>
@@ -15,7 +17,11 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 1rem;
+    grid-template-rows: var(--navbar-height) auto;
+    grid-template-areas:
+      'portrait navbar'
+      'portrait slot';
+    margin: var(--desktop-border);
     background-color: var(--color-bg);
   }
 </style>

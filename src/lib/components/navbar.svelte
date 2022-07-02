@@ -1,0 +1,45 @@
+<script>
+  import { page } from '$app/stores';
+  import { isLast } from '$lib/utils';
+  import { routes } from '$lib/constants';
+  let path;
+  $: path = $page.url.pathname;
+</script>
+
+<nav class="flow-h">
+  {#each routes as route}
+    <a href={route.href} class:active={path == route.href} sveltekit:prefetch>
+      {route.name}
+    </a>
+    {#if !isLast(routes, route)}
+      <p>|</p>
+    {/if}
+  {/each}
+</nav>
+
+<style>
+  nav {
+    --flow-spacing: 0.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: var(--flow-spacing);
+  }
+  a {
+    padding: 0.125rem 0.625rem;
+    font-size: var(--font-400);
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus,
+  a:focus-visible {
+    background-color: var(--color-dark-alpha);
+  }
+
+  a.active {
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--color-accent-light);
+  }
+</style>
