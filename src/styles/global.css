@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Raleway:wght@300;400&display=swap');
 html,
 body {
-  background-color: var(--color-white);
   height: 100vh;
   overflow: hidden;
 }
@@ -8,6 +8,7 @@ body {
 #app {
   display: flex;
   height: 100%;
+  background-color: var(--color-white);
 }
 
 h1,
@@ -25,6 +26,18 @@ a:focus-visible {
   outline-color: var(--color-accent-light);
   outline-style: solid;
   outline-width: 2px;
+}
+
+button:focus-visible {
+  outline-color: var(--color-accent-light);
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+}
+
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
 }
 
 .flow-h > * + * {

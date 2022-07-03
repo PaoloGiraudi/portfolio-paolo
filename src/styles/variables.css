@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap');
 :root {
   --color-white: hsl(0, 33%, 99%);
   --color-bg: hsl(0, 51%, 92%);
   --color-dark: hsl(48, 12%, 15%);
+  --color-dark-subtle: hsl(229, 5%, 42%);
+  --color-light-alpha: rgba(255, 255, 255, 0.9);
   --color-accent-dark: hsl(177, 32%, 23%);
   --color-accent-light: hsl(177, 32%, 51%);
-  --color-dark-alpha: rgba(0, 0, 0, 0.05);
-  --stroke-width: 3px;
+  --color-danger: hsl(0, 51%, 55%);
+
+  --stroke-sm: 2px;
+  --stroke-md: 3px;
 
   --desktop-border: 1rem;
   --navbar-height: 3rem;
@@ -18,7 +21,7 @@
   --font-medium: 500;
   --font-thick: 600;
 
-  --font-300: 0.75rem;
+  --font-300: 0.825rem;
   --font-400: 1rem;
   --font-500: 1.5rem;
   --font-600: 2rem;

@@ -26,14 +26,14 @@
     padding: var(--flow-spacing);
   }
   a {
+    font-family: var(--secondary-font);
     padding: 0.125rem 0.625rem;
     font-size: var(--font-400);
     text-decoration: none;
   }
 
   a:hover,
-  a:focus,
-  a:focus-visible {
+  a:focus {
     background-color: var(--color-dark-alpha);
   }
 

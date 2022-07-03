@@ -8,7 +8,9 @@
 
 <main>
   <Navbar />
-  <slot />
+  <section>
+    <slot />
+  </section>
   <Portrait />
 </main>
 
@@ -23,5 +25,11 @@
       'portrait slot';
     margin: var(--desktop-border);
     background-color: var(--color-bg);
+  }
+  section {
+    margin-bottom: var(--navbar-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 </style>

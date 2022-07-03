@@ -16,7 +16,7 @@
   section {
     --signature-mr: 0.375rem;
     --signature-bottom: 0.25rem;
-    --frame-width: var(--stroke-width);
+    --frame-width: var(--stroke-md);
     grid-area: portrait;
     display: grid;
     place-items: center;
