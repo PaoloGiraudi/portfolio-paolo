@@ -3,9 +3,13 @@
   --color-white: hsl(0, 33%, 99%);
   --color-bg: hsl(0, 51%, 92%);
   --color-dark: hsl(48, 12%, 15%);
-  --color-gradient-dark: hsl(177, 32%, 23%);
-  --color-gradient-light: hsl(177, 32%, 51%);
+  --color-accent-dark: hsl(177, 32%, 23%);
+  --color-accent-light: hsl(177, 32%, 51%);
+  --color-dark-alpha: rgba(0, 0, 0, 0.05);
   --stroke-width: 3px;
+
+  --desktop-border: 1rem;
+  --navbar-height: 3rem;
 
   --main-font: 'Cormorant Garamond', Georgia, serif;
   --secondary-font: 'Raleway', Arial, sans-serif;
@@ -18,7 +22,7 @@
   --font-400: 1rem;
   --font-500: 1.5rem;
   --font-600: 2rem;
-  --font-700: 1rem;
-  --font-800: 1rem;
+  --font-700: 2.5rem;
+  --font-800: 3rem;
   --font-900: 6rem;
 }
