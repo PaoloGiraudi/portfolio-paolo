@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
   import { page } from '$app/stores';
   import { isLast } from '$lib/utils';
   import { routes } from '$lib/constants';
-  let path;
+  let path: String;
   $: path = $page.url.pathname;
 </script>
 

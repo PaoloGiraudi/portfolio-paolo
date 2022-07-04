@@ -3,3 +3,5 @@ export const routes = [
   { name: 'Work', href: '/work' },
   { name: 'Contact', href: '/contact' }
 ];
+
+// TODO: add types
