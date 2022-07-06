@@ -7,10 +7,6 @@
 <style>
   header {
     --flow-spacing: 0.25rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: var(--navbar-height);
   }
 
   h1 {
@@ -30,7 +26,7 @@
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: var(--color-bg);
-      -webkit-text-stroke: var(--stroke-width) transparent;
+      -webkit-text-stroke: var(--stroke-md) transparent;
     }
   }
 
