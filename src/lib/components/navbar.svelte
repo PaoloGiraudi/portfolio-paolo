@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { isLast } from '$lib/utils';
-  import { routes } from '$lib/constants';
+  import { routes } from '$lib/routes';
+  import { isLast } from '$lib/is-last';
   let path: String;
   $: path = $page.url.pathname;
 </script>
