@@ -48,17 +48,10 @@
 
   form {
     font-family: var(--secondary-font);
-    display: grid;
-    grid-template-areas:
-      'name email'
-      'subject subject'
-      'message message'
-      'button button';
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, auto);
-    column-gap: 1rem;
+    display: flex;
+    flex-direction: column;
     row-gap: 1.5rem;
-    width: 70%;
+    width: 100%;
   }
 
   .form-field {
@@ -96,5 +89,20 @@
   label {
     margin-bottom: 0.5rem;
     color: var(--color-dark-subtle);
+  }
+
+  @media (min-width: 62rem) {
+    form {
+      display: grid;
+      grid-template-areas:
+        'name email'
+        'subject subject'
+        'message message'
+        'button button';
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, auto);
+      column-gap: 1rem;
+      width: 70%;
+    }
   }
 </style>

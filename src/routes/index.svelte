@@ -1,8 +1,12 @@
 <header class="flow-v">
-  <p>Hi, I am</p>
+  <p class="intro-text">Hi, I am</p>
   <h1>Paolo Giraudi.</h1>
-  <p>I build beautiful websites.</p>
+  <p class="intro-text">I build beautiful websites.</p>
 </header>
+<p class="subtitle">
+  I am a full-stack designer and I like this that and that. I am currently
+  working on this with that.
+</p>
 
 <style>
   header {
@@ -13,7 +17,18 @@
     font-size: var(--font-900);
     font-weight: var(--font-medium);
     color: var(--color-dark);
-    line-height: 1.3;
+    line-height: 1.25;
+  }
+
+  .intro-text {
+    font-size: var(--font-600);
+    font-weight: var(--font-thin);
+  }
+
+  .subtitle {
+    color: var(--color-dark-subtle);
+    font-size: var(--font-500);
+    max-width: 45ch;
   }
 
   @supports (-webkit-text-stroke: 4px transparent) {
@@ -28,10 +43,5 @@
       -webkit-text-fill-color: var(--color-bg);
       -webkit-text-stroke: var(--stroke-md) transparent;
     }
-  }
-
-  p {
-    font-size: var(--font-600);
-    font-weight: var(--font-thin);
   }
 </style>

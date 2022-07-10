@@ -6,30 +6,42 @@
   import Portrait from '$lib/components/portrait.svelte';
 </script>
 
-<main>
+<div>
   <Navbar />
-  <section>
+  <main>
     <slot />
-  </section>
+  </main>
   <Portrait />
-</main>
+</div>
 
 <style>
-  main {
+  div {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: var(--navbar-height) auto;
     grid-template-areas:
-      'portrait navbar'
-      'portrait slot';
-    margin: var(--desktop-border);
+      'navbar'
+      'slot';
+    margin: var(--mobile-border);
     background-color: var(--color-bg);
   }
-  section {
+  main {
     margin-bottom: var(--navbar-height);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  @media (min-width: 62rem) {
+    div {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        'portrait navbar'
+        'portrait slot';
+      margin: var(--desktop-border);
+    }
   }
 </style>
