@@ -22,7 +22,7 @@
     --flow-spacing: 0.625rem;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     padding: var(--flow-spacing);
   }
   a {
@@ -41,5 +41,11 @@
     text-decoration-line: underline;
     text-decoration-thickness: 2px;
     text-decoration-color: var(--color-accent-light);
+  }
+
+  @media (min-width: 62rem) {
+    nav {
+      justify-content: flex-end;
+    }
   }
 </style>

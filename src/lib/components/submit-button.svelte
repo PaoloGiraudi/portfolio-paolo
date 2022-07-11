@@ -9,7 +9,7 @@
 
 <style>
   button {
-    grid-area: button;
+    align-self: center;
     color: var(--color-dark);
     background-color: transparent;
     border-width: var(--stoke-sm);
@@ -55,5 +55,11 @@
 
   button:active:after {
     background-color: var(--color-accent-dark);
+  }
+
+  @media (min-width: 62rem) {
+    button {
+      grid-area: button;
+    }
   }
 </style>
