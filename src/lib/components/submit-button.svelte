@@ -1,10 +1,7 @@
-<script lang="ts">
-  export let handleSubmit: () => void;
-  export let label: string;
-</script>
-
-<button type="submit" on:click|preventDefault={handleSubmit}>
-  <span>{label}</span>
+<button type="submit">
+  <span>
+    <slot />
+  </span>
 </button>
 
 <style>
