@@ -4,28 +4,23 @@
   import '../styles/global.css';
   import Navbar from '$lib/components/navbar.svelte';
   import Portrait from '$lib/components/portrait.svelte';
+  import { onMount } from 'svelte';
+
+  onMount(() => {
+    window.addEventListener('resize', () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+  });
 </script>
 
-<div>
-  <Navbar />
-  <main>
-    <slot />
-  </main>
-  <Portrait />
-</div>
+<Navbar />
+<main>
+  <slot />
+</main>
+<Portrait />
 
 <style>
-  div {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: var(--navbar-height) auto;
-    grid-template-areas:
-      'navbar'
-      'slot';
-    margin: var(--mobile-border);
-    background-color: var(--color-bg);
-  }
   main {
     margin-bottom: var(--navbar-height);
     display: flex;
@@ -33,15 +28,5 @@
     justify-content: center;
     gap: 2rem;
     padding: 1rem;
-  }
-
-  @media (min-width: 62rem) {
-    div {
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas:
-        'portrait navbar'
-        'portrait slot';
-      margin: var(--desktop-border);
-    }
   }
 </style>

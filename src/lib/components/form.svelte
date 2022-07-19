@@ -17,7 +17,7 @@
 
 <style>
   :global(.hint) {
-    font-size: var(--font-300);
+    font-size: var(--font-xs);
     font-family: var(--secondary-font);
     color: var(--color-danger);
   }

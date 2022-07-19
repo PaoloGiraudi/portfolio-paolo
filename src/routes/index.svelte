@@ -1,3 +1,8 @@
+<script>
+  import MetaTitle from '$lib/components/meta-title.svelte';
+</script>
+
+<MetaTitle title="Official website" />
 <header class="flow-v">
   <p class="intro-text">Hi, I am</p>
   <h1>Paolo Giraudi.</h1>
@@ -11,24 +16,27 @@
 <style>
   header {
     --flow-spacing: 0.25rem;
+    text-align: center;
   }
 
   h1 {
-    font-size: var(--font-900);
+    font-size: var(--font-xxl);
     font-weight: var(--font-medium);
     color: var(--color-dark);
     line-height: 1.25;
   }
 
   .intro-text {
-    font-size: var(--font-600);
+    font-size: var(--font-lg);
     font-weight: var(--font-thin);
   }
 
   .subtitle {
     color: var(--color-dark-subtle);
-    font-size: var(--font-500);
+    font-size: var(--font-md);
     max-width: 45ch;
+    text-align: center;
+    align-self: center;
   }
 
   @supports (-webkit-text-stroke: 4px transparent) {
@@ -42,6 +50,29 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: var(--color-bg);
       -webkit-text-stroke: var(--stroke-md) transparent;
+    }
+  }
+
+  @media (min-width: 62rem) {
+    .subtitle,
+    header {
+      text-align: start;
+    }
+
+    h1 {
+      font-size: var(--font-max);
+    }
+
+    .intro-text {
+      font-size: var(--font-xl);
+    }
+
+    .subtitle {
+      font-size: var(--font-lg);
+    }
+
+    .subtitle {
+      align-self: unset;
     }
   }
 </style>

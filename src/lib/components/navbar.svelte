@@ -24,11 +24,14 @@
     align-items: center;
     justify-content: center;
     padding: var(--flow-spacing);
+    background-color: var(--color-bg);
+    position: sticky;
+    top: var(--mobile-border);
   }
   a {
     font-family: var(--secondary-font);
     padding: 0.125rem 0.625rem;
-    font-size: var(--font-400);
+    font-size: var(--font-sm);
     text-decoration: none;
   }
 
@@ -46,6 +49,7 @@
   @media (min-width: 62rem) {
     nav {
       justify-content: flex-end;
+      top: var(--desktop-border);
     }
   }
 </style>
