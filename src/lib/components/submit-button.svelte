@@ -13,7 +13,7 @@
     border-color: var(--color-accent-light);
     border-style: solid;
     padding: 0.25rem 0;
-    font-size: var(--font-400);
+    font-size: var(--font-sm);
     width: 10rem;
     position: relative;
     transition: color 0.35s;

@@ -35,7 +35,7 @@
     border-bottom-width: var(--stroke-sm);
     border-bottom-style: solid;
     border-bottom-color: var(--color-dark);
-    font-size: var(--font-400);
+    font-size: var(--font-sm);
   }
 
   input:focus-visible,
@@ -49,7 +49,14 @@
   }
 
   label {
+    font-size: var(--font-xs);
     margin-bottom: 0.5rem;
     color: var(--color-dark-subtle);
+  }
+
+  @media (min-width: 62rem) {
+    label {
+      font-size: var(--font-sm);
+    }
   }
 </style>

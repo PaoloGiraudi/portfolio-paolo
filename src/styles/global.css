@@ -1,14 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Raleway:wght@300;400&display=swap');
+
 html,
 body {
   height: 100vh;
-  overflow: hidden;
+  min-height: calc(var(--vh, 1vh) * 100);
+  overflow: auto;
+  background-color: var(--color-bg);
 }
 
-#app {
-  display: flex;
+body::before,
+html::before,
+body::after,
+html::after {
+  content: '';
+  position: fixed;
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--mobile-border);
+  z-index: 100;
+}
+
+html::before {
+  width: var(--mobile-border);
   height: 100%;
-  background-color: var(--color-white);
+}
+
+body::after {
+  top: unset;
+  left: 0;
+  bottom: 0;
+}
+
+html::after {
+  left: unset;
+  right: 0;
+  top: 0;
+  width: var(--mobile-border);
+  height: 100%;
+}
+
+#portfolio {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: var(--navbar-height) auto;
+  grid-template-areas:
+    'navbar'
+    'slot';
+  padding: var(--mobile-border);
+  background-color: var(--color-bg);
 }
 
 h1,
@@ -46,4 +88,36 @@ textarea:focus-visible {
 
 .flow-v > * + * {
   margin-top: var(--flow-spacing, 1rem);
+}
+
+@media (min-width: 62rem) {
+  html,
+  body {
+    overflow: hidden;
+  }
+
+  body::before,
+  html::before,
+  body::after,
+  html::after {
+    height: var(--desktop-border);
+  }
+
+  html::before {
+    width: var(--desktop-border);
+    height: 100%;
+  }
+
+  html::after {
+    width: var(--desktop-border);
+    height: 100%;
+  }
+
+  #portfolio {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'portrait navbar'
+      'portrait slot';
+    padding: var(--desktop-border);
+  }
 }

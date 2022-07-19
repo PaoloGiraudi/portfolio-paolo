@@ -48,7 +48,7 @@
     small {
       position: absolute;
       right: 20%;
-      font-size: var(--font-300);
+      font-size: var(--font-xs);
       margin-right: var(--signature-mr);
       bottom: var(--signature-bottom);
     }
