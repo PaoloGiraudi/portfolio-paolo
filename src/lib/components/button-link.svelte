@@ -1,23 +1,15 @@
-<div class="flow-v success">
-  <h1>Thank you!</h1>
-  <p>Your message has been received.</p>
+<script lang="ts">
+  export let href: string;
+  export let target: '__blank' | null = null;
+</script>
 
-  <a href="/">
-    <span> Back to the home </span>
-  </a>
-</div>
+<a {href} {target} sveltekit:prefetch>
+  <span>
+    <slot />
+  </span>
+</a>
 
 <style>
-  .success {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .success > a {
-    margin-top: 2rem;
-  }
-
   a {
     display: grid;
     place-items: center;
@@ -68,13 +60,5 @@
 
   a:active:after {
     background-color: var(--color-accent-dark);
-  }
-
-  @media (min-width: 62rem) {
-    .success {
-      display: flex;
-      flex-direction: column;
-      align-items: unset;
-    }
   }
 </style>

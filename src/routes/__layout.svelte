@@ -26,7 +26,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 2rem;
     padding: 1rem;
+  }
+
+  @media (min-width: 62rem) {
+    main {
+      align-items: unset;
+    }
   }
 </style>
