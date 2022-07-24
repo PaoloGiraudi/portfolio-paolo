@@ -32,8 +32,8 @@
     font-family: var(--secondary-font);
     display: flex;
     flex-direction: column;
-    row-gap: 1.5rem;
     width: 100%;
+    row-gap: 0.5rem;
   }
 
   @media (min-width: 62rem) {
@@ -47,6 +47,7 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(4, auto);
       column-gap: 1rem;
+      row-gap: 1.5rem;
       width: 70%;
     }
   }

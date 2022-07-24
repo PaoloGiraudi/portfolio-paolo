@@ -10,7 +10,7 @@
 
 <MetaTitle title="Contact me" />
 <PageHeading header="Questions? Send me a message.">
-  <p>You can also find me on Github and Linkedin.</p>
+  You can also find me on Github and Linkedin.
 </PageHeading>
 <Form>
   <TextField name="name" type="name">Name</TextField>
@@ -21,7 +21,4 @@
 </Form>
 
 <style>
-  p {
-    font-size: var(--font-md);
-  }
 </style>

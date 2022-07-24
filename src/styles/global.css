@@ -14,7 +14,7 @@ body::after,
 html::after {
   content: '';
   position: fixed;
-  background-color: white;
+  background-color: var(--color-white);
   top: 0;
   left: 0;
   width: 100%;
