@@ -1,8 +1,13 @@
+<script>
+  import MetaTitle from '$lib/components/meta-title.svelte';
+</script>
+
 <div class="flow-v success">
   <h1>Thank you!</h1>
   <p>Your message has been received.</p>
 
-  <a href="/">
+  <MetaTitle title="Thank you!" />
+  <a href="/" sveltekit:prefetch>
     <span> Back to the home </span>
   </a>
 </div>
