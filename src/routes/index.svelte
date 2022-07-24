@@ -1,4 +1,5 @@
 <script>
+  import ButtonLink from '$lib/components/button-link.svelte';
   import MetaTitle from '$lib/components/meta-title.svelte';
 </script>
 
@@ -12,6 +13,9 @@
   I am a full-stack designer and I like this that and that. I am currently
   working on this with that.
 </p>
+<ButtonLink href="http://github.com/PaoloGiraudi" target="__blank">
+  Check me out
+</ButtonLink>
 
 <style>
   header {
