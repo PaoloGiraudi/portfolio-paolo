@@ -16,7 +16,7 @@
     font-size: var(--font-sm);
     width: 10rem;
     position: relative;
-    transition: color 0.35s;
+    transition: color 0.45s;
   }
 
   button > span {
@@ -32,7 +32,7 @@
     width: 0;
     height: 100%;
     background: var(--color-accent-light);
-    transition: width 0.35s;
+    transition: width 0.45s;
   }
 
   button:hover,
