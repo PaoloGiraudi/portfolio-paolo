@@ -5,13 +5,14 @@
 
 <MetaTitle title="Official website" />
 <header>
-  <p class="intro-text">Hi, I am</p>
+  <p class="intro-text">Hey, I am</p>
   <h1>Paolo Giraudi.</h1>
-  <p class="intro-text">I build beautiful things for the web.</p>
+  <p class="intro-text">I build beautiful websites.</p>
 </header>
 <p class="subtitle">
-  I am a passionate frontend developer based in Sweden. I like clean and
-  accessible user interfaces and lucky me this is now my job.
+  I am a frontend developer based in Sweden. I am passionate about design
+  systems and I am currently building an accessible UI framework for
+  <a href="http://mediatool.com" target="__blank">Mediatool</a>.
 </p>
 <ButtonLink href="http://github.com/PaoloGiraudi" target="__blank">
   Check me out

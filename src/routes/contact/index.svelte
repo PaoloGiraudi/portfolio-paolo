@@ -9,7 +9,7 @@
 </script>
 
 <MetaTitle title="Contact me" />
-<PageHeading header="Questions? Send me a message.">
+<PageHeading header="Questions? Send me a message!">
   You can also find me on
   <a href="http://github.com/PaoloGiraudi" target="__blank">Github</a>
   and
