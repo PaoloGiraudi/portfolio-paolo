@@ -21,9 +21,6 @@
   h2 {
     font-size: var(--font-lg);
   }
-  p {
-    font-size: var(--font-md);
-  }
 
   @media (min-width: 62rem) {
     .page-heading {

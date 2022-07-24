@@ -19,6 +19,3 @@
   <TextField name="message" type="text">Message</TextField>
   <SubmitButton>Submit</SubmitButton>
 </Form>
-
-<style>
-</style>

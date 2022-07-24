@@ -64,6 +64,10 @@ li {
   font-family: var(--main-font);
 }
 
+p {
+  font-size: var(--font-md);
+}
+
 a:focus-visible {
   outline-color: var(--color-accent-light);
   outline-style: solid;
