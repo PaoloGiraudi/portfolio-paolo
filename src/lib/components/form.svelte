@@ -6,6 +6,7 @@
 <form
   name="contact"
   method="post"
+  action="/thankyou"
   data-netlify="true"
   data-netlify-honeypot="bot-field"
   use:form

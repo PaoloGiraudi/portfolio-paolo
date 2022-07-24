@@ -1,4 +1,8 @@
-<button type="submit">
+<script lang="ts">
+  export let type: 'submit' | 'button';
+</script>
+
+<button {type}>
   <span>
     <slot />
   </span>
@@ -6,6 +10,7 @@
 
 <style>
   button {
+    font-family: var(--secondary-font);
     align-self: center;
     color: var(--color-dark);
     background-color: transparent;
