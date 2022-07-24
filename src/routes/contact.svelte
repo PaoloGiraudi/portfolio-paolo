@@ -2,7 +2,7 @@
   import Form from '$lib/components/form.svelte';
   import MetaTitle from '$lib/components/meta-title.svelte';
   import PageHeading from '$lib/components/page-heading.svelte';
-  import SubmitButton from '$lib/components/submit-button.svelte';
+  import Button from '$lib/components/button.svelte';
   import TextField from '$lib/components/text-field/index.svelte';
 
   export const prerender = true;
@@ -17,5 +17,5 @@
   <TextField name="email" type="email">Email</TextField>
   <TextField name="subject" type="text">Subject</TextField>
   <TextField name="message" type="text">Message</TextField>
-  <SubmitButton>Submit</SubmitButton>
+  <Button type="submit">Submit</Button>
 </Form>
