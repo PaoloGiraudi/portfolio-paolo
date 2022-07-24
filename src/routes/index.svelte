@@ -4,14 +4,14 @@
 </script>
 
 <MetaTitle title="Official website" />
-<header class="flow-v">
+<header>
   <p class="intro-text">Hi, I am</p>
   <h1>Paolo Giraudi.</h1>
-  <p class="intro-text">I build beautiful websites.</p>
+  <p class="intro-text">I build beautiful things for the web.</p>
 </header>
 <p class="subtitle">
-  I am a full-stack designer and I like this that and that. I am currently
-  working on this with that.
+  I am a passionate frontend developer based in Sweden. I like clean and
+  accessible user interfaces and lucky me this is now my job.
 </p>
 <ButtonLink href="http://github.com/PaoloGiraudi" target="__blank">
   Check me out
@@ -58,8 +58,11 @@
   }
 
   @media (min-width: 62rem) {
-    .subtitle,
     header {
+      padding-top: 4rem;
+    }
+    header,
+    .subtitle {
       text-align: start;
     }
 

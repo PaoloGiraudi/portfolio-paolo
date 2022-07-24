@@ -1,6 +1,6 @@
 <script lang="ts">
   export let href: string;
-  export let target: '__self' | '__blank' = '__self';
+  export let target: '__blank' | null = null;
 </script>
 
 <a {href} {target} sveltekit:prefetch>
