@@ -4,7 +4,9 @@
 
 <div class="page-heading">
   <h2>{header}</h2>
-  <slot />
+  <p>
+    <slot />
+  </p>
 </div>
 
 <style>
@@ -18,6 +20,9 @@
   }
   h2 {
     font-size: var(--font-lg);
+  }
+  p {
+    font-size: var(--font-md);
   }
 
   @media (min-width: 62rem) {
