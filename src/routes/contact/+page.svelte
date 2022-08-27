@@ -1,11 +1,9 @@
-<script lang="ts" context="module">
+<script lang="ts">
   import Form from '$lib/components/form.svelte';
   import MetaTitle from '$lib/components/meta-title.svelte';
   import PageHeading from '$lib/components/page-heading.svelte';
   import Button from '$lib/components/button.svelte';
   import TextField from '$lib/components/text-field/index.svelte';
-
-  export const prerender = true;
 </script>
 
 <MetaTitle title="Contact me" />
