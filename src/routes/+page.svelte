@@ -5,26 +5,29 @@
 
 <MetaTitle title="Official website" />
 <header>
-  <p class="intro-text">Hey, I am</p>
-  <h1>Paolo Giraudi.</h1>
-  <p class="intro-text">I build beautiful websites.</p>
+  <h1>
+    <span class="intro-text">Hey, I am</span>
+    <span class="name">Paolo Giraudi.</span>
+    <span class="intro-text">I build beautiful websites.</span>
+  </h1>
 </header>
 <p class="subtitle">
-  I am a frontend developer based in Sweden. I am passionate about design
-  systems and I am currently building an accessible UI framework for
+  I am a full stack designer based in Sweden. I like boxy designs and pastel
+  colors and I am currently building an accessible UI framework for
   <a href="http://mediatool.com" target="__blank">Mediatool</a>.
 </p>
-<ButtonLink href="http://github.com/PaoloGiraudi" target="__blank">
-  Check me out
-</ButtonLink>
+<ButtonLink href="/work">Check me out</ButtonLink>
 
 <style>
-  header {
-    --flow-spacing: 0.25rem;
+  h1 {
     text-align: center;
   }
 
-  h1 {
+  span {
+    display: block;
+  }
+
+  .name {
     font-size: var(--font-xxl);
     font-weight: var(--font-medium);
     color: var(--color-dark);
@@ -45,7 +48,7 @@
   }
 
   @supports (-webkit-text-stroke: 4px transparent) {
-    h1 {
+    .name {
       background: linear-gradient(
         75deg,
         var(--color-accent-dark) 0%,
@@ -59,15 +62,15 @@
   }
 
   @media (min-width: 62rem) {
-    header {
+    h1 {
       padding-top: 4rem;
     }
-    header,
+    h1,
     .subtitle {
       text-align: start;
     }
 
-    h1 {
+    .name {
       font-size: var(--font-max);
     }
 

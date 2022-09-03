@@ -3,7 +3,7 @@
   export let target: '__blank' | null = null;
 </script>
 
-<a {href} {target} sveltekit:prefetch>
+<a {href} {target} data-sveltekit-prefetch>
   <span>
     <slot />
   </span>
@@ -17,7 +17,7 @@
     font-family: var(--secondary-font);
     color: var(--color-dark);
     background-color: transparent;
-    border-width: var(--stoke-sm);
+    border-width: var(--stroke-sm);
     border-color: var(--color-accent-light);
     border-style: solid;
     padding: 0.25rem 0;

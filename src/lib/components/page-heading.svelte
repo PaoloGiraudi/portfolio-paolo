@@ -25,9 +25,13 @@
   @media (min-width: 62rem) {
     .page-heading {
       align-items: flex-start;
+      text-align: start;
     }
     h2 {
       font-size: var(--font-xl);
+    }
+    p {
+      max-width: 45ch;
     }
   }
 </style>

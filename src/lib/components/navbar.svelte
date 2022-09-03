@@ -1,14 +1,18 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { routes } from '$lib/routes';
-  import { isLast } from '$lib/is-last';
+  import { isLast } from '$lib/utils';
   let path: String;
   $: path = $page.url.pathname;
 </script>
 
 <nav class="flow-h">
   {#each routes as route}
-    <a href={route.href} class:active={path == route.href} sveltekit:prefetch>
+    <a
+      href={route.href}
+      class:active={path == route.href}
+      data-sveltekit-prefetch
+    >
       {route.name}
     </a>
     {#if !isLast(routes, route)}
