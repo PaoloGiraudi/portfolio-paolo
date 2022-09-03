@@ -9,9 +9,7 @@
     <div class="right">
       <small>
         Cover art by
-        <a href="https://gretamabilia.myportfolio.com/" target="_blank">
-          Greta
-        </a>
+        <a href="https://www.g-studio.design/" target="_blank">Greta</a>
       </small>
     </div>
   </figure>
