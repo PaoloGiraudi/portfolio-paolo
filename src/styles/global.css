@@ -69,6 +69,10 @@ p {
   font-size: var(--font-md);
 }
 
+p[data-hidden] {
+  display: none;
+}
+
 a:focus-visible {
   outline-color: var(--color-accent-light);
   outline-style: solid;
