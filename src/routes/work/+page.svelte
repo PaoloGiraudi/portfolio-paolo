@@ -1,12 +1,12 @@
 <script lang="ts">
-  import type { Projects } from '$lib/types';
+  import type { Project } from '$lib/types';
 
   import MetaTitle from '$lib/components/meta-title.svelte';
   import PageHeading from '$lib/components/page-heading.svelte';
   import WorkCard from '$lib/components/work-card.svelte';
   import WorkList from '$lib/components/work-list.svelte';
 
-  export let data: { projects: Projects };
+  export let data: { projects: Project[] };
 </script>
 
 <MetaTitle title="My work" />

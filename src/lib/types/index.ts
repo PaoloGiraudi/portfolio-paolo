@@ -11,5 +11,3 @@ export interface Project {
   meta: Meta;
   path: string;
 }
-
-export type Projects = Project[];
