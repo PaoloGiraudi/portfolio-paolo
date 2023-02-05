@@ -6,15 +6,14 @@
 <MetaTitle title="Official website" />
 <header>
   <h1>
-    <span class="intro-text">Hey, I am</span>
+    <span class="intro-text">Hello, I am</span>
     <span class="name">Paolo Giraudi.</span>
-    <span class="intro-text">I build beautiful websites.</span>
+    <span class="intro-text">Welcome to my website.</span>
   </h1>
 </header>
 <p class="subtitle">
   I am a full stack designer based in Sweden. I like boxy designs and pastel
-  colors and I am currently building an accessible UI framework for
-  <a href="http://mediatool.com" target="__blank">Mediatool</a>.
+  colors. 
 </p>
 <ButtonLink href="/work">Check me out</ButtonLink>
 

@@ -9,7 +9,7 @@
     <div class="right">
       <small>
         Cover art by
-        <a href="https://www.g-studio.design/" target="_blank">Greta</a>
+        <a href="https://www.g-studio.design/" target="_blank" rel="noreferrer">Greta</a>
       </small>
     </div>
   </figure>

@@ -11,7 +11,7 @@
     <a
       href={route.href}
       class:active={path == route.href}
-      data-sveltekit-prefetch
+      data-sveltekit-preload-data
     >
       {route.name}
     </a>

@@ -4,9 +4,9 @@
 </script>
 
 <MetaTitle title="Oops :(" />
-<h1>{$page.status}: {$page.error.message}</h1>
+<h1>{$page.status}: {$page.error?.message}</h1>
 <h2>Oops! Something went wrong :(</h2>
 <p>
   Try to refresh the page or go back to the
-  <a href="/" data-sveltekit-prefetch>Home</a>
+  <a href="/" data-sveltekit-preload-data>Home</a>
 </p>

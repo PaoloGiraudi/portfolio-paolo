@@ -1,7 +1,9 @@
 import type { Project } from '$lib/types';
 
 export const fetchProjects = async () => {
-  const allProjects = import.meta.glob('/src/projects/*.md');
+  const allProjects: Record<string, () => Promise<any>> = import.meta.glob(
+    '/src/routes/work/projects/*.md'
+  );
   const iterableProjects = Object.entries(allProjects);
 
   const projects = await Promise.all<Project>(
