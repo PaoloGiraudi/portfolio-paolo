@@ -8,5 +8,5 @@
 <h2>Oops! Something went wrong :(</h2>
 <p>
   Try to refresh the page or go back to the
-  <a href="/" data-sveltekit-preload-data>Home</a>
+  <a href="/" data-sveltekit-preload-data="hover">Home</a>
 </p>

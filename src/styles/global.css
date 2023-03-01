@@ -6,6 +6,7 @@ body {
   min-height: calc(var(--vh, 1vh) * 100);
   overflow: auto;
   background-color: var(--color-bg);
+  cursor: none;
 }
 
 body::before,
@@ -89,6 +90,13 @@ button:focus-visible {
 input:focus-visible,
 textarea:focus-visible {
   outline: none;
+}
+
+a:hover,
+button:hover, 
+a:active,
+button:active {
+  cursor: none;
 }
 
 .flow-h > * + * {

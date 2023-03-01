@@ -1,7 +1,8 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import { routes } from '$lib/routes';
-  import { isLast } from '$lib/utils';
+  import { isLast } from '$lib/utils/is-last';
+  import { hideCursor, resetCursor } from '$lib/utils/mouse-handlers';
   let path: String;
   $: path = $page.url.pathname;
 </script>
@@ -9,9 +10,11 @@
 <nav class="flow-h">
   {#each routes as route}
     <a
+      on:mouseenter={hideCursor}
+      on:mouseleave={resetCursor}
       href={route.href}
       class:active={path == route.href}
-      data-sveltekit-preload-data
+      data-sveltekit-preload-data="hover"
     >
       {route.name}
     </a>

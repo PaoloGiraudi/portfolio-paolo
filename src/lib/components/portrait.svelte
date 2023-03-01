@@ -1,15 +1,24 @@
 <script lang="ts">
   import paolo from '$lib/assets/paolo.avif';
+  import { hideCursor, resetCursor } from '$lib/utils/mouse-handlers';
 </script>
 
 <section>
   <figure>
     <div class="left" />
-    <img src={paolo} alt="Paolo's portrait" />
+    <img
+      src={paolo}
+      alt="Paolo's portrait"
+      draggable="false"
+      on:mouseenter={hideCursor}
+      on:mouseleave={resetCursor}
+    />
     <div class="right">
       <small>
         Cover art by
-        <a href="https://www.g-studio.design/" target="_blank" rel="noreferrer">Greta</a>
+        <a href="https://www.g-studio.design/" target="_blank" rel="noreferrer">
+          Greta
+        </a>
       </small>
     </div>
   </figure>

@@ -1,19 +1,22 @@
-<script>
+<script lang="ts">
   import ButtonLink from '$lib/components/button-link.svelte';
   import MetaTitle from '$lib/components/meta-title.svelte';
+  import { growCursor, resetCursor } from '$lib/utils/mouse-handlers';
 </script>
 
 <MetaTitle title="Official website" />
 <header>
   <h1>
     <span class="intro-text">Hello, I am</span>
-    <span class="name">Paolo Giraudi.</span>
+    <span on:mouseenter={growCursor} on:mouseleave={resetCursor} class="name">
+      Paolo Giraudi.
+    </span>
     <span class="intro-text">Welcome to my website.</span>
   </h1>
 </header>
 <p class="subtitle">
   I am a full stack designer based in Sweden. I like boxy designs and pastel
-  colors. 
+  colors.
 </p>
 <ButtonLink href="/work">Check me out</ButtonLink>
 

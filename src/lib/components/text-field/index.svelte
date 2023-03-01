@@ -30,6 +30,7 @@
 
   input,
   textarea {
+    cursor: none;
     border: none;
     background-color: var(--color-bg);
     border-bottom-width: var(--stroke-sm);
