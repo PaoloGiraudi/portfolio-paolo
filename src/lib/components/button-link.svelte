@@ -1,9 +1,17 @@
 <script lang="ts">
+  import { hideCursor, resetCursor } from '$lib/utils/mouse-handlers';
+
   export let href: string;
   export let target: '__blank' | null = null;
 </script>
 
-<a {href} {target} data-sveltekit-prefetch>
+<a
+  {href}
+  {target}
+  data-sveltekit-preload-data="hover"
+  on:mouseenter={hideCursor}
+  on:mouseleave={resetCursor}
+>
   <span>
     <slot />
   </span>
@@ -45,7 +53,6 @@
 
   a:hover,
   a:active {
-    cursor: pointer;
     color: var(--color-white);
   }
 
