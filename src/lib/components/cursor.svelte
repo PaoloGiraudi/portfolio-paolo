@@ -1,4 +1,8 @@
-<div class="cursor">
+<script>
+  import { portal } from '$lib/utils/portal';
+</script>
+
+<div class="cursor" use:portal={'#portfolio'}>
   <div class="rect">
     <svg height="30" width="30">
       <rect
@@ -20,17 +24,23 @@
 
 <style>
   .cursor {
-    pointer-events: none;
+    display: none;
   }
-  .cursor > div {
-    position: fixed;
-    top: 0;
-    left: 0;
-    mix-blend-mode: difference;
-    z-index: 1000;
-  }
+  @media (min-width: 62rem) {
+    .cursor {
+      display: contents;
+      pointer-events: none;
+    }
+    .cursor > div {
+      position: fixed;
+      top: 0;
+      left: 0;
+      mix-blend-mode: difference;
+      z-index: 1000;
+    }
 
-  circle {
-    fill: var(--color-accent-dark);
+    circle {
+      fill: var(--color-accent-dark);
+    }
   }
 </style>

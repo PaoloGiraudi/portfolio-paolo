@@ -17,9 +17,9 @@
   });
 </script>
 
+<Cursor />
 <Navbar />
 <main>
-  <Cursor />
   <slot />
 </main>
 <Portrait />
