@@ -1,17 +1,9 @@
 <script lang="ts">
-  import { hideCursor, resetCursor } from '$lib/utils/mouse-handlers';
-
   export let href: string;
   export let target: '__blank' | null = null;
 </script>
 
-<a
-  {href}
-  {target}
-  data-sveltekit-preload-data="hover"
-  on:mouseenter={hideCursor}
-  on:mouseleave={resetCursor}
->
+<a {href} {target} data-sveltekit-preload-data="hover" data-cursor="shrink">
   <span>
     <slot />
   </span>

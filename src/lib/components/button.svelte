@@ -1,9 +1,8 @@
 <script lang="ts">
-  import { hideCursor, resetCursor } from '$lib/utils/mouse-handlers';
   export let type: 'submit' | 'button';
 </script>
 
-<button {type} on:mouseenter={hideCursor} on:mouseleave={resetCursor}>
+<button {type} data-cursor="shrink">
   <span>
     <slot />
   </span>
