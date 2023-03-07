@@ -4,7 +4,6 @@
   import PageHeading from '$lib/components/page-heading.svelte';
   import Button from '$lib/components/button.svelte';
   import TextField from '$lib/components/text-field/index.svelte';
-  import { hideCursor, resetCursor } from '$lib/utils/mouse-handlers';
 </script>
 
 <MetaTitle title="Contact me" />
@@ -13,16 +12,18 @@
   <a
     href="http://github.com/PaoloGiraudi"
     target="__blank"
-    on:mouseenter={hideCursor}
-    on:mouseleave={resetCursor}>Github</a
+    data-cursor="shrink"
   >
+    Github
+  </a>
   and
   <a
     href="https://linkedin.com/in/paologiraudi/"
     target="__blank"
-    on:mouseenter={hideCursor}
-    on:mouseleave={resetCursor}>LinkedIn</a
-  >.
+    data-cursor="shrink"
+  >
+    LinkedIn
+  </a>.
 </PageHeading>
 <Form>
   <TextField name="name" type="name">Name</TextField>

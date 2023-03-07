@@ -5,7 +5,7 @@
   import Navbar from '$lib/components/navbar.svelte';
   import Portrait from '$lib/components/portrait.svelte';
   import Cursor from '$lib/components/cursor.svelte';
-  import { onMouseMove } from '$lib/utils/mouse-handlers';
+  import { onMouseMove } from '$lib/utils/on-mouse-move';
   import Loader from '$lib/components/loader.svelte';
 
   const handleResize = () => {

@@ -1,6 +1,5 @@
 <script lang="ts">
   import paolo from '$lib/assets/paolo.avif';
-  import { hideCursor, resetCursor } from '$lib/utils/mouse-handlers';
 </script>
 
 <section>
@@ -10,8 +9,7 @@
       src={paolo}
       alt="Paolo's portrait"
       draggable="false"
-      on:mouseenter={hideCursor}
-      on:mouseleave={resetCursor}
+      data-cursor="shrink"
     />
     <div class="right">
       <small>
