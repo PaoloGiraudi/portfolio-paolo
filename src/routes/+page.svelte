@@ -27,7 +27,7 @@
   }
 
   .name {
-    width: max-content;
+    width: fit-content;
     font-size: var(--font-xxl);
     font-weight: var(--font-medium);
     color: var(--color-dark);
