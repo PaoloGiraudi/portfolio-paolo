@@ -14,7 +14,7 @@
 {#if show}
   <div class="overlay" out:slide={{ duration: 1500, easing: sineOut }}>
     <div class="loader" out:fade={{ duration: 1000 }}>
-      <div class="square" />
+      <div class="loader-square" />
     </div>
   </div>
 {/if}
@@ -34,7 +34,7 @@
     height: 50px;
     width: 50px;
   }
-  .square {
+  .loader-square {
     display: inline-block;
     height: 50px;
     width: 50px;
@@ -43,7 +43,7 @@
     pointer-events: none;
     position: relative;
   }
-  .square::after {
+  .loader-square::after {
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
