@@ -16,13 +16,14 @@
 
 <svelte:window on:resize={handleResize} on:mousemove={onMouseMove} />
 
-<Loader />
-<Cursor />
-<Navbar />
-<main>
-  <slot />
-</main>
-<Portrait />
+<Loader>
+  <Cursor />
+  <Navbar />
+  <main>
+    <slot />
+  </main>
+  <Portrait />
+</Loader>
 
 <style>
   main {

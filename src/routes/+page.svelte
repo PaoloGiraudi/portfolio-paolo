@@ -1,7 +1,6 @@
 <script lang="ts">
   import ButtonLink from '$lib/components/button-link.svelte';
   import MetaTitle from '$lib/components/meta-title.svelte';
-  import { fillName } from '$lib/utils/fill-name';
 </script>
 
 <MetaTitle title="Official website" />
@@ -62,7 +61,6 @@
       -webkit-background-clip: text;
       -webkit-text-stroke: var(--stroke-lg) transparent;
       position: relative;
-      display: inline-block;
     }
   }
 
