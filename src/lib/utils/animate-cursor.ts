@@ -1,3 +1,5 @@
+import { fillName } from './fill-name';
+
 const cursorSizes: Record<string, number> = {
   grow: 4,
   shrink: 0
@@ -40,4 +42,8 @@ export const animateCursor = (
       fill: 'forwards'
     }
   );
+
+  if (isHovering && size === 'grow') {
+    fillName(square);
+  }
 };

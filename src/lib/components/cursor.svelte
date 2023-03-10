@@ -18,7 +18,6 @@
     }
     .cursor > div {
       position: fixed;
-      mix-blend-mode: difference;
       z-index: 1000;
       left: 0;
       top: 0;
@@ -27,7 +26,7 @@
 
     .square {
       height: 2rem;
-      border: 1px solid var(--color-bg);
+      border: 1px solid var(--color-dark);
       background-color: transparent;
     }
 
@@ -35,6 +34,7 @@
       border-radius: 50%;
       height: 0.5rem;
       background-color: var(--color-accent-dark);
+      mix-blend-mode: difference;
     }
   }
 </style>

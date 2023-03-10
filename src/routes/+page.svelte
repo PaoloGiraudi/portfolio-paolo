@@ -1,13 +1,16 @@
 <script lang="ts">
   import ButtonLink from '$lib/components/button-link.svelte';
   import MetaTitle from '$lib/components/meta-title.svelte';
+  import { fillName } from '$lib/utils/fill-name';
 </script>
 
 <MetaTitle title="Official website" />
 <header>
   <h1>
     <span class="intro-text">Hello, I am</span>
-    <span class="name" data-cursor="grow">Paolo Giraudi.</span>
+    <span class="name" data-cursor="grow" data-content="Paolo Giraudi.">
+      Paolo Giraudi.
+    </span>
     <span class="intro-text">Welcome to my website.</span>
   </h1>
 </header>
@@ -54,10 +57,12 @@
         var(--color-accent-dark) 0%,
         var(--color-accent-light) 100%
       );
+      color: var(--color-bg);
       background-clip: text;
       -webkit-background-clip: text;
-      -webkit-text-fill-color: var(--color-bg);
-      -webkit-text-stroke: var(--stroke-md) transparent;
+      -webkit-text-stroke: var(--stroke-lg) transparent;
+      position: relative;
+      display: inline-block;
     }
   }
 
@@ -72,6 +77,28 @@
 
     .name {
       font-size: var(--font-max);
+    }
+
+    .name::before {
+      content: attr(data-content);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        75deg,
+        var(--color-accent-dark) 0%,
+        var(--color-accent-light) 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      clip-path: inset(100%);
+      transition: clip-path 0.1s cubic-bezier(0.29, 0.73, 0.74, 1.02);
+    }
+    .name:hover::before {
+      clip-path: inset(var(--top) var(--right) var(--bottom) var(--left));
     }
 
     .intro-text {
