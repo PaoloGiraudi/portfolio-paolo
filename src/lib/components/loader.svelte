@@ -1,23 +1,27 @@
 <script>
   import { onMount } from 'svelte';
   import { fade, slide } from 'svelte/transition';
-  import { sineOut } from 'svelte/easing';
+  import { quintInOut } from 'svelte/easing';
 
-  let show = true;
+  let ready = false;
+
   onMount(() => {
     setTimeout(() => {
-      show = !show;
-    }, 1000);
+      if (document.readyState === 'complete') {
+        ready = !ready;
+      }
+    }, 500);
   });
 </script>
 
-{#if show}
-  <div class="overlay" out:slide={{ duration: 1500, easing: sineOut }}>
-    <div class="loader" out:fade={{ duration: 1000 }}>
+{#if !ready}
+  <div class="overlay" out:slide={{ duration: 1200, easing: quintInOut }}>
+    <div class="loader" out:fade={{ duration: 500 }}>
       <div class="loader-square" />
     </div>
   </div>
 {/if}
+<slot />
 
 <style>
   .overlay {
