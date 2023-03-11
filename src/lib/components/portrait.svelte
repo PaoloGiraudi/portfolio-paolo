@@ -33,6 +33,7 @@
       grid-area: portrait;
       display: grid;
       place-items: center;
+      min-height: calc(100vh - var(--desktop-border) * 2);
     }
     figure {
       position: relative;
@@ -58,7 +59,7 @@
       background-color: var(--color-bg);
       height: calc(100% + var(--frame-width) * 2);
       top: calc(var(--frame-width) * -1);
-      transition: transform 1s;
+      transition: transform 0.5s ease-in-out;
       z-index: 10;
     }
 
