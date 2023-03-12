@@ -7,6 +7,9 @@
   import Cursor from '$lib/components/cursor.svelte';
   import { onMouseMove } from '$lib/utils/on-mouse-move';
   import Loader from '$lib/components/loader.svelte';
+  import { quintInOut } from 'svelte/easing';
+  import { fly } from 'svelte/transition';
+  export let data;
 
   const handleResize = () => {
     let vh = window.innerHeight * 0.01;
@@ -19,10 +22,15 @@
 <Loader>
   <Cursor />
   <Navbar />
-  <main>
-    <slot />
-  </main>
   <Portrait />
+  {#key data.pathname}
+    <main
+      in:fly={{ x: -25, duration: 150, delay: 100, easing: quintInOut }}
+      out:fly={{ x: +25, duration: 150, easing: quintInOut }}
+    >
+      <slot />
+    </main>
+  {/key}
 </Loader>
 
 <style>
