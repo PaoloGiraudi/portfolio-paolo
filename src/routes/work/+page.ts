@@ -9,5 +9,3 @@ export const load: Load = async ({ fetch }: LoadEvent) => {
     projects
   };
 };
-
-export const prerender = true;

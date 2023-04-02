@@ -5,4 +5,5 @@ export const load = ({ url }: { url: URL }) => {
     pathname
   };
 };
+
 export const prerender = true;
