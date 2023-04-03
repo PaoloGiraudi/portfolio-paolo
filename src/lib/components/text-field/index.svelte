@@ -13,7 +13,7 @@
     <slot />
   </label>
   {#if name === 'message'}
-    <textarea {name} {type} use:validators={field.validator} />
+    <textarea {name} use:validators={field.validator} />
   {:else}
     <input {name} {type} use:validators={field.validator} />
   {/if}
