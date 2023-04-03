@@ -4,6 +4,13 @@
   import PageHeading from '$lib/components/page-heading.svelte';
   import Button from '$lib/components/button.svelte';
   import TextField from '$lib/components/text-field/index.svelte';
+  import { applyAction, type SubmitFunction } from '$app/forms';
+
+  const submit: SubmitFunction = () => {
+    return async ({ result }) => {
+      await applyAction(result);
+    };
+  };
 </script>
 
 <MetaTitle title="Contact me" />
@@ -25,7 +32,7 @@
     LinkedIn
   </a>.
 </PageHeading>
-<Form>
+<Form {submit}>
   <TextField name="name" type="name">Name</TextField>
   <TextField name="email" type="email">Email</TextField>
   <TextField name="subject" type="text">Subject</TextField>

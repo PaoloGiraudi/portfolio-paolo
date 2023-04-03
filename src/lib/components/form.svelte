@@ -1,20 +1,12 @@
 <script lang="ts">
+  import { enhance, type SubmitFunction } from '$app/forms';
   import { useForm } from 'svelte-use-form';
   const form = useForm();
+  export let submit: SubmitFunction;
 </script>
 
-<form
-  name="contact"
-  method="POST"
-  action="/contact/thankyou"
-  data-netlify="true"
-  netlify-honeypot="bot-field"
-  use:form
->
-  <input type="hidden" name="form-name" value="contact" />
-  <p data-hidden="hidden">
-    <input name="bot-field" />
-  </p>
+<form method="POST" use:form use:enhance={submit}>
+  <input type="checkbox" name="botcheck" id="" style="display: none;" />
   <slot />
 </form>
 
