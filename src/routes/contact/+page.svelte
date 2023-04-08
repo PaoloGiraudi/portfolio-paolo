@@ -5,8 +5,13 @@
   import Button from '$lib/components/button.svelte';
   import TextField from '$lib/components/text-field/index.svelte';
   import { applyAction, type SubmitFunction } from '$app/forms';
+  import { goto } from '$app/navigation';
 
-  const submit: SubmitFunction = () => {
+  const submit: SubmitFunction = ({ data, cancel }) => {
+    if (data.get('website-url') !== null) {
+      cancel();
+      goto('/contact/thankyou');
+    }
     return async ({ result }) => {
       await applyAction(result);
     };

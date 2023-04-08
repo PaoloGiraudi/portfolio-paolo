@@ -6,7 +6,16 @@
 </script>
 
 <form method="POST" use:form use:enhance={submit}>
-  <input type="checkbox" name="botcheck" id="" style="display: none;" />
+  <div class="url-field">
+    <label for="website-url">Your website</label>
+    <input
+      type="text"
+      id="website-url"
+      name="url"
+      tabindex="-1"
+      autocomplete="nope"
+    />
+  </div>
   <slot />
 </form>
 
@@ -21,6 +30,11 @@
   }
   :global(.form-field[data-type='message']) {
     grid-area: message;
+  }
+
+  .url-field {
+    position: absolute;
+    left: -9999px;
   }
 
   form {
