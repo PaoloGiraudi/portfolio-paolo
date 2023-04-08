@@ -2,11 +2,11 @@ import { SCRIPTS_ID } from '$env/static/private';
 import { type Actions, redirect, error } from '@sveltejs/kit';
 
 export const actions: Actions = {
-  default: async ({ request }) => {
+  default: async ({ request, fetch }) => {
     const data = await request.formData();
 
     const response = await fetch(
-      `https://script.google.cm/macros/s/${SCRIPTS_ID}/exec`,
+      `https://script.google.com/macros/s/${SCRIPTS_ID}/exec`,
       {
         method: 'POST',
         headers: {
