@@ -16,6 +16,7 @@
 </PageHeading>
 <WorkList>
   {#each data.projects as project}
-    <WorkCard {...project} />
+    <!-- pass full project for path -->
+    <WorkCard meta={project.meta} />
   {/each}
 </WorkList>

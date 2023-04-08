@@ -43,6 +43,7 @@
     flex-direction: column;
     width: 100%;
     row-gap: 0.5rem;
+    position: relative;
   }
 
   @media (min-width: 62rem) {
