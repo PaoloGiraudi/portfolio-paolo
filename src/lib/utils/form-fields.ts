@@ -1,5 +1,5 @@
+import type { FormControl } from '$lib/types';
 import { email, required } from 'svelte-use-form';
-import type { FormControl } from './types';
 
 export const fields: FormControl = {
   name: {

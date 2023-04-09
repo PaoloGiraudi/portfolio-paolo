@@ -1,6 +1,8 @@
 <script lang="ts">
   import type { Meta } from '$lib/types';
+
   export let meta: Meta;
+
   const { title, description, code, demo } = meta;
 </script>
 

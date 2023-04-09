@@ -2,15 +2,17 @@
   import '../styles/variables.css';
   import '../styles/reset.css';
   import '../styles/global.css';
-  import Navbar from '$lib/components/navbar.svelte';
-  import Portrait from '$lib/components/portrait.svelte';
-  import Cursor from '$lib/components/cursor.svelte';
-  import LoadingOverlay from '$lib/components/loading-overlay/overlay.svelte';
   import { onMouseMove } from '$lib/utils/on-mouse-move';
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
-  import PageTransition from '$lib/components/page-transition.svelte';
   import { onResize } from '$lib/utils/on-resize';
+  import {
+    Cursor,
+    LoadingOverlay,
+    Navbar,
+    PageTransition,
+    Portrait
+  } from '$lib/components';
   export let data;
   let loading = true;
 

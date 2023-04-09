@@ -1,12 +1,14 @@
 <script lang="ts">
-  import Form from '$lib/components/form.svelte';
-  import MetaTitle from '$lib/components/meta-title.svelte';
-  import PageHeading from '$lib/components/page-heading.svelte';
-  import Button from '$lib/components/button.svelte';
-  import TextField from '$lib/components/text-field/index.svelte';
   import { applyAction, type SubmitFunction } from '$app/forms';
   import { goto } from '$app/navigation';
-  import LoadingOverlay from '$lib/components/loading-overlay/overlay.svelte';
+  import {
+    Button,
+    Form,
+    LoadingOverlay,
+    MetaTitle,
+    PageHeading,
+    TextField
+  } from '$lib/components';
 
   let loading = false;
 

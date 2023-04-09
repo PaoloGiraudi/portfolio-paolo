@@ -1,6 +1,5 @@
 <script>
-  import ButtonLink from '$lib/components/button-link.svelte';
-  import MetaTitle from '$lib/components/meta-title.svelte';
+  import { ButtonLink, MetaTitle } from '$lib/components';
 </script>
 
 <MetaTitle title="Thank you!" />

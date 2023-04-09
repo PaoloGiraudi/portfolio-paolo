@@ -1,6 +1,6 @@
 <script lang="ts">
-  import MetaTitle from '$lib/components/meta-title.svelte';
   import { page } from '$app/stores';
+  import { MetaTitle } from '$lib/components';
 </script>
 
 <MetaTitle title="Oops :(" />

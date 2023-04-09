@@ -1,7 +1,9 @@
 <script lang="ts">
   import { enhance, type SubmitFunction } from '$app/forms';
   import { useForm } from 'svelte-use-form';
+
   const form = useForm();
+
   export let submit: SubmitFunction;
 </script>
 
