@@ -1,20 +1,11 @@
-<script>
-  import { onMount } from 'svelte';
+<script lang="ts">
   import { fade, slide } from 'svelte/transition';
   import { quintInOut } from 'svelte/easing';
 
-  let ready = false;
-
-  onMount(() => {
-    setTimeout(() => {
-      if (document.readyState === 'complete') {
-        ready = !ready;
-      }
-    }, 500);
-  });
+  export let loading: Boolean;
 </script>
 
-{#if !ready}
+{#if loading}
   <div class="overlay" out:slide={{ duration: 1200, easing: quintInOut }}>
     <div class="loader" out:fade={{ duration: 500 }}>
       <div class="loader-square" />
@@ -38,6 +29,7 @@
     height: 50px;
     width: 50px;
   }
+
   .loader-square {
     display: inline-block;
     height: 50px;

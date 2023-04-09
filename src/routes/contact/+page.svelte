@@ -1,18 +1,25 @@
 <script lang="ts">
-  import Form from '$lib/components/form.svelte';
-  import MetaTitle from '$lib/components/meta-title.svelte';
-  import PageHeading from '$lib/components/page-heading.svelte';
-  import Button from '$lib/components/button.svelte';
-  import TextField from '$lib/components/text-field/index.svelte';
   import { applyAction, type SubmitFunction } from '$app/forms';
   import { goto } from '$app/navigation';
+  import {
+    Button,
+    Form,
+    LoadingOverlay,
+    MetaTitle,
+    PageHeading,
+    TextField
+  } from '$lib/components';
+
+  let loading = false;
 
   const submit: SubmitFunction = ({ data, cancel }) => {
     if (data.get('website-url') !== null) {
       cancel();
       goto('/contact/thankyou');
     }
+    loading = true;
     return async ({ result }) => {
+      loading = false;
       await applyAction(result);
     };
   };
@@ -38,9 +45,11 @@
   </a>.
 </PageHeading>
 <Form {submit}>
-  <TextField name="name" type="name">Name</TextField>
-  <TextField name="email" type="email">Email</TextField>
-  <TextField name="subject" type="text">Subject</TextField>
-  <TextField name="message" type="text">Message</TextField>
-  <Button type="submit">Send</Button>
+  <LoadingOverlay {loading}>
+    <TextField name="name" type="name">Name</TextField>
+    <TextField name="email" type="email">Email</TextField>
+    <TextField name="subject" type="text">Subject</TextField>
+    <TextField name="message" type="text">Message</TextField>
+    <Button type="submit">Send</Button>
+  </LoadingOverlay>
 </Form>

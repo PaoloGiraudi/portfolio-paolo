@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Hint, validators } from 'svelte-use-form';
-  import { fields } from './fields';
-  import type { FormControl } from './types';
+  import { fields } from '../utils/form-fields';
+  import type { FormControl } from '$lib/types';
 
   export let name: string, type: string;
 

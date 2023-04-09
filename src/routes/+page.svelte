@@ -1,6 +1,5 @@
 <script lang="ts">
-  import ButtonLink from '$lib/components/button-link.svelte';
-  import MetaTitle from '$lib/components/meta-title.svelte';
+  import { ButtonLink, MetaTitle } from '$lib/components';
 </script>
 
 <MetaTitle title="Official website" />
@@ -92,7 +91,7 @@
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      clip-path: inset(100%);
+      clip-path: inset(50%);
       transition: clip-path 0.1s cubic-bezier(0.29, 0.73, 0.74, 1.02);
     }
     .name:hover::before {
