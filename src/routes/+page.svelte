@@ -91,7 +91,7 @@
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      clip-path: inset(50%);
+      clip-path: inset(100%);
       transition: clip-path 0.1s cubic-bezier(0.29, 0.73, 0.74, 1.02);
     }
     .name:hover::before {
@@ -108,6 +108,12 @@
 
     .subtitle {
       align-self: unset;
+    }
+  }
+
+  @supports (-moz-appearance: none) {
+    .name::before {
+      clip-path: inset(50%);
     }
   }
 </style>
