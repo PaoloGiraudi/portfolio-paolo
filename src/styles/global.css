@@ -6,7 +6,6 @@ body {
   min-height: calc(var(--vh, 1vh) * 100);
   overflow: auto;
   background-color: var(--color-bg);
-  cursor: none;
 }
 
 body::before,
@@ -92,13 +91,6 @@ textarea:focus-visible {
   outline: none;
 }
 
-a:hover,
-button:hover, 
-a:active,
-button:active {
-  cursor: none;
-}
-
 .flow-h > * + * {
   margin-left: var(--flow-spacing, 1rem);
 }
@@ -108,6 +100,10 @@ button:active {
 }
 
 @media (min-width: 62rem) {
+  * {
+    cursor: none;
+  }
+  
   html,
   body {
     overflow: hidden;
