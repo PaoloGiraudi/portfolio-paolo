@@ -9,6 +9,7 @@
   --color-accent-light: hsl(177, 32%, 51%);
   --color-danger: hsl(0, 51%, 55%);
 
+  --stroke-xs: 1px;
   --stroke-sm: 2px;
   --stroke-md: 3px;
   --stroke-lg: 4px;
@@ -16,6 +17,8 @@
   --desktop-border: 1rem;
   --mobile-border: 0.5rem;
   --navbar-height: 3rem;
+  --loader-size: 3rem;
+  --dot-size: 0.5rem;
 
   --main-font: 'Cormorant Garamond', Georgia, serif;
   --secondary-font: 'Raleway', Arial, sans-serif;

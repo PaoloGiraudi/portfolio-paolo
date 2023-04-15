@@ -26,13 +26,13 @@
 
     .square {
       height: 2rem;
-      border: 1px solid var(--color-dark);
+      border: var(--stroke-xs) solid var(--color-dark);
       background-color: transparent;
     }
 
     .circle {
       border-radius: 50%;
-      height: 0.5rem;
+      height: var(--dot-size);
       background-color: var(--color-accent-dark);
       mix-blend-mode: difference;
     }
