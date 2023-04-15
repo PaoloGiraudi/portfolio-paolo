@@ -73,6 +73,10 @@ p[data-hidden] {
   display: none;
 }
 
+a {
+  display: inline-block;
+}
+
 a:focus-visible {
   outline-color: var(--color-accent-light);
   outline-style: solid;

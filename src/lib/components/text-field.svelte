@@ -13,9 +13,9 @@
     <slot />
   </label>
   {#if name === 'message'}
-    <textarea {name} use:validators={field.validator} />
+    <textarea {name} id={name} use:validators={field.validator} />
   {:else}
-    <input {name} {type} use:validators={field.validator} />
+    <input {name} {type} id={name} use:validators={field.validator} />
   {/if}
   <Hint class="hint" for={name} on={field.on}>
     {field.message}
