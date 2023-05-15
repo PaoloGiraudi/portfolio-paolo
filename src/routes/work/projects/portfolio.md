@@ -1,7 +1,7 @@
 ---
 title: My Portfolio
 description: This very beautiful website.
-stack: ['SvelteKit']
+stack: ['Sveltekit']
 code: 'https://github.com/PaoloGiraudi/portfolio-paolo'
 demo: 'http://www.paologiraudi.com'
 ---
