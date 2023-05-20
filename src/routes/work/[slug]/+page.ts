@@ -7,6 +7,8 @@ export async function load({ params }: LoadEvent) {
 
   return {
     Content,
-    title
+    title,
+    // src: `/src/lib/assets/${params.slug}.png`,
+    caption: null
   };
 }

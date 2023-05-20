@@ -1,16 +1,12 @@
 import type { Validator } from 'svelte-use-form';
-export interface Meta {
+export interface Project {
   code: string;
   date: string;
   website: string;
   title: string;
   description: string;
   stack: string[];
-}
-
-export interface Project {
-  meta: Meta;
-  path: string;
+  slug: string;
 }
 
 export type Fields = 'name' | 'email' | 'subject' | 'message';
