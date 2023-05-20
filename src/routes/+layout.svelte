@@ -5,7 +5,6 @@
   import { onMouseMove } from '$lib/utils/on-mouse-move';
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
-  import { onResize } from '$lib/utils/on-resize';
   import {
     Cursor,
     LoadingOverlay,
@@ -17,13 +16,11 @@
   let loading = true;
 
   onMount(() => {
-    setTimeout(() => {
-      loading = !browser;
-    }, 500);
+    loading = !browser;
   });
 </script>
 
-<svelte:window on:resize={onResize} on:mousemove={onMouseMove} />
+<svelte:window on:mousemove={onMouseMove} />
 
 <LoadingOverlay {loading}>
   <Cursor />
@@ -35,3 +32,10 @@
     </PageTransition>
   {/key}
 </LoadingOverlay>
+
+<style>
+  :global() {
+    --main-font: 'Cormorant Garamond', Georgia, serif;
+    --secondary-font: 'Raleway', Arial, sans-serif;
+  }
+</style>

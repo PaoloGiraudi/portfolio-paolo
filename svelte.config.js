@@ -8,7 +8,7 @@ const config = {
   // for more information about preprocessors
 
   kit: {
-    adapter: adapter()
+    adapter: adapter(),
   },
 
   extensions: ['.svelte', '.md'],
@@ -17,8 +17,8 @@ const config = {
     preprocess(),
     mdsvex({
       extensions: ['.md']
-    })
-  ]
+    }),
+  ],
 };
 
 export default config;

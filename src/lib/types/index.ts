@@ -2,7 +2,7 @@ import type { Validator } from 'svelte-use-form';
 export interface Meta {
   code: string;
   date: string;
-  demo: string;
+  website: string;
   title: string;
   description: string;
   stack: string[];
