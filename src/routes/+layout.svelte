@@ -10,7 +10,7 @@
     LoadingOverlay,
     Navbar,
     PageTransition,
-    Portrait
+    Window
   } from '$lib/components';
   export let data;
   let loading = true;
@@ -25,17 +25,10 @@
 <LoadingOverlay {loading}>
   <Cursor />
   <Navbar />
-  <Portrait />
+  <Window />
   {#key data.pathname}
     <PageTransition>
       <slot />
     </PageTransition>
   {/key}
 </LoadingOverlay>
-
-<style>
-  :global() {
-    --main-font: 'Cormorant Garamond', Georgia, serif;
-    --secondary-font: 'Raleway', Arial, sans-serif;
-  }
-</style>
