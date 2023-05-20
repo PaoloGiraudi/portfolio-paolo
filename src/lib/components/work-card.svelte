@@ -3,7 +3,7 @@
 
   export let meta: Meta;
 
-  const { title, description, code, demo } = meta;
+  const { title, description, code, website } = meta;
 </script>
 
 <li>
@@ -11,8 +11,10 @@
     <h3>{title}</h3>
     <p>{description}</p>
     <div class="links">
-      <a href={code} target="__blank">Code</a>
-      <a href={demo} target="__blank">Demo</a>
+      <a href={website} target="__blank">Website</a>
+      {#if code}
+        <a href={code} target="__blank">Code</a>
+      {/if}
     </div>
   </article>
 </li>
