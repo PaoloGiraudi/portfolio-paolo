@@ -19,8 +19,12 @@
     position: absolute;
     display: grid;
     place-items: center;
-    height: 100%;
-    width: 100%;
+    height: -moz-available;
+    height: -webkit-fill-available;
+    height: fill-available;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
     z-index: 10;
     background-color: var(--color-bg);
   }
