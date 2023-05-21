@@ -1,14 +1,14 @@
 <script lang="ts">
-  import type { Meta } from '$lib/types';
-
-  export let meta: Meta;
-
-  const { title, description, code, website } = meta;
+  import type { Project } from '$lib/types';
+  export let project: Project;
+  const { code, description, slug, title, website } = project;
 </script>
 
 <li>
   <article class="flow-v">
+    <!-- <a href="work/{slug}"> -->
     <h3>{title}</h3>
+    <!-- </a> -->
     <p>{description}</p>
     <div class="links">
       <a href={website} target="__blank">Website</a>

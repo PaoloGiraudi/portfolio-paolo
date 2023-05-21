@@ -1,23 +1,20 @@
 <script lang="ts">
-  import paolo from '$lib/assets/paolo.avif';
+  import { page } from '$app/stores';
 </script>
 
 <section>
   <figure>
     <div class="left" />
     <img
-      src={paolo}
-      alt="Paolo's portrait"
+      src={$page.data.src}
+      alt={$page.data.alt}
       draggable="false"
-      data-cursor="shrink"
+      data-cursor={$page.data.cursor}
     />
     <div class="right">
-      <small>
-        Cover art by
-        <a href="https://www.g-studio.design/" target="_blank" rel="noreferrer">
-          Greta
-        </a>
-      </small>
+      {#if $page.data.caption}
+        <svelte:component this={$page.data.caption} />
+      {/if}
     </div>
   </figure>
 </section>
@@ -26,6 +23,7 @@
   section {
     display: none;
   }
+
   @media (min-width: 62rem) {
     section {
       --signature-bottom: 0.25rem;
@@ -42,14 +40,6 @@
       border-top: var(--frame-width) var(--color-dark) solid;
       border-bottom: var(--frame-width) var(--color-dark) solid;
       mix-blend-mode: darken;
-    }
-
-    img {
-      object-fit: cover;
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      background-color: var(--color-bg);
     }
 
     .left,
@@ -79,15 +69,12 @@
       transform: translateX(80%);
     }
 
-    small {
+    img {
+      object-fit: cover;
       position: absolute;
-      left: -6.75rem;
-      font-size: var(--font-xs);
-      bottom: var(--signature-bottom);
-    }
-
-    small > a {
-      font-weight: var(--font-medium);
+      height: 100%;
+      width: 100%;
+      background-color: var(--color-bg);
     }
   }
 </style>

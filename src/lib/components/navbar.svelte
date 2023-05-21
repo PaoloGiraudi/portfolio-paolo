@@ -3,8 +3,7 @@
   import { routes } from '$lib/routes';
   import { isLast } from '$lib/utils/is-last';
 
-  let path: String;
-  $: path = $page.url.pathname;
+  $: path = $page.route.id;
 </script>
 
 <nav class="flow-h">
@@ -12,7 +11,7 @@
     <a
       data-cursor="shrink"
       href={route.href}
-      class:active={path == route.href}
+      class:active={path === `${route.href}/[slug]` || path === route.href}
       data-sveltekit-preload-data="hover"
     >
       {route.name}
