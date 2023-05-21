@@ -7,7 +7,7 @@
     LoadingOverlay,
     MetaTitle,
     PageHeading,
-    TextField
+    Field
   } from '$lib/components';
   import type { SubmitFunction } from '@sveltejs/kit';
 
@@ -27,7 +27,7 @@
 </script>
 
 <MetaTitle title="Contact me" />
-<PageHeading header="Questions? Send me a message!">
+<PageHeading header="Questions?">
   You can also find me on
   <a
     href="http://github.com/PaoloGiraudi"
@@ -47,10 +47,10 @@
 </PageHeading>
 <Form {submit}>
   <LoadingOverlay {loading}>
-    <TextField name="name" type="name">Name</TextField>
-    <TextField name="email" type="email">Email</TextField>
-    <TextField name="subject" type="text">Subject</TextField>
-    <TextField name="message" type="text">Message</TextField>
+    <Field name="name" type="name">Name</Field>
+    <Field name="email" type="email">Email</Field>
+    <Field name="subject" type="text">Subject</Field>
+    <Field name="message" type="text">Message</Field>
     <Button type="submit">Send</Button>
   </LoadingOverlay>
 </Form>

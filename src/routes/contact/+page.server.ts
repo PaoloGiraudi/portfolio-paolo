@@ -20,6 +20,7 @@ export const actions: Actions = {
         })
       }
     );
+    console.log('response:', response);
 
     if (response.status === 200) {
       throw redirect(303, '/contact/thankyou');

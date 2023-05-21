@@ -1,4 +1,3 @@
-export { default as ButtonLink } from './button-link.svelte';
 export { default as Button } from './button.svelte';
 export { default as Cursor } from './cursor.svelte';
 export { default as Form } from './form.svelte';
@@ -6,9 +5,8 @@ export { default as LoadingOverlay } from './loading-overlay.svelte';
 export { default as MetaTitle } from './meta-title.svelte';
 export { default as Navbar } from './navbar.svelte';
 export { default as PageHeading } from './page-heading.svelte';
-export { default as PageTransition } from './page-transition.svelte';
-export { default as TextField } from './text-field.svelte';
-export { default as WorkCard } from './work-card.svelte';
+export { default as Field } from './field.svelte';
+export { default as WorkLink } from './work-link.svelte';
 export { default as WorkList } from './work-list.svelte';
 export { default as Window } from './window.svelte';
 export { default as PortraitCaption } from './portrait-caption.svelte';

@@ -6,7 +6,7 @@
   $: path = $page.route.id;
 </script>
 
-<nav class="flow-h">
+<nav>
   {#each routes as route}
     <a
       data-cursor="shrink"
@@ -24,37 +24,32 @@
 
 <style>
   nav {
-    --flow-spacing: 0.625rem;
+    grid-area: navbar;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--flow-spacing);
-    background-color: var(--color-bg);
+    gap: var(--size-4);
+    background-color: var(--surface-1);
     position: sticky;
-    top: var(--mobile-border);
+    z-index: 20;
   }
   a {
-    font-family: var(--secondary-font);
-    padding: 0.125rem 0.625rem;
-    font-size: var(--font-sm);
+    font-family: var(--font-serif);
+    font-size: var(--font-size-4);
     text-decoration: none;
-  }
-
-  a:hover,
-  a:focus {
-    background-color: var(--color-dark-alpha);
   }
 
   a.active {
     text-decoration-line: underline;
-    text-decoration-thickness: 2px;
-    text-decoration-color: var(--color-accent-light);
+    text-decoration-thickness: var(--border-size-2);
+    text-decoration-color: var(--accent-2);
+    text-underline-offset: var(--size-1);
   }
 
   @media (min-width: 62rem) {
     nav {
       justify-content: flex-end;
-      top: var(--desktop-border);
+      padding-inline-end: var(--size-6);
     }
   }
 </style>

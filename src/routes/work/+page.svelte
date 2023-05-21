@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { MetaTitle, PageHeading, WorkCard, WorkList } from '$lib/components';
+  import { MetaTitle, PageHeading, WorkLink, WorkList } from '$lib/components';
   import type { Project } from '$lib/types';
   export let data: { projects: Project[] };
 </script>
@@ -8,6 +8,6 @@
 <PageHeading header="My projects" />
 <WorkList>
   {#each data.projects as project}
-    <WorkCard {project} />
+    <WorkLink {project} />
   {/each}
 </WorkList>

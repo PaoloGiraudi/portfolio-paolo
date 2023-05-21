@@ -1,8 +1,7 @@
 html,
 body {
-  height: 100dvh;
   overflow: auto;
-  background-color: var(--color-bg);
+  background-color: var(--surface-1);
 }
 
 ::selection {
@@ -15,7 +14,7 @@ body::after,
 html::after {
   content: '';
   position: fixed;
-  background-color: var(--color-white);
+  background-color: var(--frame);
   top: 0;
   left: 0;
   width: 100%;
@@ -42,19 +41,6 @@ html::after {
   height: 100%;
 }
 
-#portfolio {
-  height: 100dvh;
-  width: 100dvw;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: var(--navbar-height) auto;
-  grid-template-areas:
-    'navbar'
-    'slot';
-  padding: var(--mobile-border);
-  background-color: var(--color-bg);
-}
-
 h1,
 h2,
 h3,
@@ -62,12 +48,12 @@ h4,
 a,
 p,
 li {
-  color: var(--color-dark);
-  font-family: var(--main-font);
+  color: var(--text-1);
+  font-family: var(--font-serif);
 }
 
 p {
-  font-size: var(--font-md);
+  font-size: var(--font-size-3);
 }
 
 p[data-hidden] {
@@ -79,13 +65,13 @@ a {
 }
 
 a:focus-visible {
-  outline-color: var(--color-accent-light);
+  outline-color: var(--accent-2);
   outline-style: solid;
   outline-width: 2px;
 }
 
 button:focus-visible {
-  outline-color: var(--color-accent-light);
+  outline-color: var(--accent-2);
   outline-style: solid;
   outline-width: 2px;
   outline-offset: 2px;
@@ -97,11 +83,11 @@ textarea:focus-visible {
 }
 
 .flow-h > * + * {
-  margin-left: var(--flow-spacing, 1rem);
+  margin-left: var(--flow-spacing, var(--size-3));
 }
 
 .flow-v > * + * {
-  margin-top: var(--flow-spacing, 1rem);
+  margin-top: var(--flow-spacing, var(--size-3));
 }
 
 @media (min-width: 62rem) {
@@ -131,33 +117,25 @@ textarea:focus-visible {
     height: 100%;
   }
 
-  #portfolio {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      'portrait navbar'
-      'portrait slot';
-    padding: var(--desktop-border);
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #2b2922 #f5e0e0;
   }
-}
 
-/* ===== Scrollbar CSS ===== */
-/* Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #2b2922 #f5e0e0;
-}
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
 
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: 10px;
-}
+  *::-webkit-scrollbar-track {
+    background: #f5e0e0;
+  }
 
-*::-webkit-scrollbar-track {
-  background: #f5e0e0;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #2b2922;
-  border-radius: 0px;
-  border: 4px solid #f5e0e0;
+  *::-webkit-scrollbar-thumb {
+    background-color: #2b2922;
+    border-radius: 0px;
+    border: 4px solid #f5e0e0;
+  }
 }

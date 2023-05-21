@@ -17,6 +17,8 @@
 <style>
   .overlay {
     position: absolute;
+    top: 0;
+    left: 0;
     display: grid;
     place-items: center;
     height: -moz-available;
@@ -25,35 +27,35 @@
     width: -moz-available;
     width: -webkit-fill-available;
     width: fill-available;
-    z-index: 10;
-    background-color: var(--color-bg);
+    z-index: 30;
+    background-color: var(--surface-1);
   }
   .loader {
     position: relative;
-    height: var(--loader-size);
+    height: var(--size-8);
   }
 
   .loader-square {
     display: inline-block;
-    height: var(--loader-size);
+    height: var(--size-8);
     aspect-ratio: 1;
     background-color: transparent;
-    border: var(--stroke-sm) var(--color-dark) solid;
+    border: var(--border-size-2) var(--text-1) solid;
     pointer-events: none;
     position: relative;
   }
   .loader-square::after {
-    --dot-offset: 0.5rem;
-    height: var(--dot-size);
+    --dot-offset: var(--size-2);
+    height: var(--size-2);
     aspect-ratio: 1;
     border-radius: 50%;
     position: absolute;
     content: '';
-    background-color: var(--color-accent-dark);
+    background-color: var(--accent-1);
     mix-blend-mode: difference;
     bottom: calc(100% - var(--dot-offset) * 2);
     left: var(--dot-offset);
-    animation: moving-ball 2s ease-in-out infinite;
+    animation: moving-ball 2s var(--ease-in-out-1) infinite;
   }
   @keyframes moving-ball {
     25% {

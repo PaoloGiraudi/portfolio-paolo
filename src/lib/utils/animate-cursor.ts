@@ -29,8 +29,9 @@ export const animateCursor = (
       })`
     },
     {
-      duration: 800,
-      fill: 'forwards'
+      duration: 450,
+      fill: 'forwards',
+      easing: 'ease-in-out'
     }
   );
   cursorPointer?.animate(

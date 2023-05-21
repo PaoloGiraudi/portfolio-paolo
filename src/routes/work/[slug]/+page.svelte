@@ -1,10 +1,21 @@
 <script>
   export let data;
-  const { title, Content } = data;
+  const { Content } = data;
 </script>
 
 <article>
-  <h1>{title}</h1>
-  <p>Hey! How did you get here?</p>
   <Content />
 </article>
+
+<style>
+  article {
+    background-color: var(--surface-1);
+    & h3 {
+    }
+    & p {
+      max-inline-size: var(--size-content-3);
+      font-size: var(--font-size-3);
+      line-height: 30px;
+    }
+  }
+</style>

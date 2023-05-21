@@ -24,8 +24,8 @@
 
 <style>
   :global(.hint) {
-    font-size: var(--font-xs);
-    font-family: var(--secondary-font);
+    font-size: var(--font-size-0);
+    font-family: var(--font-serif);
     color: var(--color-danger);
   }
   :global(.form-field[data-type='subject']) {
@@ -41,11 +41,15 @@
   }
 
   form {
-    font-family: var(--secondary-font);
+    padding-inline-end: var(--size-4);
+    padding-block-end: var(--size-8);
+    /* find better way */
+    background-color: var(--surface-1);
+    font-family: var(--font-serif);
     display: flex;
     flex-direction: column;
-    width: 100%;
-    row-gap: 0.5rem;
+    max-inline-size: var(--size-content-3);
+    row-gap: var(--size-2);
     position: relative;
   }
 
@@ -59,9 +63,8 @@
         'button button';
       grid-template-columns: 1fr 1fr;
       grid-template-rows: repeat(4, auto);
-      column-gap: 1rem;
-      row-gap: 1.5rem;
-      width: 70%;
+      column-gap: var(--size-3);
+      row-gap: var(--size-5);
     }
   }
 </style>
