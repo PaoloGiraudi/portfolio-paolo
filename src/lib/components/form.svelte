@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { enhance, type SubmitFunction } from '$app/forms';
+  import { enhance } from '$app/forms';
+  import type { SubmitFunction } from '@sveltejs/kit';
   import { useForm } from 'svelte-use-form';
 
   const form = useForm();
@@ -15,7 +16,7 @@
       id="website-url"
       name="url"
       tabindex="-1"
-      autocomplete="nope"
+      autocomplete="off"
     />
   </div>
   <slot />

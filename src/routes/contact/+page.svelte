@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { applyAction, type SubmitFunction } from '$app/forms';
+  import { applyAction } from '$app/forms';
   import { goto } from '$app/navigation';
   import {
     Button,
@@ -9,6 +9,7 @@
     PageHeading,
     TextField
   } from '$lib/components';
+  import type { SubmitFunction } from '@sveltejs/kit';
 
   let loading = false;
 
