@@ -1,12 +1,12 @@
 <script>
-  import { ButtonLink, MetaTitle } from '$lib/components';
+  import { Button, MetaTitle } from '$lib/components';
 </script>
 
 <MetaTitle title="Thank you!" />
 <div class="flow-v success">
   <h1>Thank you!</h1>
   <p>Your message has been received.</p>
-  <ButtonLink href="/">Back to the home</ButtonLink>
+  <Button href="/">Back to the home</Button>
 </div>
 
 <style>
@@ -17,7 +17,7 @@
   }
 
   .success > p {
-    margin-bottom: 2rem;
+    margin-bottom: var(--size-7);
   }
 
   @media (min-width: 62rem) {

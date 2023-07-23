@@ -9,13 +9,13 @@
   @media (min-width: 62rem) {
     small {
       position: absolute;
-      left: -6.75rem;
-      font-size: var(--font-xs);
-      bottom: var(--signature-bottom);
+      left: -6.25rem;
+      font-size: var(--font-size-0);
+      bottom: var(--size-1);
     }
 
     small > a {
-      font-weight: var(--font-medium);
+      font-weight: var(--font-weight-5);
     }
   }
 </style>

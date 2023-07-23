@@ -25,15 +25,15 @@
     }
 
     .square {
-      height: 2rem;
-      border: var(--stroke-xs) solid var(--color-dark);
+      height: var(--size-7);
+      border: var(--border-size-1) solid var(--text-1);
       background-color: transparent;
     }
 
     .circle {
       border-radius: 50%;
-      height: var(--dot-size);
-      background-color: var(--color-accent-dark);
+      height: var(--size-2);
+      background-color: var(--accent-1);
       mix-blend-mode: difference;
     }
   }

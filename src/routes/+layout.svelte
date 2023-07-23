@@ -1,18 +1,12 @@
 <script lang="ts">
-  import '../styles/variables.css';
+  import '../styles/themes.css';
   import '../styles/reset.css';
-  import '../styles/global.css';
+  import '../styles/app.css';
   import { onMouseMove } from '$lib/utils/on-mouse-move';
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
-  import {
-    Cursor,
-    LoadingOverlay,
-    Navbar,
-    PageTransition,
-    Window
-  } from '$lib/components';
-  export let data;
+  import { Cursor, LoadingOverlay, Navbar, Window } from '$lib/components';
+
   let loading = true;
 
   onMount(() => {
@@ -22,13 +16,65 @@
 
 <svelte:window on:mousemove={onMouseMove} />
 
-<LoadingOverlay {loading}>
-  <Cursor />
-  <Navbar />
-  <Window />
-  {#key data.pathname}
-    <PageTransition>
+<div id="layout">
+  <LoadingOverlay {loading}>
+    <Cursor />
+    <Navbar />
+    <Window />
+    <main>
       <slot />
-    </PageTransition>
-  {/key}
-</LoadingOverlay>
+    </main>
+  </LoadingOverlay>
+</div>
+
+<style>
+  div {
+    height: 100dvh;
+    width: 100dvw;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto var(--navbar-height);
+    grid-template-areas:
+      'portrait'
+      'slot'
+      'navbar';
+    padding: var(--mobile-border);
+    background-color: var(--surface-1);
+    overflow-y: auto;
+  }
+
+  main {
+    overflow-y: auto;
+    grid-area: 1 / 1 / 3 / -1;
+    max-inline-size: 100%;
+    padding-inline-start: var(--size-4);
+    padding-block-start: var(--size-8);
+    z-index: 10;
+    padding-block-start: 20dvh;
+    background: linear-gradient(
+      to top right,
+      var(--surface-1) 70%,
+      transparent 70%
+    );
+  }
+
+  @media (min-width: 62rem) {
+    div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: var(--navbar-height) auto;
+      grid-template-areas:
+        'portrait navbar'
+        'portrait slot';
+      padding: var(--desktop-border);
+    }
+
+    main {
+      grid-area: slot;
+      padding-block-start: var(--size-10);
+      align-items: unset;
+      margin-bottom: var(--navbar-height);
+    }
+  }
+</style>

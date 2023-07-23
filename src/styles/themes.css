@@ -1,0 +1,73 @@
+html {
+  --frame-light: hsl(var(--gray-0-hsl));
+  --brand-light: hsl(0, 51%, 92%);
+  --surface-1-light: var(--brand-light);
+  --surface-2-light: var(--brand-light);
+  --blend-mode-light: darken;
+
+  --text-1-light: hsl(var(--gray-9-hsl));
+  --text-2-light: hsl(var(--gray-7-hsl));
+
+  --accent-1-light: hsl(177, 32%, 23%);
+  --accent-2-light: hsl(177, 32%, 51%);
+  --color-danger-light: hsl(0, 51%, 55%);
+
+  /* --------- */
+
+  --frame-dark: hsl(var(--gray-12-hsl));
+  --brand-dark: hsl(0, 51%, 92%);
+  --surface-1-dark: hsl(var(--gray-11-hsl));
+  --surface-2-dark: hsl(0, 0%, 0%);
+  --blend-mode-dark: difference;
+
+  --text-1-dark: hsl(var(--gray-2-hsl));
+  --text-2-dark: hsl(var(--gray-5-hsl));
+
+  --accent-1-dark: hsl(177, 32%, 43%);
+  --accent-2-dark: hsl(177, 32%, 71%);
+  --color-danger-dark: hsl(0, 51%, 75%);
+}
+
+:root {
+  --frame: var(--frame-light);
+  --brand: var(--brand-light);
+  --surface-1: var(--surface-1-light);
+  --surface-2: var(--surface-2-light);
+  --blend-mode: var(--blend-mode-light);
+
+  --text-1: var(--text-1-light);
+  --text-2: var(--text-2-light);
+
+  --accent-1: var(--accent-1-light);
+  --accent-2: var(--accent-2-light);
+  --color-danger: var(--color-danger-light);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --frame: var(--frame-dark);
+    --brand: var(--brand-dark);
+    --surface-1: var(--surface-1-dark);
+    --surface-2: var(--surface-2-dark);
+    --blend-mode: var(--blend-mode-dark);
+
+    --text-1: var(--text-1-dark);
+    --text-2: var(--text-2-dark);
+
+    --accent-1: var(--accent-1-dark);
+    --accent-2: var(--accent-2-dark);
+    --color-danger: var(--color-danger-dark);
+  }
+} */
+
+:root {
+  --desktop-border: var(--size-3);
+  --mobile-border: var(--size-2);
+  --navbar-height: var(--size-9);
+
+  --font-serif: 'EB Garamond', Georgia, serif;
+
+  --font-size-9: 5rem;
+  --font-size-10: 6rem;
+  --font-size-11: 7rem;
+}

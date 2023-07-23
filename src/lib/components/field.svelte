@@ -12,11 +12,13 @@
   <label for={name}>
     <slot />
   </label>
-  {#if name === 'message'}
-    <textarea {name} id={name} use:validators={field.validator} />
-  {:else}
-    <input {name} {type} id={name} use:validators={field.validator} />
-  {/if}
+  <svelte:element
+    this={name === 'message' ? 'textarea' : 'input'}
+    {name}
+    {type}
+    id={name}
+    use:validators={field.validator}
+  />
   <Hint class="hint" for={name} on={field.on}>
     {field.message}
   </Hint>
@@ -25,38 +27,39 @@
 <style>
   .form-field {
     display: grid;
-    grid-template-rows: auto auto 1rem;
+    grid-template-rows: auto auto var(--size-3);
   }
 
   input,
   textarea {
     border: none;
-    background-color: var(--color-bg);
-    border-bottom-width: var(--stroke-sm);
+    background-color: var(--surface-1);
+    border-bottom-width: var(--border-size-2);
     border-bottom-style: solid;
-    border-bottom-color: var(--color-dark);
-    font-size: var(--font-sm);
+    border-bottom-color: var(--text-1);
+    font-size: var(--font-size-3);
+    color: var(--text-1);
   }
 
   input:focus-visible,
   textarea:focus-visible {
-    border-bottom-color: var(--color-accent-light);
+    border-bottom-color: var(--accent-2);
   }
 
   textarea {
     resize: none;
-    height: 5rem;
+    height: var(--size-11);
   }
 
   label {
-    font-size: var(--font-xs);
-    margin-bottom: 0.5rem;
-    color: var(--color-dark-subtle);
+    font-size: var(--font-size-2);
+    margin-bottom: var(--size-2);
+    color: var(--text-2);
   }
 
   @media (min-width: 62rem) {
     label {
-      font-size: var(--font-sm);
+      font-size: var(--font-size-3);
     }
   }
 </style>

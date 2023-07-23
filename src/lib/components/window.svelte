@@ -21,45 +21,65 @@
 
 <style>
   section {
+    overflow: hidden;
+    grid-area: 1 / 1 / -1 / -1;
+  }
+  figure {
+    background-color: var(--surface-1);
+    position: relative;
+    height: 150%;
+    width: 150%;
+    mix-blend-mode: var(--blend-mode);
+  }
+
+  img {
+    object-fit: cover;
+    background-color: var(--surface-1);
+  }
+
+  .right,
+  .left {
     display: none;
   }
 
   @media (min-width: 62rem) {
     section {
-      --signature-bottom: 0.25rem;
-      --frame-width: var(--stroke-md);
       grid-area: portrait;
-      display: grid;
       place-items: center;
+      display: grid;
       min-height: calc(100vh - var(--desktop-border) * 2);
     }
     figure {
-      position: relative;
       height: 80%;
       width: 80%;
-      border-top: var(--frame-width) var(--color-dark) solid;
-      border-bottom: var(--frame-width) var(--color-dark) solid;
-      mix-blend-mode: darken;
+      border-top: var(--border-size-2) var(--text-1) solid;
+      border-bottom: var(--border-size-2) var(--text-1) solid;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
     }
 
     .left,
     .right {
+      display: block;
       width: 25%;
       position: absolute;
-      background-color: var(--color-bg);
-      height: calc(100% + var(--frame-width) * 2);
-      top: calc(var(--frame-width) * -1);
-      transition: transform 0.5s ease-in-out;
+      background-color: var(--surface-2);
+      height: calc(100% + var(--border-size-2) * 2);
+      top: calc(var(--border-size-2) * -1);
+      transition: transform 450ms var(--ease-in-out-3);
       z-index: 10;
     }
 
     .left {
       left: 0;
-      border-right: var(--frame-width) solid var(--color-dark);
+      border-right: var(--border-size-2) solid var(--text-1);
     }
     .right {
       right: 0;
-      border-left: var(--frame-width) solid var(--color-dark);
+      border-left: var(--border-size-2) solid var(--text-1);
     }
 
     figure:hover > .left {
@@ -69,12 +89,10 @@
       transform: translateX(80%);
     }
 
-    img {
-      object-fit: cover;
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      background-color: var(--color-bg);
+    @media (prefers-color-scheme: dark) {
+      img {
+        filter: brightness(0.4);
+      }
     }
   }
 </style>

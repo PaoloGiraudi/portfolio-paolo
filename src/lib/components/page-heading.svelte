@@ -11,15 +11,21 @@
 
 <style>
   .page-heading {
+    grid-area: heading;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    row-gap: 0.25rem;
-    margin-bottom: 0.5rem;
-    text-align: center;
+    row-gap: var(--size-1);
+    margin-block-end: var(--size-8);
   }
   h2 {
-    font-size: var(--font-lg);
+    font-size: var(--font-size-6);
+    font-weight: var(--font-weight-5);
+    text-wrap: balance;
+  }
+
+  p {
+    font-size: var(--font-size-3);
+    text-wrap: balance;
   }
 
   @media (min-width: 62rem) {
@@ -27,11 +33,9 @@
       align-items: flex-start;
       text-align: start;
     }
-    h2 {
-      font-size: var(--font-xl);
-    }
+
     p {
-      max-width: 45ch;
+      max-inline-size: var(--size-content-2);
     }
   }
 </style>
