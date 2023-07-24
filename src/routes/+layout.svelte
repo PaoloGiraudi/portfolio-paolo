@@ -5,12 +5,25 @@
   import { onMouseMove } from '$lib/utils/on-mouse-move';
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
-  import { Cursor, LoadingOverlay, Navbar, Window } from '$lib/components';
+  import {
+    Cursor,
+    LoadingOverlay,
+    Navbar,
+    Window,
+    Menu
+  } from '$lib/components';
+  import { navigating } from '$app/stores';
+  import { menu } from '$lib/stores/menu';
 
   let loading = true;
+  let isDesktop: boolean;
+
+  $: !isDesktop && $navigating && menu.set(false);
 
   onMount(() => {
     loading = !browser;
+    isDesktop = window.matchMedia('(min-width: 62rem)').matches;
+    isDesktop && menu.set(true);
   });
 </script>
 
@@ -19,6 +32,7 @@
 <div id="layout">
   <LoadingOverlay {loading}>
     <Cursor />
+    <Menu />
     <Navbar />
     <Window />
     <main>
@@ -34,11 +48,10 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto var(--navbar-height);
+    grid-template-rows: auto auto;
     grid-template-areas:
       'portrait'
-      'slot'
-      'navbar';
+      'slot';
     padding: var(--mobile-border);
     background-color: var(--surface-1);
     overflow-y: auto;

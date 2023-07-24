@@ -27,7 +27,7 @@
     width: -moz-available;
     width: -webkit-fill-available;
     width: fill-available;
-    z-index: 30;
+    z-index: 50;
     background-color: var(--surface-1);
   }
   .loader {
