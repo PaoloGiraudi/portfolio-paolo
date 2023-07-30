@@ -25,6 +25,7 @@
 
   p {
     font-size: var(--font-size-3);
+    max-width: var(--size-content-1);
     text-wrap: balance;
   }
 
