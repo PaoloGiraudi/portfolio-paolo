@@ -67,8 +67,8 @@
     padding-block-start: 20dvh;
     background: linear-gradient(
       to top right,
-      var(--surface-1) 70%,
-      transparent 70%
+      var(--surface-1) 75%,
+      transparent 75%
     );
   }
 
