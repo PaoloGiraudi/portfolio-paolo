@@ -5,11 +5,7 @@ const cursorSizes: Record<string, number> = {
   shrink: 0
 };
 
-export const animateCursor = (
-  e: MouseEvent,
-  isHovering: boolean,
-  size?: string | null
-) => {
+export const animateCursor = (e: MouseEvent, isHovering: boolean, size?: string | null) => {
   const cursorSquare = document.querySelector('.square') as HTMLElement;
   const cursorPointer = document.querySelector('.circle') as HTMLElement;
 

@@ -42,13 +42,6 @@
     display: none;
   }
 
-  @media (prefers-color-scheme: dark) {
-    img {
-      opacity: 0.5;
-      filter: grayscale(1);
-    }
-  }
-
   @media (min-width: 62rem) {
     section {
       grid-area: portrait;

@@ -5,13 +5,7 @@
   import { onMouseMove } from '$lib/utils/on-mouse-move';
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
-  import {
-    Cursor,
-    LoadingOverlay,
-    Navbar,
-    Window,
-    Menu
-  } from '$lib/components';
+  import { Cursor, LoadingOverlay, Navbar, Window, Menu } from '$lib/components';
   import { navigating } from '$app/stores';
   import { menu } from '$lib/stores/menu';
 
@@ -65,11 +59,7 @@
     padding-block-start: var(--size-8);
     z-index: 10;
     padding-block-start: 20dvh;
-    background: linear-gradient(
-      to top right,
-      var(--surface-1) 75%,
-      transparent 75%
-    );
+    background: linear-gradient(to top right, var(--surface-1) 75%, transparent 75%);
   }
 
   @media (min-width: 62rem) {
@@ -84,6 +74,7 @@
     }
 
     main {
+      background: var(--surface-1);
       grid-area: slot;
       padding-block-start: var(--size-10);
       align-items: unset;

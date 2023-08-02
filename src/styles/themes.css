@@ -66,7 +66,7 @@ html {
   }
 }
 
-[color-scheme='dark'] {
+[data-theme='dark'] {
   color-scheme: dark;
   --frame: var(--frame-dark);
   --brand: var(--brand-dark);
@@ -82,7 +82,7 @@ html {
   --color-danger: var(--color-danger-dark);
 }
 
-[color-scheme='light'] {
+[data-theme='light'] {
   color-scheme: light;
 
   --frame: var(--frame-light);
