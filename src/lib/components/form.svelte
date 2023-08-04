@@ -11,13 +11,7 @@
 <form method="POST" use:form use:enhance={submit}>
   <div class="url-field">
     <label for="website-url">Your website</label>
-    <input
-      type="text"
-      id="website-url"
-      name="url"
-      tabindex="-1"
-      autocomplete="off"
-    />
+    <input type="text" id="website-url" name="url" tabindex="-1" autocomplete="off" />
   </div>
   <slot />
 </form>

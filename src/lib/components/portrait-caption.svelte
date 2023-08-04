@@ -1,8 +1,6 @@
 <small>
   Cover art by
-  <a href="https://www.g-studio.design/" target="_blank" rel="noreferrer">
-    Greta
-  </a>
+  <a href="https://www.g-studio.design/" target="_blank" rel="noreferrer"> Greta </a>
 </small>
 
 <style>

@@ -7,14 +7,11 @@
 <header>
   <h1>
     <span class="intro-text">Hello, I am</span>
-    <span class="name" data-cursor="grow" data-content="Paolo Giraudi.">
-      Paolo Giraudi.
-    </span>
+    <span class="name" data-cursor="grow" data-content="Paolo Giraudi."> Paolo Giraudi. </span>
   </h1>
 </header>
 <p class="subtitle">
-  I am a full stack designer based in Sweden. I like boxy designs and pastel
-  colors.
+  I am a full stack designer based in Sweden. I like boxy designs and pastel colors.
 </p>
 <Button href="/work">Check me out</Button>
 
@@ -53,11 +50,7 @@
 
   @supports (-webkit-text-stroke: 4px transparent) {
     .name {
-      background: linear-gradient(
-        75deg,
-        var(--accent-1) 0%,
-        var(--accent-2) 100%
-      );
+      background: linear-gradient(75deg, var(--accent-1) 0%, var(--accent-2) 100%);
       color: var(--surface-1);
       background-clip: text;
       -webkit-background-clip: text;
@@ -80,11 +73,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      background: linear-gradient(
-        75deg,
-        var(--accent-1) 0%,
-        var(--accent-2) 100%
-      );
+      background: linear-gradient(75deg, var(--accent-1) 0%, var(--accent-2) 100%);
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;

@@ -4,6 +4,11 @@ body {
   background-color: var(--surface-1);
 }
 
+html[data-theme='dark'] img {
+  opacity: 0.5;
+  filter: grayscale(0.7);
+}
+
 ::selection {
   background: rgba(90, 170, 166, 0.5);
 }

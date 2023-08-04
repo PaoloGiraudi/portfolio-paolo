@@ -34,7 +34,7 @@
 
   img {
     object-fit: cover;
-    background-color: var(--surface-1);
+    background-color: var(--surface-2);
   }
 
   .right,
@@ -66,7 +66,7 @@
       display: block;
       width: 25%;
       position: absolute;
-      background-color: var(--surface-2);
+      background-color: var(--surface-1);
       height: calc(100% + var(--border-size-2) * 2);
       top: calc(var(--border-size-2) * -1);
       transition: transform 450ms var(--ease-in-out-3);
@@ -87,12 +87,6 @@
     }
     figure:hover > .right {
       transform: translateX(80%);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      img {
-        filter: brightness(0.4);
-      }
     }
   }
 </style>

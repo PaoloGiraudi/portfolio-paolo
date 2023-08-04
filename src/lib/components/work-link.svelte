@@ -4,12 +4,7 @@
 </script>
 
 <li>
-  <a
-    href={project.website}
-    target="_blank"
-    data-cursor="shrink"
-    rel="noreferrer"
-  >
+  <a href={project.website} target="_blank" data-cursor="shrink" rel="noreferrer">
     {project.title}
   </a>
   <!-- <a href="work/{project.slug}" data-cursor="shrink">

@@ -1,14 +1,7 @@
 <script lang="ts">
   import { applyAction } from '$app/forms';
   import { goto } from '$app/navigation';
-  import {
-    Button,
-    Form,
-    LoadingOverlay,
-    MetaTitle,
-    PageHeading,
-    Field
-  } from '$lib/components';
+  import { Button, Form, LoadingOverlay, MetaTitle, PageHeading, Field } from '$lib/components';
   import type { SubmitFunction } from '@sveltejs/kit';
 
   let loading = false;
@@ -29,19 +22,9 @@
 <MetaTitle title="Contact me" />
 <PageHeading header="Questions?">
   You can also find me on
-  <a
-    href="http://github.com/PaoloGiraudi"
-    target="__blank"
-    data-cursor="shrink"
-  >
-    Github
-  </a>
+  <a href="http://github.com/PaoloGiraudi" target="__blank" data-cursor="shrink"> Github </a>
   and
-  <a
-    href="https://linkedin.com/in/paologiraudi/"
-    target="__blank"
-    data-cursor="shrink"
-  >
+  <a href="https://linkedin.com/in/paologiraudi/" target="__blank" data-cursor="shrink">
     LinkedIn
   </a>.
 </PageHeading>

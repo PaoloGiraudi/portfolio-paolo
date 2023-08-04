@@ -4,6 +4,7 @@
   import { menu } from '$lib/stores/menu';
   import { isLast } from '$lib/utils/is-last';
   import { slide } from 'svelte/transition';
+  import ThemeToggle from './theme-toggle.svelte';
 
   $: path = $page.route.id;
 </script>
@@ -23,6 +24,7 @@
         <p>|</p>
       {/if}
     {/each}
+    <ThemeToggle />
   </nav>
 {/if}
 
@@ -60,7 +62,7 @@
     nav {
       justify-content: flex-end;
       flex-direction: row;
-      padding-inline-end: var(--size-6);
+      padding-inline-end: var(--size-3);
       grid-area: navbar;
       position: sticky;
     }
