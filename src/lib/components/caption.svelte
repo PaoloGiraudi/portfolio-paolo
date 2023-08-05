@@ -1,6 +1,11 @@
+<script lang="ts">
+  import type { PageParentData } from '../../routes/$types';
+  export let data: PageParentData['caption'];
+</script>
+
 <small>
-  Cover art by
-  <a href="https://www.g-studio.design/" target="_blank" rel="noreferrer"> Greta </a>
+  {data.text}
+  <a href={data.link.href} target="_blank" rel="noreferrer">{data.link.text}</a>
 </small>
 
 <style>

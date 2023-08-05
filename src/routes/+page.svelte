@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Button, MetaTitle } from '$lib/components';
-  import PageHeading from '$lib/components/page-heading.svelte';
+  // import PageHeading from '$lib/components/page-heading.svelte';
 </script>
 
 <MetaTitle title="Official website" />

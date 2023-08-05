@@ -8,11 +8,16 @@
   import { Cursor, LoadingOverlay, Navbar, Window, Menu } from '$lib/components';
   import { navigating } from '$app/stores';
   import { menu } from '$lib/stores/menu';
+  import type { LayoutData } from './$types';
+  import { theme } from '$lib/stores/theme';
 
   let loading = true;
   let isDesktop: boolean;
+  export let data: LayoutData;
 
+  $theme = data.theme;
   $: !isDesktop && $navigating && menu.set(false);
+  $: browser && (document.documentElement.dataset.theme = $theme);
 
   onMount(() => {
     loading = !browser;
