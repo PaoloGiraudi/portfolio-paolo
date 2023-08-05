@@ -9,5 +9,5 @@ export { default as Field } from './field.svelte';
 export { default as WorkLink } from './work-link.svelte';
 export { default as WorkList } from './work-list.svelte';
 export { default as Window } from './window.svelte';
-export { default as PortraitCaption } from './portrait-caption.svelte';
+export { default as Caption } from './caption.svelte';
 export { default as Menu } from './menu.svelte';

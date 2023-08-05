@@ -1,20 +1,35 @@
 <script lang="ts">
-  import { setTheme, theme } from '$lib/stores/theme';
+  import { browser } from '$app/environment';
+  import { applyAction, enhance } from '$app/forms';
+  import { theme, type Theme } from '$lib/stores/theme';
   import Moon from './moon.svelte';
   import Sun from './sun.svelte';
+
+  const prefersDarkMode = browser && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  let newTheme: Theme;
+  $: newTheme = $theme === 'light' ? 'dark' : 'light';
 </script>
 
-<button
-  data-cursor="shrink"
-  aria-label="Switch theme"
-  on:click={() => setTheme($theme === 'light' ? 'dark' : 'light')}
+<form
+  method="POST"
+  action="/?/change-theme"
+  use:enhance={async () => {
+    $theme = newTheme;
+    return async ({ result }) => {
+      await applyAction(result);
+    };
+  }}
 >
-  {#if $theme === 'light'}
-    <Moon />
-  {:else}
-    <Sun />
-  {/if}
-</button>
+  <input name="theme" value={newTheme} hidden />
+  <button data-cursor="shrink" aria-label="Switch theme">
+    {#if $theme === 'dark' || ($theme === 'auto' && prefersDarkMode)}
+      <Sun />
+    {:else}
+      <Moon />
+    {/if}
+  </button>
+</form>
 
 <style>
   button {

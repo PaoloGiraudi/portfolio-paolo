@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import Caption from './caption.svelte';
 </script>
 
 <section>
@@ -13,7 +14,7 @@
     />
     <div class="right">
       {#if $page.data.caption}
-        <svelte:component this={$page.data.caption} />
+        <Caption data={$page.data.caption} />
       {/if}
     </div>
   </figure>
