@@ -5,17 +5,16 @@
   import { isLast } from '$lib/utils/is-last';
   import { slide } from 'svelte/transition';
   import ThemeToggle from './theme-toggle.svelte';
-
-  $: path = $page.route.id;
 </script>
 
 {#if $menu}
   <nav transition:slide={{ axis: 'x' }}>
     {#each routes as route}
+      {@const active = $page.url.pathname === route.href ? 'page' : null}
       <a
         data-cursor="shrink"
         href={route.href}
-        class:active={path === `${route.href}/[slug]` || path === route.href}
+        aria-current={active}
         data-sveltekit-preload-data="hover"
       >
         {route.name}
@@ -49,13 +48,16 @@
     font-family: var(--font-serif);
     font-size: var(--font-size-7);
     text-decoration: none;
+    position: relative;
   }
 
-  a.active {
-    text-decoration-line: underline;
-    text-decoration-thickness: var(--border-size-3);
-    text-decoration-color: var(--accent-2);
-    text-underline-offset: var(--size-1);
+  a[aria-current='page']::before {
+    content: '';
+    position: absolute;
+    bottom: var(--size-1);
+    height: var(--border-size-3);
+    width: 100%;
+    background-color: var(--accent-2);
   }
 
   @media (min-width: 62rem) {
@@ -75,8 +77,9 @@
       font-size: var(--font-size-4);
     }
 
-    a.active {
-      text-decoration-thickness: var(--border-size-2);
+    a[aria-current='page']::before {
+      height: var(--border-size-2);
+      view-transition-name: active-page;
     }
   }
 </style>

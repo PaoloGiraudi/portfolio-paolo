@@ -10,6 +10,7 @@
   import { menu } from '$lib/stores/menu';
   import type { LayoutData } from './$types';
   import { theme } from '$lib/stores/theme';
+  import ViewTransition from '$lib/components/view-transition.svelte';
 
   let loading = true;
   let isDesktop: boolean;
@@ -28,6 +29,7 @@
 
 <svelte:window on:mousemove={onMouseMove} />
 
+<ViewTransition />
 <div id="layout">
   <LoadingOverlay {loading}>
     <Cursor />

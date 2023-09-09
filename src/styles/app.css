@@ -95,6 +95,11 @@ textarea:focus-visible {
   margin-top: var(--flow-spacing, var(--size-3));
 }
 
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 100ms;
+}
+
 @media (min-width: 62rem) {
   * {
     cursor: none;
