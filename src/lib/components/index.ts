@@ -11,3 +11,4 @@ export { default as WorkList } from './work-list.svelte';
 export { default as Window } from './window.svelte';
 export { default as Caption } from './caption.svelte';
 export { default as Menu } from './menu.svelte';
+export { default as ViewTransition } from './view-transition.svelte';
