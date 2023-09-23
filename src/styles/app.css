@@ -97,7 +97,7 @@ textarea:focus-visible {
 
 ::view-transition-old(root),
 ::view-transition-new(root) {
-  animation-duration: 100ms;
+  animation-duration: 0ms;
 }
 
 @media (min-width: 62rem) {
@@ -108,6 +108,11 @@ textarea:focus-visible {
   html,
   body {
     overflow: hidden;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 100ms;
   }
 
   body::before,
