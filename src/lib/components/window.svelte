@@ -22,6 +22,7 @@
 
 <style>
   section {
+    opacity: 0.2;
     overflow: hidden;
     grid-area: 1 / 1 / -1 / -1;
   }
@@ -45,9 +46,10 @@
 
   @media (min-width: 62rem) {
     section {
-      grid-area: portrait;
-      place-items: center;
+      opacity: 1;
       display: grid;
+      place-items: center;
+      flex-basis: 50%;
       min-height: calc(100vh - var(--desktop-border) * 2);
     }
     figure {
