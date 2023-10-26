@@ -6,7 +6,7 @@
   <title>Paolo Giraudi | {title}</title>
   <meta
     name="description"
-    content="Personal portfolio of Paolo Giraudi. Frontend developer based in the cold and dark Sweden"
+    content="Personal portfolio of Paolo Giraudi. Software developer based in the cold and dark Sweden"
   />
   <meta
     name="robots"

@@ -1,23 +1,34 @@
 <script lang="ts">
-  import { Button, MetaTitle } from '$lib/components';
-  // import PageHeading from '$lib/components/page-heading.svelte';
+  import { MetaTitle } from '$lib/components';
+  import { Projects, Project } from '$lib/components';
+  import type { PageData } from './$types';
+  export let data: PageData;
 </script>
 
 <MetaTitle title="Official website" />
-<header>
-  <h1>
-    <span class="intro-text">Hello, I am</span>
-    <span class="name" data-cursor="grow" data-content="Paolo Giraudi."> Paolo Giraudi. </span>
-  </h1>
-</header>
-<p class="subtitle">
-  I am a full stack designer based in Sweden. I like boxy designs and pastel colors.
-</p>
-<Button href="/work">Check me out</Button>
-
-<!-- <PageHeading header="My latest projects" /> -->
+<section>
+  <header>
+    <h1>
+      <span class="intro-text">Hello, I am</span>
+      <span class="name" data-cursor="grow" data-content="Paolo Giraudi."> Paolo Giraudi. </span>
+    </h1>
+  </header>
+  <p class="subtitle">
+    I am a software developer based in Sweden. I like boxy web designs and pastel colors.
+  </p>
+  {#if data.projects}
+    <Projects>
+      {#each data.projects as project}
+        <Project name={project.name} description={project.description} url={project.url} />
+      {/each}
+    </Projects>
+  {/if}
+</section>
 
 <style>
+  section {
+    padding-inline: var(--size-4);
+  }
   header {
     padding-block-end: var(--size-4);
   }

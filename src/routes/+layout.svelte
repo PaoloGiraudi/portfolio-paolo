@@ -1,43 +1,38 @@
 <script lang="ts">
-  import '../styles/themes.css';
+  import '../styles/fonts.css';
   import '../styles/reset.css';
+  import '../styles/props.css';
+  import '../styles/themes.css';
   import '../styles/app.css';
   import { onMouseMove } from '$lib/utils/on-mouse-move';
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
-  import { Cursor, LoadingOverlay, Navbar, Window, Menu } from '$lib/components';
-  import { navigating } from '$app/stores';
-  import { menu } from '$lib/stores/menu';
+  import { Cursor, LoadingOverlay, Window } from '$lib/components';
   import type { LayoutData } from './$types';
   import { theme } from '$lib/stores/theme';
-  import ViewTransition from '$lib/components/view-transition.svelte';
+  import { ThemeToggle, Footer } from '$lib/components';
 
   let loading = true;
-  let isDesktop: boolean;
   export let data: LayoutData;
 
   $theme = data.theme;
-  $: !isDesktop && $navigating && menu.set(false);
   $: browser && (document.documentElement.dataset.theme = $theme);
 
   onMount(() => {
     loading = !browser;
-    isDesktop = window.matchMedia('(min-width: 62rem)').matches;
-    isDesktop && menu.set(true);
   });
 </script>
 
 <svelte:window on:mousemove={onMouseMove} />
 
-<ViewTransition />
 <div id="layout">
   <LoadingOverlay {loading}>
+    <ThemeToggle />
     <Cursor />
-    <Menu />
-    <Navbar />
     <Window />
     <main>
       <slot />
+      <Footer />
     </main>
   </LoadingOverlay>
 </div>
@@ -62,7 +57,6 @@
     overflow-y: auto;
     grid-area: 1 / 1 / 3 / -1;
     max-inline-size: 100%;
-    padding-inline-start: var(--size-4);
     padding-block-start: var(--size-8);
     z-index: 10;
     padding-block-start: 20dvh;
@@ -71,21 +65,18 @@
 
   @media (min-width: 62rem) {
     div {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: var(--navbar-height) auto;
-      grid-template-areas:
-        'portrait navbar'
-        'portrait slot';
+      display: flex;
       padding: var(--desktop-border);
     }
 
     main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       background: var(--surface-1);
-      grid-area: slot;
-      padding-block-start: var(--size-10);
+      flex-basis: 50%;
       align-items: unset;
-      margin-bottom: var(--navbar-height);
+      padding-block-start: 0;
     }
   }
 </style>

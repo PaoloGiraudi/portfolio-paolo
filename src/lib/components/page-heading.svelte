@@ -11,7 +11,6 @@
 
 <style>
   .page-heading {
-    grid-area: heading;
     display: flex;
     flex-direction: column;
     row-gap: var(--size-1);
