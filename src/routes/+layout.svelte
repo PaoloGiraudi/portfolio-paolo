@@ -1,7 +1,7 @@
 <script lang="ts">
+  import '../styles/props.css';
   import '../styles/fonts.css';
   import '../styles/reset.css';
-  import '../styles/props.css';
   import '../styles/themes.css';
   import '../styles/app.css';
   import { onMouseMove } from '$lib/utils/on-mouse-move';
@@ -11,6 +11,10 @@
   import type { LayoutData } from './$types';
   import { theme } from '$lib/stores/theme';
   import { ThemeToggle, Footer } from '$lib/components';
+  import { dev } from '$app/environment';
+  import { inject } from '@vercel/analytics';
+
+  inject({ mode: dev ? 'development' : 'production' });
 
   let loading = true;
   export let data: LayoutData;
