@@ -1,5 +1,5 @@
 <script>
-  import { Github, Linkedin } from '$lib/icons';
+  import { Github, Linkedin, Email } from '$lib/icons';
 </script>
 
 <footer>
@@ -20,6 +20,15 @@
     data-cursor="shrink"
   >
     <Github />
+  </a>
+  <a
+    aria-label="Send me an email"
+    href="mailto:me@paologiraudi.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    data-cursor="shrink"
+  >
+    <Email />
   </a>
 </footer>
 
