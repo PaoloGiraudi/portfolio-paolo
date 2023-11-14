@@ -957,15 +957,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/analytics@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "@vercel/analytics@npm:1.1.1"
-  dependencies:
-    server-only: "npm:^0.0.1"
-  checksum: 218f94620b6dd0349960caf170c7c86872d67b0ef90ac127cd6e6a8f018c9118fbf21a3adf9314ca93d72c1599b8b77ac0e4cb8390ac33aa5fec555d749b3308
-  languageName: node
-  linkType: hard
-
 "@vercel/nft@npm:^0.23.0":
   version: 0.23.1
   resolution: "@vercel/nft@npm:0.23.1"
@@ -3372,7 +3363,6 @@ __metadata:
     "@sveltejs/kit": "npm:^1.27.2"
     "@typescript-eslint/eslint-plugin": "npm:^6.9.1"
     "@typescript-eslint/parser": "npm:^6.9.1"
-    "@vercel/analytics": "npm:^1.1.1"
     dotenv: "npm:^16.3.1"
     drizzle-kit: "npm:^0.19.13"
     drizzle-orm: "npm:^0.28.6"
@@ -3386,6 +3376,7 @@ __metadata:
     tsx: "npm:^3.14.0"
     typescript: "npm:^5.2.2"
     vite: "npm:^4.5.0"
+    web-vitals: "npm:^3.5.0"
   languageName: unknown
   linkType: soft
 
@@ -3645,13 +3636,6 @@ __metadata:
   bin:
     semver: bin/semver.js
   checksum: 5160b06975a38b11c1ab55950cb5b8a23db78df88275d3d8a42ccf1f29e55112ac995b3a26a522c36e3b5f76b0445f1eef70d696b8c7862a2b4303d7b0e7609e
-  languageName: node
-  linkType: hard
-
-"server-only@npm:^0.0.1":
-  version: 0.0.1
-  resolution: "server-only@npm:0.0.1"
-  checksum: 4704f0ef85da0be981af6d4ed8e739d39bcfd265b9c246a684060acda5642d0fdc6daffc2308e71e2682c5f508090978802eae0a77623c9b90a49f9ae68048d6
   languageName: node
   linkType: hard
 
@@ -4165,6 +4149,13 @@ __metadata:
   version: 3.2.1
   resolution: "web-streams-polyfill@npm:3.2.1"
   checksum: 70ed6b5708e14afa2ab699221ea197d7c68ec0c8274bbe0181aecc5ba636ca27cbd383d2049f0eb9d529e738f5c088825502b317f3df24d18a278e4cc9a10e8b
+  languageName: node
+  linkType: hard
+
+"web-vitals@npm:^3.5.0":
+  version: 3.5.0
+  resolution: "web-vitals@npm:3.5.0"
+  checksum: 9409011cf6cf405796aba919cd0f6957eb59f1170481f948e4f70e34a0cc461103accc8ce80fa0ceaf3c68d4c8d2b92788454323cfda08722eaa1ec9c36159d5
   languageName: node
   linkType: hard
 
