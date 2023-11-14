@@ -3,7 +3,6 @@ export { default as LoadingOverlay } from './loading-overlay.svelte';
 export { default as MetaTitle } from './meta-title.svelte';
 export { default as PageHeading } from './page-heading.svelte';
 export { default as Window } from './window.svelte';
-export { default as Caption } from './caption.svelte';
 export { default as Project } from './project.svelte';
 export { default as Projects } from './projects.svelte';
 export { default as Footer } from './footer.svelte';

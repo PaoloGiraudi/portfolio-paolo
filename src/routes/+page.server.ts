@@ -1,7 +1,6 @@
 import { isValidTheme } from '$lib/stores/theme';
 import { type Actions, fail } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
-import { projects } from '$lib/server/schema';
 import { db } from '$lib/server/database';
 
 const ONE_YEAR = 60 * 60 * 24 * 365;
@@ -25,7 +24,16 @@ export const actions: Actions = {
 };
 
 export const load: PageServerLoad = async () => {
+  const projects = await db.query.projects.findMany({
+    columns: {
+      id: true,
+      name: true,
+      description: true,
+      url: true
+    },
+    orderBy: (projects, { desc }) => [desc(projects.id)]
+  });
   return {
-    projects: (await db.select().from(projects)).reverse()
+    projects
   };
 };

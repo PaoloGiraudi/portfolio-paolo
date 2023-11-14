@@ -1,21 +1,23 @@
 <script lang="ts">
-  import { page } from '$app/stores';
-  import Caption from './caption.svelte';
+  import { CldImage } from 'svelte-cloudinary';
 </script>
 
 <section>
   <figure>
     <div class="left" />
-    <img
-      src={$page.data.src}
-      alt={$page.data.alt}
-      draggable="false"
-      data-cursor={$page.data.cursor}
+    <CldImage
+      width={1280}
+      height={1050}
+      src="portfolio/portrait"
+      alt="Description of my image"
+      crop="crop"
+      gravity="center"
     />
     <div class="right">
-      {#if $page.data.caption}
-        <Caption data={$page.data.caption} />
-      {/if}
+      <small>
+        Cover art by
+        <a href="https://www.g-studio.design/" target="_blank" rel="noreferrer">Greta</a>
+      </small>
     </div>
   </figure>
 </section>
@@ -34,16 +36,16 @@
     mix-blend-mode: var(--blend-mode);
   }
 
-  img {
+  :global(img) {
     object-fit: cover;
     background-color: var(--surface-2);
+    height: 35%;
   }
 
   .right,
   .left {
     display: none;
   }
-
   @media (min-width: 62rem) {
     section {
       opacity: 1;
@@ -59,9 +61,8 @@
       border-bottom: var(--border-size-2) var(--text-1) solid;
     }
 
-    img {
+    :global(img) {
       height: 100%;
-      width: 100%;
     }
 
     .left,
@@ -90,6 +91,17 @@
     }
     figure:hover > .right {
       transform: translateX(80%);
+    }
+
+    small {
+      position: absolute;
+      left: -6.25rem;
+      font-size: var(--font-size-0);
+      bottom: var(--size-1);
+    }
+
+    small > a {
+      font-weight: var(--font-weight-5);
     }
   }
 </style>
