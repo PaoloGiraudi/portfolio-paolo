@@ -8,7 +8,12 @@ const config = {
 
   preprocess: vitePreprocess(),
   kit: {
-    adapter: adapter()
+    adapter: adapter(),
+    csp: {
+      directives: {
+        "connect-src": ["vitals.vercel-insights.com"]
+      }
+    }
   },
 };
 
