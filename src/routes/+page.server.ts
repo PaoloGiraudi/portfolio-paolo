@@ -3,6 +3,11 @@ import { type Actions, fail } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import { projects } from '$lib/server/schema';
 import { db } from '$lib/server/database';
+import type { Config } from '@sveltejs/adapter-vercel';
+
+export const config: Config = {
+  runtime: 'edge'
+};
 
 const ONE_YEAR = 60 * 60 * 24 * 365;
 

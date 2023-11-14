@@ -8,7 +8,15 @@ const config = {
 
   preprocess: vitePreprocess(),
   kit: {
-    adapter: adapter()
+    adapter: adapter(),
+    csp: {
+      directives: {
+        "connect-src": ["self", "vitals.vercel-insights.com"]
+      },
+      reportOnly: {
+        'report-to': ["vitals.vercel-insights.com"]
+      }
+    },
   },
 };
 
