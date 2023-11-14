@@ -11,13 +11,20 @@
   import type { LayoutData } from './$types';
   import { theme } from '$lib/stores/theme';
   import { ThemeToggle, Footer } from '$lib/components';
-  import { dev } from '$app/environment';
-  import { inject } from '@vercel/analytics';
+  import { webVitals } from '$lib/utils/vitals';
+  import { page } from '$app/stores';
 
-  inject({ mode: dev ? 'development' : 'production' });
+  export let data: LayoutData;
 
   let loading = true;
-  export let data: LayoutData;
+
+  $: if (browser && data?.analyticsId) {
+    webVitals({
+      path: $page.url.pathname,
+      params: $page.params,
+      analyticsId: data.analyticsId
+    });
+  }
 
   $theme = data.theme;
   $: browser && (document.documentElement.dataset.theme = $theme);
