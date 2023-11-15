@@ -7,10 +7,9 @@
   import { onMouseMove } from '$lib/utils/on-mouse-move';
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
-  import { Cursor, LoadingOverlay, Window } from '$lib/components';
+  import { Cursor, LoadingOverlay, Window, Footer, ThemeToggle } from '$lib/components';
   import type { LayoutData } from './$types';
   import { theme } from '$lib/stores/theme';
-  import { ThemeToggle, Footer } from '$lib/components';
   import { webVitals } from '$lib/utils/vitals';
   import { page } from '$app/stores';
 
