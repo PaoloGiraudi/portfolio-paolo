@@ -9,9 +9,9 @@
   import { browser } from '$app/environment';
   import { Cursor, LoadingOverlay, Window, Footer, ThemeToggle } from '$lib/components';
   import type { LayoutData } from './$types';
-  import { theme } from '$lib/stores/theme';
   import { webVitals } from '$lib/utils/vitals';
   import { page } from '$app/stores';
+  import { theme, type Theme } from '$lib/stores/theme';
 
   export let data: LayoutData;
 
@@ -25,10 +25,8 @@
     });
   }
 
-  $theme = data.theme;
-  $: browser && (document.documentElement.dataset.theme = $theme);
-
   onMount(() => {
+    theme.set((document.documentElement.dataset.theme as Theme) || 'light');
     loading = !browser;
   });
 </script>
