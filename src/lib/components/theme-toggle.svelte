@@ -1,35 +1,27 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
-  import { applyAction, enhance } from '$app/forms';
+  import { Moon, Sun } from '$lib/icons';
   import { theme, type Theme } from '$lib/stores/theme';
-  import { Moon, Sun } from '$lib/icons/';
 
-  const prefersDarkMode = browser && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const setTheme = (newTheme: Theme) => {
+    theme.set(newTheme);
+    localStorage.setItem('theme', newTheme);
+    document.documentElement.dataset.theme = newTheme;
+  };
 
-  let newTheme: Theme;
-  $: newTheme = $theme === 'light' ? 'dark' : 'light';
+  const toggleTheme = (): void => {
+    const newTheme: Theme = $theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+  };
 </script>
 
 <div>
-  <form
-    method="POST"
-    action="/?/change-theme"
-    use:enhance={async () => {
-      $theme = newTheme;
-      return async ({ result }) => {
-        await applyAction(result);
-      };
-    }}
-  >
-    <input name="theme" value={newTheme} hidden />
-    <button data-cursor="shrink" aria-label="Switch theme">
-      {#if $theme === 'dark' || ($theme === 'auto' && prefersDarkMode)}
-        <Sun />
-      {:else}
-        <Moon />
-      {/if}
-    </button>
-  </form>
+  <button data-cursor="shrink" aria-label="toggle theme" on:click={toggleTheme}>
+    {#if $theme === 'dark'}
+      <Sun />
+    {:else}
+      <Moon />
+    {/if}
+  </button>
 </div>
 
 <style>
