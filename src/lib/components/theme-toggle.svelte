@@ -44,11 +44,6 @@
     color: var(--text-2);
   }
 
-  :global(svg) {
-    width: var(--font-size-4);
-    height: var(--font-size-4);
-  }
-
   @media (min-width: 62rem) {
     div {
       right: var(--desktop-border);
