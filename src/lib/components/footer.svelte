@@ -37,7 +37,9 @@
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    bottom: var(--desktop-border);
+    bottom: var(--mobile-border);
+    bottom: var(--mobile-border);
+    gap: var(--size-1);
     padding: var(--size-2);
   }
   a {
@@ -50,17 +52,9 @@
   @media (min-width: 62rem) {
     footer {
       position: absolute;
-      display: flex;
       bottom: var(--desktop-border);
       right: var(--desktop-border);
-      padding: var(--size-2);
-    }
-    a {
-      display: grid;
-      place-items: center;
-      color: var(--text-2);
-      width: var(--size-7);
-      height: var(--size-7);
+      gap: 0;
     }
   }
 </style>
