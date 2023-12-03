@@ -4,7 +4,7 @@ export const onMouseMove = (e: MouseEvent) => {
   const target = e.target as HTMLElement;
 
   const hoverElement = target?.closest('[data-cursor]') as HTMLElement;
-  const isHovering = hoverElement !== null;
+  const isHovering = hoverElement !== undefined;
   const cursorSize = hoverElement?.dataset?.cursor;
 
   animateCursor(e, isHovering, cursorSize);
