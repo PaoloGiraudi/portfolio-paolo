@@ -56,7 +56,6 @@
     grid-template-areas:
       'portrait'
       'slot';
-    padding: var(--mobile-border);
     background-color: var(--surface-1);
     overflow-y: auto;
   }
@@ -74,7 +73,6 @@
   @media (min-width: 62rem) {
     div {
       display: flex;
-      padding: var(--desktop-border);
     }
 
     main {
