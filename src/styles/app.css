@@ -82,7 +82,7 @@ svg {
   height: var(--font-size-5);
 }
 
-@media (min-width: 62rem) {
+@media (min-width: 50rem) {
   * {
     cursor: none;
   }

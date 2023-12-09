@@ -1,33 +1,40 @@
 <script lang="ts">
-  import { Projects, Project, MetaTitle } from '$lib/components';
+  import { Projects, Project } from '$lib/components';
+  import Footer from '$lib/components/footer.svelte';
   import type { PageData } from './$types';
   export let data: PageData;
 </script>
 
-<MetaTitle title="Official website" />
-<section>
+<div>
   <header>
     <h1>
       <span class="intro-text">Hello, I am</span>
-      <span class="name" data-cursor="grow" data-content="Paolo Giraudi."> Paolo Giraudi. </span>
+      <span class="name" data-cursor="grow" data-content="Paolo Giraudi.">Paolo Giraudi.</span>
     </h1>
   </header>
   <p class="subtitle">
     I am a software developer based in Sweden. I like boxy web designs and pastel colors.
   </p>
-  {#if data.projects}
-    <Projects>
-      {#each data.projects as project}
-        <Project name={project.name} description={project.description} url={project.url} />
-      {/each}
-    </Projects>
-  {/if}
-</section>
+  <Projects>
+    {#each data.projects as project}
+      <Project name={project.name} description={project.description} url={project.url} />
+    {/each}
+  </Projects>
+  <Footer />
+</div>
 
 <style>
-  section {
+  div {
     padding-inline: var(--size-4);
+    grid-area: 1 / 1 / 3 / -1;
+    height: 100%;
+    max-inline-size: 100%;
+    overflow-y: auto;
+    z-index: 10;
+    padding-block-start: 20dvh;
+    background: linear-gradient(to top right, var(--surface-1) 75%, transparent 75%);
   }
+
   header {
     padding-block-end: var(--size-4);
   }
@@ -69,7 +76,10 @@
     }
   }
 
-  @media (min-width: 62rem) {
+  @media (min-width: 50rem) {
+    div {
+      flex-basis: 50%;
+    }
     h1,
     .subtitle {
       text-align: start;
