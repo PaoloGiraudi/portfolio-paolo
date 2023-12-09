@@ -1,9 +1,4 @@
 <script lang="ts">
-  import '../styles/props.css';
-  import '../styles/fonts.css';
-  import '../styles/reset.css';
-  import '../styles/themes.css';
-  import '../styles/app.css';
   import { onMouseMove } from '$lib/utils/on-mouse-move';
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
@@ -48,6 +43,16 @@
 </LoadingOverlay>
 
 <style>
+  @import 'open-props/fonts.min.css';
+  @import 'open-props/gray-oklch.min.css';
+  @import 'open-props/easings.min.css';
+  @import 'open-props/borders.min.css';
+  @import 'open-props/sizes.min.css';
+  @import '../styles/fonts.css';
+  @import '../styles/reset.css';
+  @import '../styles/themes.css';
+  @import '../styles/app.css';
+
   main {
     padding: var(--mobile-border);
     height: 100dvh;
