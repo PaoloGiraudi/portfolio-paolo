@@ -3677,6 +3677,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"open-props@npm:^1.6.16":
+  version: 1.6.16
+  resolution: "open-props@npm:1.6.16"
+  checksum: 5ae29d56855dc9b33259d4257cb4f24109a28bc4db1fdb115eb2664347c0c391bbfd7380cd0d7b16e10a131c366aa3c01afa6ba6fba355df40382e9d4acbc526
+  languageName: node
+  linkType: hard
+
 "optionator@npm:^0.9.3":
   version: 0.9.3
   resolution: "optionator@npm:0.9.3"
@@ -3812,6 +3819,7 @@ __metadata:
     eslint: "npm:^8.55.0"
     eslint-config-prettier: "npm:^9.1.0"
     eslint-plugin-svelte: "npm:^2.35.1"
+    open-props: "npm:^1.6.16"
     prettier: "npm:^3.1.0"
     prettier-plugin-svelte: "npm:^3.1.2"
     svelte: "npm:^4.2.8"
