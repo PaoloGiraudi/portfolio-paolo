@@ -1,7 +1,43 @@
 html,
 body {
   overflow: auto;
-  background-color: var(--surface-1);
+  position: relative;
+}
+
+html::before,
+html:after,
+body:before,
+body:after {
+  z-index: 100;
+  content: '';
+  position: fixed;
+  background-color: var(--frame);
+}
+
+html::before {
+  height: var(--mobile-border);
+  top: 0;
+  width: 100%;
+}
+
+html::after {
+  height: var(--mobile-border);
+  bottom: 0;
+  width: 100%;
+}
+
+body::before {
+  width: var(--mobile-border);
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+body::after {
+  width: var(--mobile-border);
+  top: 0;
+  right: 0;
+  height: 100%;
 }
 
 html[data-theme='dark'] img {
@@ -13,39 +49,6 @@ html[data-theme='dark'] img {
   background: rgba(90, 170, 166, 0.5);
 }
 
-body::before,
-html::before,
-body::after,
-html::after {
-  content: '';
-  position: fixed;
-  background-color: var(--frame);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: var(--mobile-border);
-  z-index: 100;
-}
-
-html::before {
-  width: var(--mobile-border);
-  height: 100%;
-}
-
-body::after {
-  top: unset;
-  left: 0;
-  bottom: 0;
-}
-
-html::after {
-  left: unset;
-  right: 0;
-  top: 0;
-  width: var(--mobile-border);
-  height: 100%;
-}
-
 h1,
 h2,
 h3,
@@ -55,14 +58,6 @@ p,
 li {
   color: var(--text-1);
   font-family: var(--font-serif);
-}
-
-p {
-  font-size: var(--font-size-3);
-}
-
-p[data-hidden] {
-  display: none;
 }
 
 a {
@@ -82,30 +77,12 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-input:focus-visible,
-textarea:focus-visible {
-  outline: none;
-}
-
-.flow-h > * + * {
-  margin-left: var(--flow-spacing, var(--size-3));
-}
-
-.flow-v > * + * {
-  margin-top: var(--flow-spacing, var(--size-3));
-}
-
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation-duration: 0ms;
-}
-
 svg {
   width: var(--font-size-5);
   height: var(--font-size-5);
 }
 
-@media (min-width: 62rem) {
+@media (min-width: 50rem) {
   * {
     cursor: none;
   }
@@ -115,26 +92,14 @@ svg {
     overflow: hidden;
   }
 
-  ::view-transition-old(root),
-  ::view-transition-new(root) {
-    animation-duration: 100ms;
-  }
-
-  body::before,
   html::before,
-  body::after,
   html::after {
     height: var(--desktop-border);
   }
 
-  html::before {
+  body::before,
+  body::after {
     width: var(--desktop-border);
-    height: 100%;
-  }
-
-  html::after {
-    width: var(--desktop-border);
-    height: 100%;
   }
 
   /* ===== Scrollbar CSS ===== */

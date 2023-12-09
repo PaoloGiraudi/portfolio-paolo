@@ -2,7 +2,7 @@
   import { CldImage } from 'svelte-cloudinary';
 </script>
 
-<section>
+<aside>
   <figure>
     <div class="left" />
     <CldImage
@@ -20,10 +20,10 @@
       </small>
     </div>
   </figure>
-</section>
+</aside>
 
 <style>
-  section {
+  aside {
     opacity: 0.2;
     overflow: hidden;
     grid-area: 1 / 1 / -1 / -1;
@@ -46,8 +46,8 @@
   .left {
     display: none;
   }
-  @media (min-width: 62rem) {
-    section {
+  @media (min-width: 50rem) {
+    aside {
       opacity: 1;
       display: grid;
       place-items: center;

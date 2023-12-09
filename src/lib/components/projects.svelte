@@ -1,12 +1,12 @@
-<div class="container">
+<section>
   <h2>Projects</h2>
   <div class="projects">
     <slot />
   </div>
-</div>
+</section>
 
 <style>
-  .container {
+  section {
     display: flex;
     flex-direction: column;
     gap: var(--size-3);

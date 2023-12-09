@@ -7,15 +7,17 @@
   import { onMouseMove } from '$lib/utils/on-mouse-move';
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
-  import { Cursor, LoadingOverlay, Window, Footer, ThemeToggle } from '$lib/components';
+  import { Cursor, LoadingOverlay, Window, ThemeToggle } from '$lib/components';
   import type { LayoutData } from './$types';
   import { webVitals } from '$lib/utils/vitals';
   import { page } from '$app/stores';
   import { theme, type Theme } from '$lib/stores/theme';
+  import MetaTitle from '$lib/components/meta-title.svelte';
 
   export let data: LayoutData;
 
   let loading = true;
+  let screenWidth: number;
 
   $: if (browser && data?.analyticsId) {
     webVitals({
@@ -31,60 +33,37 @@
   });
 </script>
 
-<svelte:window on:mousemove={onMouseMove} />
+<svelte:window on:mousemove={onMouseMove} bind:innerWidth={screenWidth} />
+<MetaTitle title="Official website" />
 
-<div id="layout">
-  <LoadingOverlay {loading}>
-    <ThemeToggle />
-    <Cursor />
+{#if screenWidth > 800}
+  <Cursor />
+{/if}
+<LoadingOverlay {loading}>
+  <main>
     <Window />
-    <main>
-      <slot />
-      <Footer />
-    </main>
-  </LoadingOverlay>
-</div>
+    <ThemeToggle />
+    <slot />
+  </main>
+</LoadingOverlay>
 
 <style>
-  div {
+  main {
+    padding: var(--mobile-border);
     height: 100dvh;
-    width: 100dvw;
     position: relative;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      'portrait'
-      'slot';
-    padding: var(--mobile-border);
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 'portrait' 'slot';
     background-color: var(--surface-1);
-    overflow-y: auto;
   }
 
-  main {
-    overflow-y: auto;
-    grid-area: 1 / 1 / 3 / -1;
-    max-inline-size: 100%;
-    padding-block-start: var(--size-8);
-    z-index: 10;
-    padding-block-start: 20dvh;
-    background: linear-gradient(to top right, var(--surface-1) 75%, transparent 75%);
-  }
-
-  @media (min-width: 62rem) {
-    div {
-      display: flex;
-      padding: var(--desktop-border);
-    }
-
+  @media (min-width: 50rem) {
     main {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background: var(--surface-1);
-      flex-basis: 50%;
-      align-items: unset;
-      padding-block-start: 0;
+      align-items: center;
+      padding: var(--desktop-border);
     }
   }
 </style>

@@ -24,7 +24,7 @@
     color: var(--text-2);
   }
 
-  @media (min-width: 62rem) {
+  @media (min-width: 50rem) {
     div {
       flex-basis: var(--size-content-2);
     }

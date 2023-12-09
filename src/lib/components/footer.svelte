@@ -36,11 +36,10 @@
   footer {
     display: flex;
     justify-content: flex-end;
-    width: 100%;
-    bottom: var(--mobile-border);
     bottom: var(--mobile-border);
     gap: var(--size-1);
     padding: var(--size-2);
+    margin-inline: calc(var(--size-4) * -1);
   }
   a {
     display: grid;
@@ -49,12 +48,13 @@
     width: var(--size-7);
     height: var(--size-7);
   }
-  @media (min-width: 62rem) {
+  @media (min-width: 50rem) {
     footer {
       position: absolute;
       bottom: var(--desktop-border);
       right: var(--desktop-border);
       gap: 0;
+      margin-inline: 0;
     }
   }
 </style>
