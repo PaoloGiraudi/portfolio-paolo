@@ -3,24 +3,11 @@
   import { onMount } from 'svelte';
   import { browser } from '$app/environment';
   import { Cursor, LoadingOverlay, Window, ThemeToggle } from '$lib/components';
-  import type { LayoutData } from './$types';
-  import { webVitals } from '$lib/utils/vitals';
-  import { page } from '$app/stores';
   import { theme, type Theme } from '$lib/stores/theme';
   import MetaTitle from '$lib/components/meta-title.svelte';
 
-  export let data: LayoutData;
-
   let loading = true;
   let screenWidth: number;
-
-  $: if (browser && data?.analyticsId) {
-    webVitals({
-      path: $page.url.pathname,
-      params: $page.params,
-      analyticsId: data.analyticsId
-    });
-  }
 
   onMount(() => {
     theme.set((document.documentElement.dataset.theme as Theme) || 'light');
