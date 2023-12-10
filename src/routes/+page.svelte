@@ -98,7 +98,6 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       clip-path: inset(100%);
-      transition: clip-path 0.1s var(--ease-elastic-1);
     }
     .name:hover::before {
       clip-path: inset(var(--top) var(--right) var(--bottom) var(--left));
