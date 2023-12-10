@@ -100,7 +100,7 @@
       clip-path: inset(100%);
     }
     .name:hover::before {
-      clip-path: inset(var(--top) var(--right) var(--bottom) var(--left));
+      clip-path: inset(var(--top, 0) var(--right, 0) var(--bottom, 0) var(--left, 0));
     }
 
     .subtitle {

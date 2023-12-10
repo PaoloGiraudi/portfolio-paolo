@@ -15,7 +15,10 @@
   });
 </script>
 
-<svelte:window on:mousemove={onMouseMove} bind:innerWidth={screenWidth} />
+<svelte:window
+  on:mousemove={screenWidth > 800 ? onMouseMove : null}
+  bind:innerWidth={screenWidth}
+/>
 <MetaTitle title="Official website" />
 
 {#if screenWidth > 800}
