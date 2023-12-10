@@ -5,6 +5,12 @@ const cursorSizes: Record<string, number> = {
   shrink: 0
 };
 
+const options: KeyframeAnimationOptions = {
+  duration: 450,
+  fill: 'forwards',
+  easing: 'ease-in-out'
+};
+
 export const animateCursor = (e: MouseEvent, isHovering: boolean, size?: string | undefined) => {
   const cursorSquare = document.querySelector('.square') as HTMLElement;
   const cursorPointer = document.querySelector('.circle') as HTMLElement;
@@ -24,17 +30,29 @@ export const animateCursor = (e: MouseEvent, isHovering: boolean, size?: string 
   cursorSquare?.animate(
     {
       marginLeft: `${square.x}px`,
-      marginTop: `${square.y}px`,
-      transform: `scale(${isHovering && size ? cursorSizes[size] : 1})`
+      marginTop: `${square.y}px`
     },
     {
-      duration: 300,
-      fill: 'forwards',
-      easing: 'ease-in-out'
+      ...options,
+      duration: 150
     }
   );
 
-  if (isHovering && size === 'grow') {
-    fillName(square);
+  if (isHovering && size) {
+    cursorSquare?.animate(
+      {
+        transform: `scale(${cursorSizes[size]})`
+      },
+      options
+    );
+
+    size === 'grow' && fillName(square);
+  } else {
+    cursorSquare?.animate(
+      {
+        transform: 'scale(1)'
+      },
+      options
+    );
   }
 };
