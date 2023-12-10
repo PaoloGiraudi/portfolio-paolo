@@ -32,7 +32,6 @@
 <style>
   @import 'open-props/fonts.min.css';
   @import 'open-props/gray-oklch.min.css';
-  @import 'open-props/easings.min.css';
   @import 'open-props/borders.min.css';
   @import 'open-props/sizes.min.css';
   @import '../styles/fonts.css';

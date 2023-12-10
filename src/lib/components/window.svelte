@@ -12,9 +12,10 @@
       alt="Description of my image"
       crop="crop"
       gravity="center"
+      data-cursor="shrink"
     />
     <div class="right">
-      <small>
+      <small data-cursor="shrink">
         Cover art by
         <a href="https://www.g-studio.design/" target="_blank" rel="noreferrer">Greta</a>
       </small>
@@ -73,7 +74,7 @@
       background-color: var(--surface-1);
       height: calc(100% + var(--border-size-2) * 2);
       top: calc(var(--border-size-2) * -1);
-      transition: transform 450ms var(--ease-in-out-3);
+      transition: transform 450ms cubic-bezier(0.5, 0, 0.5, 1);
       z-index: 10;
     }
 

@@ -18,25 +18,19 @@ export const animateCursor = (e: MouseEvent, isHovering: boolean, size?: string 
     y: e.clientY - cursorPointer?.offsetHeight / 2
   };
 
+  cursorPointer.style.marginLeft = `${circle.x}px`;
+  cursorPointer.style.marginTop = `${circle.y}px`;
+
   cursorSquare?.animate(
     {
-      transform: `translate(${square.x}px, ${square.y}px) scale(${
-        isHovering && size ? cursorSizes[size] : 1
-      })`
+      marginLeft: `${square.x}px`,
+      marginTop: `${square.y}px`,
+      transform: `scale(${isHovering && size ? cursorSizes[size] : 1})`
     },
     {
-      duration: 450,
+      duration: 300,
       fill: 'forwards',
       easing: 'ease-in-out'
-    }
-  );
-  cursorPointer?.animate(
-    {
-      transform: `translate(${circle.x}px, ${circle.y}px)`
-    },
-    {
-      duration: 100,
-      fill: 'forwards'
     }
   );
 

@@ -55,7 +55,7 @@
     mix-blend-mode: difference;
     bottom: calc(100% - var(--dot-offset) * 2);
     left: var(--dot-offset);
-    animation: moving-ball 2s var(--ease-in-out-1) infinite;
+    animation: moving-ball 2s cubic-bezier(0.1, 0, 0.9, 1) infinite;
   }
   @keyframes moving-ball {
     25% {
