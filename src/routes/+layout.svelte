@@ -1,17 +1,14 @@
 <script lang="ts">
   import { onMouseMove } from '$lib/utils/on-mouse-move';
   import { onMount } from 'svelte';
-  import { browser } from '$app/environment';
-  import { Cursor, LoadingOverlay, Window, ThemeToggle } from '$lib/components';
+  import { Cursor, Window, ThemeToggle } from '$lib/components';
   import { theme, type Theme } from '$lib/stores/theme';
   import MetaTitle from '$lib/components/meta-title.svelte';
 
-  let loading = true;
   let screenWidth: number;
 
   onMount(() => {
     theme.set((document.documentElement.dataset.theme as Theme) || 'light');
-    loading = !browser;
   });
 </script>
 
@@ -24,13 +21,11 @@
 {#if screenWidth > 800}
   <Cursor />
 {/if}
-<LoadingOverlay {loading}>
-  <main>
-    <Window />
-    <ThemeToggle />
-    <slot />
-  </main>
-</LoadingOverlay>
+<main>
+  <Window />
+  <ThemeToggle />
+  <slot />
+</main>
 
 <style>
   @import 'open-props/fonts.min.css';

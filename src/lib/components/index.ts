@@ -1,5 +1,4 @@
 export { default as Cursor } from './cursor.svelte';
-export { default as LoadingOverlay } from './loading-overlay.svelte';
 export { default as MetaTitle } from './meta-title.svelte';
 export { default as Window } from './window.svelte';
 export { default as Project } from './project.svelte';

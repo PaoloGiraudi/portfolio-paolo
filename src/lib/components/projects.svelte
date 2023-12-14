@@ -12,6 +12,9 @@
     gap: var(--size-3);
     padding-block-end: var(--size-10);
   }
+  h2 {
+    font-weight: 500;
+  }
   .projects {
     display: flex;
     flex-wrap: wrap;
