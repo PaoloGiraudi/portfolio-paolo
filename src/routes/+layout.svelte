@@ -4,6 +4,14 @@
   import { Cursor, Window, ThemeToggle } from '$lib/components';
   import { theme, type Theme } from '$lib/stores/theme';
   import MetaTitle from '$lib/components/meta-title.svelte';
+  import 'open-props/fonts.min.css';
+  import 'open-props/gray-oklch.min.css';
+  import 'open-props/borders.min.css';
+  import 'open-props/sizes.min.css';
+  import '../styles/fonts.css';
+  import '../styles/reset.css';
+  import '../styles/themes.css';
+  import '../styles/app.css';
 
   let screenWidth: number;
 
@@ -28,15 +36,6 @@
 </main>
 
 <style>
-  @import 'open-props/fonts.min.css';
-  @import 'open-props/gray-oklch.min.css';
-  @import 'open-props/borders.min.css';
-  @import 'open-props/sizes.min.css';
-  @import '../styles/fonts.css';
-  @import '../styles/reset.css';
-  @import '../styles/themes.css';
-  @import '../styles/app.css';
-
   main {
     padding: var(--mobile-border);
     height: 100dvh;
