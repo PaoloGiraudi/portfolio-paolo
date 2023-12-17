@@ -1,10 +1,13 @@
 <script lang="ts">
-  export let name: string, description: string, url: string;
+  import type { PageData } from '../../routes/$types';
+  export let project: PageData['projects'][number];
 </script>
 
 <div>
-  <a href={url} data-cursor="shrink" target="_blank" rel="noopener noreferrer"> {name}</a>
-  <p>{description}</p>
+  <a href={project.url} data-cursor="shrink" target="_blank" rel="noopener noreferrer">
+    {project.name}
+  </a>
+  <p>{project.description}</p>
 </div>
 
 <style>

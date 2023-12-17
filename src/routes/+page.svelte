@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { Projects, Project } from '$lib/components';
+  import { Project } from '$lib/components';
   import Footer from '$lib/components/footer.svelte';
   import type { PageData } from './$types';
   export let data: PageData;
 </script>
 
-<div>
+<div class="content">
   <header>
     <h1>
       <span class="intro-text">Hello, I am</span>
@@ -15,23 +15,26 @@
   <p class="subtitle">
     I am a software developer based in Sweden. I like boxy web designs and pastel colors.
   </p>
-  <Projects>
-    {#each data.projects as project}
-      <Project name={project.name} description={project.description} url={project.url} />
-    {/each}
-  </Projects>
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+      {#each data.projects as project}
+        <Project {project} />
+      {/each}
+    </div>
+  </section>
   <Footer />
 </div>
 
 <style>
-  div {
+  .content {
     padding-inline: var(--size-4);
     grid-area: 1 / 1 / 3 / -1;
     height: 100%;
     max-inline-size: 100%;
     overflow-y: auto;
     z-index: 10;
-    padding-block-start: 20dvh;
+    padding-block-start: 20svh;
     background: linear-gradient(to top right, var(--surface-1) 75%, transparent 75%);
   }
 
@@ -76,8 +79,26 @@
     }
   }
 
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-3);
+    padding-block-end: var(--size-10);
+  }
+
+  h2 {
+    font-weight: 500;
+  }
+
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: var(--size-6);
+    column-gap: var(--size-2);
+  }
+
   @media (min-width: 50rem) {
-    div {
+    .content {
       flex-basis: 50%;
     }
     h1,
