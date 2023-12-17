@@ -3,12 +3,11 @@
   import { onMount } from 'svelte';
   import { Cursor, Window, ThemeToggle } from '$lib/components';
   import { theme, type Theme } from '$lib/stores/theme';
-  import MetaTitle from '$lib/components/meta-title.svelte';
+  import '@fontsource-variable/eb-garamond/wght.css';
   import 'open-props/fonts.min.css';
   import 'open-props/gray-oklch.min.css';
   import 'open-props/borders.min.css';
   import 'open-props/sizes.min.css';
-  import '../styles/fonts.css';
   import '../styles/reset.css';
   import '../styles/themes.css';
   import '../styles/app.css';
@@ -24,7 +23,15 @@
   on:mousemove={screenWidth > 800 ? onMouseMove : null}
   bind:innerWidth={screenWidth}
 />
-<MetaTitle title="Official website" />
+
+<svelte:head>
+  <title>Paolo Giraudi | Official website</title>
+  <meta name="description" content="Paolo's personal portfolio, full of unecessary css gimmicks." />
+  <meta
+    name="robots"
+    content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  />
+</svelte:head>
 
 {#if screenWidth > 800}
   <Cursor />
@@ -38,7 +45,7 @@
 <style>
   main {
     padding: var(--mobile-border);
-    height: 100dvh;
+    height: 100svh;
     position: relative;
     display: grid;
     grid-template-columns: auto;
