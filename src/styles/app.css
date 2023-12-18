@@ -2,6 +2,7 @@ html,
 body {
   overflow: auto;
   position: relative;
+  background-color: var(--surface-1);
 }
 
 html::before,
@@ -106,7 +107,7 @@ svg {
   /* Firefox */
   * {
     scrollbar-width: thin;
-    scrollbar-color: #2b2922 #f5e0e0;
+    scrollbar-color: #2b2922 var(--surface-1);
   }
 
   /* Chrome, Edge, and Safari */
@@ -115,13 +116,13 @@ svg {
   }
 
   *::-webkit-scrollbar-track {
-    background: #f5e0e0;
+    background: var(--surface-1);
   }
 
   *::-webkit-scrollbar-thumb {
     background-color: #2b2922;
     border-radius: 0px;
-    border: 4px solid #f5e0e0;
+    border: 4px solid var(--surface-1);
   }
 
   svg {
