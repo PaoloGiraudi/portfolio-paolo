@@ -34,12 +34,11 @@
 
 <style>
   footer {
+    background-color: var(--surface-1);
     display: flex;
-    justify-content: flex-end;
-    bottom: var(--mobile-border);
     gap: var(--size-1);
-    padding: var(--size-2);
-    margin-inline: calc(var(--size-4) * -1);
+    justify-content: flex-end;
+    margin-block: var(--size-4);
   }
   a {
     display: grid;
@@ -50,11 +49,11 @@
   }
   @media (min-width: 50rem) {
     footer {
-      position: absolute;
-      bottom: var(--desktop-border);
-      right: var(--desktop-border);
+      position: fixed;
       gap: 0;
-      margin-inline: 0;
+      margin-block: 0;
+      bottom: var(--size-6);
+      right: var(--size-6);
     }
   }
 </style>

@@ -28,8 +28,8 @@
   div {
     padding: var(--size-2);
     position: absolute;
-    right: var(--mobile-border);
-    top: var(--mobile-border);
+    right: var(--border);
+    top: var(--border);
     z-index: 20;
     aspect-ratio: 1;
   }
@@ -46,8 +46,7 @@
 
   @media (min-width: 50rem) {
     div {
-      right: var(--desktop-border);
-      top: var(--desktop-border);
+      padding: 0;
     }
   }
 </style>

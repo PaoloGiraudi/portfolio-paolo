@@ -1,19 +1,18 @@
 <script lang="ts">
-  import { CldImage } from 'svelte-cloudinary';
+  import { TwicImg } from '@twicpics/components/sveltekit';
 </script>
 
 <aside>
   <figure>
     <div class="left" />
-    <CldImage
-      width={1280}
-      height={1050}
-      src="portfolio/portrait"
-      alt="Description of my image"
-      crop="crop"
-      gravity="center"
-      data-cursor="shrink"
-    />
+    <span data-cursor="shrink">
+      <TwicImg
+        src="portrait.png"
+        ratio="none"
+        class="portrait"
+        preTransform="focus=center/crop=85px85p"
+      />
+    </span>
     <div class="right">
       <small data-cursor="shrink">
         Cover art by
@@ -25,22 +24,28 @@
 
 <style>
   aside {
-    opacity: 0.2;
+    opacity: 0.6;
     overflow: hidden;
-    grid-area: 1 / 1 / -1 / -1;
+    mix-blend-mode: var(--blend-mode);
+    direction: ltr;
+    position: fixed;
+    height: 100%;
+    width: 85vw;
+    left: 0;
   }
   figure {
     background-color: var(--surface-1);
-    position: relative;
-    height: 150%;
-    width: 150%;
-    mix-blend-mode: var(--blend-mode);
+    height: inherit;
+    width: inherit;
+  }
+
+  :global(.portrait) {
+    width: 100%;
+    height: 100%;
   }
 
   :global(img) {
-    object-fit: cover;
     background-color: var(--surface-2);
-    height: 35%;
   }
 
   .right,
@@ -52,18 +57,15 @@
       opacity: 1;
       display: grid;
       place-items: center;
+      position: relative;
       flex-basis: 50%;
-      min-height: calc(100vh - var(--desktop-border) * 2);
     }
     figure {
+      position: inherit;
       height: 80%;
       width: 80%;
       border-top: var(--border-size-2) var(--text-1) solid;
       border-bottom: var(--border-size-2) var(--text-1) solid;
-    }
-
-    :global(img) {
-      height: 100%;
     }
 
     .left,

@@ -22,41 +22,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudinary-util/url-loader@npm:3.9.0":
-  version: 3.9.0
-  resolution: "@cloudinary-util/url-loader@npm:3.9.0"
-  dependencies:
-    "@cloudinary-util/util": "npm:2.1.0"
-    "@cloudinary/url-gen": "npm:^1.10.1"
-  checksum: 292b399e5ab9dcf5c1952db542c5725b5e0b202b7f9b4c7e2c1578d6b85df20b6b54165d910524ac94e4a077f5d0c6434499a9dd84d5cc10d535a3f1bec5b8e6
-  languageName: node
-  linkType: hard
-
-"@cloudinary-util/util@npm:2.1.0":
-  version: 2.1.0
-  resolution: "@cloudinary-util/util@npm:2.1.0"
-  checksum: 70f34cfd29062a6292034e2a706ff45e13b3aaf5e7c6813b2d3181eb8b642e2d63fc9c4b37623a810d1c8e840da40a13c7c92476f6819876015b13ae65d8c72b
-  languageName: node
-  linkType: hard
-
-"@cloudinary/transformation-builder-sdk@npm:^1.7.0":
-  version: 1.8.0
-  resolution: "@cloudinary/transformation-builder-sdk@npm:1.8.0"
-  dependencies:
-    "@cloudinary/url-gen": "npm:^1.7.0"
-  checksum: e66efb974f5325e61d7b04721633f80cd405ca744d4d4f70f8ba6e2c5af33f447ee579d9a59e95ef0b9d16dad2930b6feb4e667e15778edfe923dadb1e549a20
-  languageName: node
-  linkType: hard
-
-"@cloudinary/url-gen@npm:^1.10.1, @cloudinary/url-gen@npm:^1.7.0":
-  version: 1.13.0
-  resolution: "@cloudinary/url-gen@npm:1.13.0"
-  dependencies:
-    "@cloudinary/transformation-builder-sdk": "npm:^1.7.0"
-  checksum: 416c9c5ee17ad5938e3d7fe198106c65658ef605c5a83961ca2f568675498dae8a73be7d52a857332c348098e4d47e68796cd8c01e831e5848e3954e6eba8186
-  languageName: node
-  linkType: hard
-
 "@esbuild/android-arm64@npm:0.19.8":
   version: 0.19.8
   resolution: "@esbuild/android-arm64@npm:0.19.8"
@@ -567,6 +532,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@twicpics/components@npm:^0.26.0":
+  version: 0.26.0
+  resolution: "@twicpics/components@npm:0.26.0"
+  checksum: f159501fd85c2959456f9e7abd4975ae97c48841e0615ba3a672ff3d29d30af8ecb5629d0c6ec687ed2deb88da657992312cf9fe982a7084b48fd27aa7e3a688
+  languageName: node
+  linkType: hard
+
 "@types/cookie@npm:^0.6.0":
   version: 0.6.0
   resolution: "@types/cookie@npm:0.6.0"
@@ -721,28 +693,6 @@ __metadata:
   version: 1.2.0
   resolution: "@ungap/structured-clone@npm:1.2.0"
   checksum: 8209c937cb39119f44eb63cf90c0b73e7c754209a6411c707be08e50e29ee81356dca1a848a405c8bdeebfe2f5e4f831ad310ae1689eeef65e7445c090c6657d
-  languageName: node
-  linkType: hard
-
-"@unpic/core@npm:0.0.24, @unpic/core@npm:^0.0.24":
-  version: 0.0.24
-  resolution: "@unpic/core@npm:0.0.24"
-  dependencies:
-    unpic: "npm:^3.6.1"
-  checksum: 6cb26cdfcb438940cde80dbb805e80430c17f42b91147690ca68ae74657df20887980fdef1f16e87f9c4aa76ec93a143ebd27033d012f70508ef97147c566b49
-  languageName: node
-  linkType: hard
-
-"@unpic/svelte@npm:0.0.25":
-  version: 0.0.25
-  resolution: "@unpic/svelte@npm:0.0.25"
-  dependencies:
-    "@unpic/core": "npm:^0.0.24"
-    style-object-to-css-string: "npm:^1.0.1"
-    unpic: "npm:^3.6.1"
-  peerDependencies:
-    svelte: "*"
-  checksum: 2e0346eb5ec4c921cf02f4e6c1a49ce538ab2aa05a9136ad7f09505d752b134fe586119adc3f05b85a7a00bf1d87510d71b991a159fc5547b0158a146c7d38ab
   languageName: node
   linkType: hard
 
@@ -984,27 +934,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cloudinary-core@npm:^2.13.0":
-  version: 2.13.0
-  resolution: "cloudinary-core@npm:2.13.0"
-  peerDependencies:
-    lodash: ">=4.0"
-  checksum: 183cc22ecf19d4430787f3de0a7a489ecdfe522021de3f636f9e01e040bcf6bb7d8bddbb6d551d67bd2d74587587f9c77d12214602e90fc1a70d454101bad20d
-  languageName: node
-  linkType: hard
-
-"cloudinary@npm:^1.32.0":
-  version: 1.41.0
-  resolution: "cloudinary@npm:1.41.0"
-  dependencies:
-    cloudinary-core: "npm:^2.13.0"
-    core-js: "npm:^3.30.1"
-    lodash: "npm:^4.17.21"
-    q: "npm:^1.5.1"
-  checksum: 4ea615ed82d1080e4caa727e3f80d927ff2b46559db75e538d1c58ae6e38d99db4efae34ddcf05890c1ecf4bd0d1dd89bc97c0efcdb8d032798ea68a628e6454
-  languageName: node
-  linkType: hard
-
 "code-red@npm:^1.0.3":
   version: 1.0.3
   resolution: "code-red@npm:1.0.3"
@@ -1045,13 +974,6 @@ __metadata:
   version: 0.6.0
   resolution: "cookie@npm:0.6.0"
   checksum: f2318b31af7a31b4ddb4a678d024514df5e705f9be5909a192d7f116cfb6d45cbacf96a473fa733faa95050e7cff26e7832bb3ef94751592f1387b71c8956686
-  languageName: node
-  linkType: hard
-
-"core-js@npm:^3.30.1":
-  version: 3.33.2
-  resolution: "core-js@npm:3.33.2"
-  checksum: d6a56ad3e134846c805ce936788dd58cb51e861f173ed1f830979735d7865ea6f6a5a437076c36c8d8b842ba0384d052998f160774a8da7712f0f51df60167fe
   languageName: node
   linkType: hard
 
@@ -2006,13 +1928,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.21":
-  version: 4.17.21
-  resolution: "lodash@npm:4.17.21"
-  checksum: d8cbea072bb08655bb4c989da418994b073a608dffa608b09ac04b43a791b12aeae7cd7ad919aa4c925f33b48490b5cfe6c1f71d827956071dae2e7bb3a6b74c
-  languageName: node
-  linkType: hard
-
 "lru-cache@npm:^10.0.1, lru-cache@npm:^9.1.1 || ^10.0.0":
   version: 10.0.1
   resolution: "lru-cache@npm:10.0.1"
@@ -2420,6 +2335,7 @@ __metadata:
     "@sveltejs/adapter-static": "npm:^3.0.0"
     "@sveltejs/kit": "npm:^2.0.1"
     "@sveltejs/vite-plugin-svelte": "npm:^3.0.1"
+    "@twicpics/components": "npm:^0.26.0"
     "@typescript-eslint/eslint-plugin": "npm:^6.14.0"
     "@typescript-eslint/parser": "npm:^6.14.0"
     "@vercel/analytics": "npm:^1.1.1"
@@ -2432,7 +2348,6 @@ __metadata:
     prettier: "npm:^3.1.1"
     prettier-plugin-svelte: "npm:^3.1.2"
     svelte: "npm:^4.2.8"
-    svelte-cloudinary: "npm:^1.1.1"
     typescript: "npm:^5.3.3"
     vite: "npm:^5.0.10"
   languageName: unknown
@@ -2564,13 +2479,6 @@ __metadata:
   version: 2.3.0
   resolution: "punycode@npm:2.3.0"
   checksum: 8e6f7abdd3a6635820049e3731c623bbef3fedbf63bbc696b0d7237fdba4cefa069bc1fa62f2938b0fbae057550df7b5318f4a6bcece27f1907fc75c54160bee
-  languageName: node
-  linkType: hard
-
-"q@npm:^1.5.1":
-  version: 1.5.1
-  resolution: "q@npm:1.5.1"
-  checksum: 7855fbdba126cb7e92ef3a16b47ba998c0786ec7fface236e3eb0135b65df36429d91a86b1fff3ab0927b4ac4ee88a2c44527c7c3b8e2a37efbec9fe34803df4
   languageName: node
   linkType: hard
 
@@ -2856,34 +2764,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"style-object-to-css-string@npm:^1.0.1":
-  version: 1.1.0
-  resolution: "style-object-to-css-string@npm:1.1.0"
-  checksum: e96b290671d08ab8fce50f60d1f059c933e35520c3a3df4f83073d4f1ac9f38d66a01760f31a6b7a3743b9094f17ecf1569e04d85294e41845ddc1ce0a454c72
-  languageName: node
-  linkType: hard
-
 "supports-color@npm:^7.1.0":
   version: 7.2.0
   resolution: "supports-color@npm:7.2.0"
   dependencies:
     has-flag: "npm:^4.0.0"
   checksum: afb4c88521b8b136b5f5f95160c98dee7243dc79d5432db7efc27efb219385bbc7d9427398e43dd6cc730a0f87d5085ce1652af7efbe391327bc0a7d0f7fc124
-  languageName: node
-  linkType: hard
-
-"svelte-cloudinary@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "svelte-cloudinary@npm:1.1.1"
-  dependencies:
-    "@cloudinary-util/url-loader": "npm:3.9.0"
-    "@cloudinary-util/util": "npm:2.1.0"
-    "@unpic/core": "npm:0.0.24"
-    "@unpic/svelte": "npm:0.0.25"
-    cloudinary: "npm:^1.32.0"
-  peerDependencies:
-    svelte: ^3.0.0 || ^4.0.0
-  checksum: 2c7d2dd2ef75b8123c3c3b342db329644b528a956b7619ef87c0ea22e9236a12eff1fae45ca161f718014c2e049d09ef6bdc237e423efe1f2f44e539bdd6940e
   languageName: node
   linkType: hard
 
@@ -3056,13 +2942,6 @@ __metadata:
   dependencies:
     imurmurhash: "npm:^0.1.4"
   checksum: cb811d9d54eb5821b81b18205750be84cb015c20a4a44280794e915f5a0a70223ce39066781a354e872df3572e8155c228f43ff0cce94c7cbf4da2cc7cbdd635
-  languageName: node
-  linkType: hard
-
-"unpic@npm:^3.6.1":
-  version: 3.13.0
-  resolution: "unpic@npm:3.13.0"
-  checksum: 75e3e6c4fdd5b13e2f1adbd554bc061495a42697203695b51a4af7f771a967b9698dab9e031f6ba71efa8aefad71838051374c6b71d26f6e8845a598f3727854
   languageName: node
   linkType: hard
 

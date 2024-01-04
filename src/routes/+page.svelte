@@ -28,14 +28,15 @@
 
 <style>
   .content {
-    padding-inline: var(--size-4);
-    grid-area: 1 / 1 / 3 / -1;
-    height: 100%;
-    max-inline-size: 100%;
+    position: relative;
     overflow-y: auto;
-    z-index: 10;
-    padding-block-start: 20svh;
-    background: linear-gradient(to top right, var(--surface-1) 75%, transparent 75%);
+    padding-block-start: 15vh;
+    padding-inline: var(--size-4);
+    background-color: var(--surface-1);
+    height: var(--content-height);
+    width: var(--content-width);
+    scroll-snap-align: start end;
+    direction: ltr;
   }
 
   header {
@@ -83,7 +84,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--size-3);
-    padding-block-end: var(--size-10);
+    padding-block-end: var(--size-6);
   }
 
   h2 {
@@ -100,6 +101,7 @@
   @media (min-width: 50rem) {
     .content {
       flex-basis: 50%;
+      padding-block-start: 20vh;
     }
     h1,
     .subtitle {
