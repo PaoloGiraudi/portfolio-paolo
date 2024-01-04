@@ -1,46 +1,51 @@
 <script lang="ts">
+  import { browser } from '$app/environment';
+  import { TwicImg } from '@twicpics/components/sveltekit';
   import { CldImage } from 'svelte-cloudinary';
 </script>
 
-<aside>
-  <figure>
-    <div class="left" />
-    <CldImage
-      width={1280}
-      height={1050}
-      src="portfolio/portrait"
-      alt="Description of my image"
-      crop="crop"
-      gravity="center"
-      data-cursor="shrink"
-    />
-    <div class="right">
-      <small data-cursor="shrink">
-        Cover art by
-        <a href="https://www.g-studio.design/" target="_blank" rel="noreferrer">Greta</a>
-      </small>
-    </div>
-  </figure>
-</aside>
+{#if browser}
+  <aside>
+    <figure>
+      <div class="left" />
+      <TwicImg src="portfolio" />
+      <!-- <CldImage
+        width={1280}
+        height={1050}
+        src="portfolio/portrait"
+        alt="Description of my image"
+        gravity="center"
+        crop={window.innerWidth > 800 ? 'crop' : 'fit'}
+        data-cursor="shrink"
+      /> -->
+      <div class="right">
+        <small data-cursor="shrink">
+          Cover art by
+          <a href="https://www.g-studio.design/" target="_blank" rel="noreferrer">Greta</a>
+        </small>
+      </div>
+    </figure>
+  </aside>
+{/if}
 
 <style>
   aside {
-    opacity: 0.2;
-    overflow: hidden;
-    grid-area: 1 / 1 / -1 / -1;
+    position: fixed;
+    left: 0;
+    z-index: 0;
+    width: 80vw;
+    overflow: clip;
+    mix-blend-mode: var(--blend-mode);
   }
   figure {
     background-color: var(--surface-1);
     position: relative;
-    height: 150%;
-    width: 150%;
-    mix-blend-mode: var(--blend-mode);
+    height: 100%;
   }
 
   :global(img) {
-    object-fit: cover;
     background-color: var(--surface-2);
-    height: 35%;
+    height: 100%;
   }
 
   .right,

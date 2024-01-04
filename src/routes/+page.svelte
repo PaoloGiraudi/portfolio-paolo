@@ -23,19 +23,19 @@
       {/each}
     </div>
   </section>
-  <Footer />
 </div>
 
 <style>
   .content {
     padding-inline: var(--size-4);
-    grid-area: 1 / 1 / 3 / -1;
-    height: 100%;
-    max-inline-size: 100%;
     overflow-y: auto;
     z-index: 10;
-    padding-block-start: 20svh;
-    background: linear-gradient(to top right, var(--surface-1) 75%, transparent 75%);
+    direction: ltr;
+    height: 100%;
+    width: 100vw;
+    scroll-snap-align: start end;
+    direction: ltr;
+    background-color: var(--surface-1);
   }
 
   header {
@@ -99,6 +99,7 @@
 
   @media (min-width: 50rem) {
     .content {
+      padding-block-start: 20svh;
       flex-basis: 50%;
     }
     h1,

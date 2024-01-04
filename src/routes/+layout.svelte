@@ -1,7 +1,8 @@
 <script lang="ts">
   import { onMouseMove } from '$lib/utils/on-mouse-move';
+  import { installTwicpics } from '@twicpics/components/sveltekit';
   import { onMount } from 'svelte';
-  import { Cursor, Window, ThemeToggle } from '$lib/components';
+  import { Cursor, Footer, Portrait, ThemeToggle } from '$lib/components';
   import { theme, type Theme } from '$lib/stores/theme';
   import '@fontsource-variable/eb-garamond/wght.css';
   import 'open-props/fonts.min.css';
@@ -16,6 +17,10 @@
 
   onMount(() => {
     theme.set((document.documentElement.dataset.theme as Theme) || 'light');
+  });
+
+  installTwicpics({
+    domain: 'https://paolo.twic.pics'
   });
 </script>
 
@@ -37,25 +42,37 @@
   <Cursor />
 {/if}
 <main>
-  <Window />
   <ThemeToggle />
-  <slot />
+  <Portrait />
+  <!-- <Footer /> -->
+  <!-- <div class="scroll-container">
+    <slot />
+  </div> -->
 </main>
 
 <style>
   main {
+    direction: rtl;
     padding: var(--mobile-border);
     height: 100svh;
+    width: 100vw;
     position: relative;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: 'portrait' 'slot';
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     background-color: var(--surface-1);
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+  }
+  .scroll-container {
+    position: relative;
+    scroll-snap-align: start end;
+    width: 180vw;
   }
 
   @media (min-width: 50rem) {
     main {
+      direction: ltr;
       display: flex;
       align-items: center;
       padding: var(--desktop-border);

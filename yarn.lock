@@ -567,6 +567,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@twicpics/components@npm:^0.26.0":
+  version: 0.26.0
+  resolution: "@twicpics/components@npm:0.26.0"
+  checksum: f159501fd85c2959456f9e7abd4975ae97c48841e0615ba3a672ff3d29d30af8ecb5629d0c6ec687ed2deb88da657992312cf9fe982a7084b48fd27aa7e3a688
+  languageName: node
+  linkType: hard
+
 "@types/cookie@npm:^0.6.0":
   version: 0.6.0
   resolution: "@types/cookie@npm:0.6.0"
@@ -2420,6 +2427,7 @@ __metadata:
     "@sveltejs/adapter-static": "npm:^3.0.0"
     "@sveltejs/kit": "npm:^2.0.1"
     "@sveltejs/vite-plugin-svelte": "npm:^3.0.1"
+    "@twicpics/components": "npm:^0.26.0"
     "@typescript-eslint/eslint-plugin": "npm:^6.14.0"
     "@typescript-eslint/parser": "npm:^6.14.0"
     "@vercel/analytics": "npm:^1.1.1"

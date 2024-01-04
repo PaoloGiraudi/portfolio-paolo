@@ -39,7 +39,6 @@
     bottom: var(--mobile-border);
     gap: var(--size-1);
     padding: var(--size-2);
-    margin-inline: calc(var(--size-4) * -1);
   }
   a {
     display: grid;
