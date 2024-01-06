@@ -53,7 +53,7 @@
 
 <style>
   main {
-    --content-height: calc(100vh - var(--border) * 2);
+    --content-height: calc(100svh - var(--border) * 2);
     --content-width: calc(100vw - var(--border) * 2);
     margin: var(--border);
     direction: rtl;
