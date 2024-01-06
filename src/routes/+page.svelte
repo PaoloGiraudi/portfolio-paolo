@@ -35,7 +35,7 @@
     background-color: var(--surface-1);
     height: var(--content-height);
     width: var(--content-width);
-    scroll-snap-align: start;
+    scroll-snap-align: start end;
     direction: ltr;
     box-shadow: calc(var(--border-size-2) * -1) 0 0 var(--text-1);
   }

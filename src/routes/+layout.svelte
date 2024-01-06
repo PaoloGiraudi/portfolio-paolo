@@ -71,7 +71,7 @@
 
   .scroll-container {
     position: relative;
-    scroll-snap-align: start;
+    scroll-snap-align: start end;
     width: 180vw;
   }
 
