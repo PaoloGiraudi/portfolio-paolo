@@ -1,9 +1,11 @@
 <script lang="ts">
   import { onMouseMove } from '$lib/utils/on-mouse-move';
   import { onMount } from 'svelte';
-  import { Cursor, Window, ThemeToggle } from '$lib/components';
+  import { Cursor, Portrait, ThemeToggle } from '$lib/components';
   import { theme, type Theme } from '$lib/stores/theme';
   import '@fontsource-variable/eb-garamond/wght.css';
+  import { installTwicpics } from '@twicpics/components/sveltekit';
+  import '@twicpics/components/style.css';
   import 'open-props/fonts.min.css';
   import 'open-props/gray-oklch.min.css';
   import 'open-props/borders.min.css';
@@ -16,6 +18,11 @@
 
   onMount(() => {
     theme.set((document.documentElement.dataset.theme as Theme) || 'light');
+  });
+
+  installTwicpics({
+    domain: 'https://paolo.twic.pics',
+    path: 'portfolio'
   });
 </script>
 
@@ -37,28 +44,47 @@
   <Cursor />
 {/if}
 <main>
-  <Window />
+  <Portrait />
   <ThemeToggle />
-  <slot />
+  <div class="scroll-container">
+    <slot />
+  </div>
 </main>
 
 <style>
   main {
-    padding: var(--mobile-border);
-    height: 100svh;
+    --content-height: calc(100svh - var(--border) * 2);
+    --content-width: calc(100vw - var(--border) * 2);
+    margin: var(--border);
+    direction: rtl;
+    height: var(--content-height);
+    width: var(--content-width);
     position: relative;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: 'portrait' 'slot';
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    scroll-snap-type: x mandatory;
     background-color: var(--surface-1);
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .scroll-container {
+    position: relative;
+    scroll-snap-align: start;
+    width: 180vw;
   }
 
   @media (min-width: 50rem) {
     main {
+      overflow-x: hidden;
+      direction: initial;
       display: flex;
       align-items: center;
-      padding: var(--desktop-border);
+    }
+
+    .scroll-container {
+      display: contents;
     }
   }
 </style>
