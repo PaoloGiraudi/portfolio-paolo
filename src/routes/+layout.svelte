@@ -3,8 +3,8 @@
   import { onMount } from 'svelte';
   import { Cursor, Portrait, ThemeToggle } from '$lib/components';
   import { theme, type Theme } from '$lib/stores/theme';
-  import '@fontsource-variable/eb-garamond/wght.css';
   import { installTwicpics } from '@twicpics/components/sveltekit';
+  import '@fontsource-variable/eb-garamond/wght.css';
   import '@twicpics/components/style.css';
   import 'open-props/fonts.min.css';
   import 'open-props/gray-oklch.min.css';
@@ -71,7 +71,7 @@
 
   .scroll-container {
     position: relative;
-    scroll-snap-align: start;
+    scroll-snap-align: start end;
     width: 180vw;
   }
 
