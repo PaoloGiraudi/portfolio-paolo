@@ -42,28 +42,33 @@
 
   header {
     padding-block-end: var(--size-4);
-    & span {
-      display: block;
-    }
-    & .intro-text {
-      font-size: var(--font-size-6);
-      font-weight: var(--font-weight-4);
-    }
-    & .name {
-      width: fit-content;
-      font-size: var(--font-size-10);
-      font-weight: var(--font-weight-4);
-      color: var(--text-1);
-      line-height: var(--font-lineheight-1);
+  }
 
-      @supports (-webkit-text-stroke: 4px transparent) {
-        background: linear-gradient(75deg, var(--accent-1) 0%, var(--accent-2) 100%);
-        color: var(--surface-1);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-stroke: var(--border-size-3) transparent;
-        position: relative;
-      }
+  span {
+    display: block;
+  }
+
+  .intro-text {
+    font-size: var(--font-size-6);
+    font-weight: var(--font-weight-4);
+  }
+
+  .name {
+    width: fit-content;
+    font-size: var(--font-size-10);
+    font-weight: var(--font-weight-4);
+    color: var(--text-1);
+    line-height: var(--font-lineheight-1);
+  }
+
+  @supports (-webkit-text-stroke: 4px transparent) {
+    .name {
+      background: linear-gradient(75deg, var(--accent-1) 0%, var(--accent-2) 100%);
+      color: var(--surface-1);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-stroke: var(--border-size-3) transparent;
+      position: relative;
     }
   }
 
