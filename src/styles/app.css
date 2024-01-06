@@ -68,17 +68,11 @@ a {
   display: inline-block;
 }
 
-a:focus-visible {
-  outline-color: var(--accent-2);
-  outline-style: solid;
-  outline-width: 2px;
-}
-
+a:focus-visible,
 button:focus-visible {
   outline-color: var(--accent-2);
   outline-style: solid;
   outline-width: 2px;
-  outline-offset: 2px;
 }
 
 svg {

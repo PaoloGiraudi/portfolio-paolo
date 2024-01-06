@@ -31,14 +31,11 @@
     right: var(--border);
     top: var(--border);
     z-index: 20;
-    aspect-ratio: 1;
   }
   button {
     padding: 0;
     background-color: transparent;
     border: none;
-    display: grid;
-    place-items: center;
     width: var(--size-7);
     height: var(--size-7);
     color: var(--text-2);

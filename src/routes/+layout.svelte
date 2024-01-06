@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMouseMove } from '$lib/utils/on-mouse-move';
   import { onMount } from 'svelte';
-  import { Cursor, Window, ThemeToggle, Footer } from '$lib/components';
+  import { Cursor, Portrait, ThemeToggle } from '$lib/components';
   import { theme, type Theme } from '$lib/stores/theme';
   import '@fontsource-variable/eb-garamond/wght.css';
   import { installTwicpics } from '@twicpics/components/sveltekit';
@@ -44,7 +44,7 @@
   <Cursor />
 {/if}
 <main>
-  <Window />
+  <Portrait />
   <ThemeToggle />
   <div class="scroll-container">
     <slot />
@@ -71,7 +71,7 @@
 
   .scroll-container {
     position: relative;
-    scroll-snap-align: start end;
+    scroll-snap-align: start;
     width: 180vw;
   }
 

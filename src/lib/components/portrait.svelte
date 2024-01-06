@@ -24,17 +24,16 @@
 
 <style>
   aside {
-    opacity: 0.6;
     overflow: hidden;
     mix-blend-mode: var(--blend-mode);
     direction: ltr;
     position: fixed;
     height: 100%;
-    width: 85vw;
+    width: 90vw;
     left: 0;
+    background-color: var(--surface-1);
   }
   figure {
-    background-color: var(--surface-1);
     height: inherit;
     width: inherit;
   }
@@ -48,13 +47,25 @@
     background-color: var(--surface-2);
   }
 
-  .right,
   .left {
     display: none;
   }
+
+  .right {
+    display: contents;
+  }
+
+  small {
+    position: absolute;
+    font-size: var(--font-size-0);
+    left: var(--size-5);
+    bottom: var(--size-5);
+    & a {
+      font-weight: var(--font-weight-5);
+    }
+  }
   @media (min-width: 50rem) {
     aside {
-      opacity: 1;
       display: grid;
       place-items: center;
       position: relative;
@@ -95,16 +106,9 @@
     figure:hover > .right {
       transform: translateX(80%);
     }
-
     small {
-      position: absolute;
       left: -6.25rem;
-      font-size: var(--font-size-0);
       bottom: var(--size-1);
-    }
-
-    small > a {
-      font-weight: var(--font-weight-5);
     }
   }
 </style>
