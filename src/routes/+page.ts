@@ -1,7 +1,10 @@
-import type { PageLoad } from './$types';
+import type { Post } from '$lib/types.js';
 
-export const load: PageLoad = () => {
+export async function load({ fetch }) {
+  const response = await fetch('api/posts');
+  const posts: Post[] = await response.json();
   return {
+    posts: posts,
     projects: [
       {
         name: 'Good Enough Metronome',
@@ -12,17 +15,7 @@ export const load: PageLoad = () => {
         name: 'Switcheroo',
         description: 'A simple units converter.',
         url: 'https://www.switcheroo.dev/'
-      },
-      {
-        name: 'Kopli Sound Studio',
-        description: 'The perfect creative office in the heart of Tallinn.',
-        url: 'https://www.koplisoundstudio.ee/'
-      },
-      {
-        name: 'My Portfolio',
-        description: 'This very beautiful website.',
-        url: 'https://www.paologiraudi.com/'
       }
     ]
   };
-};
+}

@@ -3,23 +3,16 @@
   export let project: PageData['projects'][number];
 </script>
 
-<div>
-  <a href={project.url} data-cursor="shrink" target="_blank" rel="noopener noreferrer">
+<div class="flex-col gap-1">
+  <a href={project.url} data-cursor="shrink" target="_blank" rel="noopener noreferrer" class="link">
     {project.name}
   </a>
   <p>{project.description}</p>
 </div>
 
 <style>
-  div {
-    display: flex;
-    flex-direction: column;
-    gap: var(--size-1);
-  }
   a {
     font-size: var(--font-size-md);
-    text-underline-offset: 2px;
-    text-decoration-color: var(--accent-1);
   }
   p {
     font-size: var(--font-size-sm);

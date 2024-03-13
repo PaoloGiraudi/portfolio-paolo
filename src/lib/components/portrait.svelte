@@ -16,13 +16,18 @@
     <div class="right">
       <small data-cursor="shrink">
         Cover art by
-        <a href="https://www.g-studio.design/" target="_blank" rel="noreferrer">Greta</a>
+        <a href="https://www.g-studio.design/" target="_blank" rel="noreferrer" class="link">
+          Greta
+        </a>
       </small>
     </div>
   </figure>
 </aside>
 
 <style>
+  a {
+    font-size: var(--font-size-0);
+  }
   aside {
     overflow: hidden;
     mix-blend-mode: var(--blend-mode);
@@ -60,9 +65,6 @@
     font-size: var(--font-size-xs);
     left: var(--size-5);
     bottom: var(--size-5);
-    & a {
-      font-weight: var(--font-weight-5);
-    }
   }
   @media (min-width: 50rem) {
     aside {

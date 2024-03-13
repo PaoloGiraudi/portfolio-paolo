@@ -60,7 +60,8 @@ h4,
 a,
 p,
 li,
-small {
+small,
+time {
   color: var(--text-1);
   font-family: var(--font-serif);
 }
@@ -85,37 +86,83 @@ svg {
   * {
     cursor: none;
   }
-
   html,
   body {
     --border-size: var(--size-3);
     overflow: hidden;
   }
 
-  /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: #2b2922 var(--surface-1);
-  }
-
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  *::-webkit-scrollbar-track {
-    background: var(--surface-1);
-  }
-
-  *::-webkit-scrollbar-thumb {
-    background-color: #2b2922;
-    border-radius: 0px;
-    border: 4px solid var(--surface-1);
-  }
-
   svg {
     width: var(--font-size-4);
     height: var(--font-size-4);
+  }
+}
+
+.link {
+  text-underline-offset: 2px;
+  text-decoration-color: var(--accent-1);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.gap-1 {
+  gap: var(--size-1);
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.scroller {
+  scrollbar-color: var(--frame) var(--surface-1);
+  scrollbar-width: none;
+}
+
+.prose {
+  max-width: 70ch;
+  font-size: var(--font-size-3);
+  line-height: var(--font-lineheight-4);
+
+  & strong {
+    font-weight: 600;
+  }
+
+  & p {
+    font-size: var(--font-size-4);
+    line-height: var(--font-lineheight-4);
+    margin-block: 1.25em;
+
+    & code {
+      font-size: var(--font-size-2);
+      background-color: var(--frame);
+      padding-inline: var(--size-1);
+      padding: var(--size-1);
+    }
+  }
+
+  & h1 {
+    font-size: var(--font-size-7);
+    font-weight: 500;
+    font-variant: small-caps;
+    margin-block-start: 0;
+    margin-block-end: 1em;
+    line-height: var(--font-lineheight-0);
+  }
+
+  pre {
+    font-size: var(--font-size-1);
+    line-height: var(--font-lineheight-5);
+    margin-block-end: 2em;
+    margin-inline: -1rem;
+    padding: var(--size-3);
+    background-color: var(--frame) !important;
+    overflow-x: auto;
   }
 }

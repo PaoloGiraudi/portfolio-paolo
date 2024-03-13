@@ -24,7 +24,7 @@ html {
   --surface-2-dark: var(--brand-light);
   --blend-mode-dark: initial;
 
-  --text-1-dark: var(--gray-3);
+  --text-1-dark: var(--gray-2);
   --text-2-dark: var(--gray-4);
 
   --accent-1-dark: oklch(42% 0.15 205);
@@ -74,6 +74,11 @@ html {
 
   --accent-1: var(--accent-1-dark);
   --accent-2: var(--accent-2-dark);
+
+  .shiki,
+  .shiki span {
+    color: var(--shiki-dark) !important;
+  }
 }
 
 [data-theme='light'] {
@@ -96,6 +101,7 @@ html {
   --font-serif: 'EB Garamond Variable', Georgia, serif;
 
   --size-content-2: 40ch;
+  --size-content-4: 75ch;
 
   --font-size-xs: clamp(var(--font-size-0), 0.625vw, var(--font-size-1));
   --font-size-sm: clamp(var(--font-size-2), 0.75rem + 0.3125vw, var(--font-size-4));

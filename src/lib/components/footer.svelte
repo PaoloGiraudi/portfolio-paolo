@@ -47,6 +47,7 @@
     width: var(--size-7);
     height: var(--size-7);
   }
+
   @media (min-width: 50rem) {
     footer {
       position: fixed;
