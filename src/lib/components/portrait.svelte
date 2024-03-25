@@ -109,7 +109,7 @@
       transform: translateX(80%);
     }
     small {
-      left: -6.25rem;
+      left: calc(var(--font-size-xs) * -8);
       bottom: var(--size-1);
     }
   }
