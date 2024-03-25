@@ -57,7 +57,7 @@
 
   small {
     position: absolute;
-    font-size: var(--font-size-0);
+    font-size: var(--font-size-xs);
     left: var(--size-5);
     bottom: var(--size-5);
     & a {
@@ -70,7 +70,9 @@
       place-items: center;
       position: relative;
       flex-basis: 50%;
+      max-width: 960px;
     }
+
     figure {
       position: inherit;
       height: 80%;

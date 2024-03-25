@@ -17,12 +17,12 @@
     gap: var(--size-1);
   }
   a {
-    font-size: var(--font-size-3);
+    font-size: var(--font-size-md);
     text-underline-offset: 2px;
     text-decoration-color: var(--accent-1);
   }
   p {
-    font-size: var(--font-size-2);
+    font-size: var(--font-size-sm);
     text-wrap: balance;
     color: var(--text-2);
   }
