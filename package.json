@@ -15,11 +15,11 @@
   "devDependencies": {
     "@fontsource-variable/eb-garamond": "^5.0.18",
     "@sveltejs/adapter-static": "^3.0.1",
-    "@sveltejs/kit": "^2.5.3",
+    "@sveltejs/kit": "^2.5.4",
     "@sveltejs/vite-plugin-svelte": "^3.0.2",
-    "@twicpics/components": "^0.28.0",
-    "@typescript-eslint/eslint-plugin": "^7.2.0",
-    "@typescript-eslint/parser": "^7.2.0",
+    "@twicpics/components": "^0.28.1",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
     "@vercel/analytics": "^1.2.2",
     "@vercel/speed-insights": "^1.0.10",
     "dotenv": "^16.4.5",
@@ -30,7 +30,7 @@
     "prettier": "^3.2.5",
     "prettier-plugin-svelte": "^3.2.2",
     "svelte": "^4.2.12",
-    "typescript": "^5.4.2",
-    "vite": "^5.1.6"
+    "typescript": "^5.4.3",
+    "vite": "^5.2.6"
   }
 }
