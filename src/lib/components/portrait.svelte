@@ -70,7 +70,6 @@
       place-items: center;
       position: relative;
       flex-basis: 50%;
-      max-width: 960px;
     }
 
     figure {

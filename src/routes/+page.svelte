@@ -97,6 +97,7 @@
     flex-wrap: wrap;
     row-gap: var(--size-6);
     column-gap: var(--size-2);
+    max-width: calc(2.5 * var(--size-content-2));
   }
 
   @media (min-width: 50rem) {
@@ -104,7 +105,6 @@
       flex-basis: 50%;
       padding-block-start: 20vh;
       box-shadow: none;
-      max-width: 960px;
     }
 
     .name::before {
