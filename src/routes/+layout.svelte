@@ -13,6 +13,7 @@
   import '../styles/reset.css';
   import '../styles/themes.css';
   import '../styles/app.css';
+  import { dev } from '$app/environment';
 
   let screenWidth: number;
 
@@ -20,10 +21,12 @@
     theme.set((document.documentElement.dataset.theme as Theme) || 'light');
   });
 
-  installTwicpics({
-    domain: 'https://paolo.twic.pics',
-    path: 'portfolio'
-  });
+  if (!dev) {
+    installTwicpics({
+      domain: 'https://paolo.twic.pics',
+      path: 'portfolio'
+    });
+  }
 </script>
 
 <svelte:window
@@ -81,6 +84,7 @@
       direction: initial;
       display: flex;
       align-items: center;
+      justify-content: center;
     }
 
     .scroll-container {

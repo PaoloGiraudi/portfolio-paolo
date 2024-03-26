@@ -49,13 +49,13 @@
   }
 
   .intro-text {
-    font-size: var(--font-size-6);
+    font-size: var(--font-size-xl);
     font-weight: var(--font-weight-4);
   }
 
   .name {
     width: fit-content;
-    font-size: var(--font-size-10);
+    font-size: var(--font-size-huge);
     font-weight: var(--font-weight-4);
     color: var(--text-1);
     line-height: var(--font-lineheight-1);
@@ -74,7 +74,7 @@
 
   .subtitle {
     color: var(--text-2);
-    font-size: var(--font-size-4);
+    font-size: var(--font-size-lg);
     max-inline-size: var(--size-content-2);
     text-wrap: balance;
     margin-block-end: var(--size-7);
@@ -88,6 +88,7 @@
   }
 
   h2 {
+    font-size: var(--font-size-md);
     font-weight: 500;
   }
 
@@ -96,6 +97,7 @@
     flex-wrap: wrap;
     row-gap: var(--size-6);
     column-gap: var(--size-2);
+    max-width: calc(2.5 * var(--size-content-2));
   }
 
   @media (min-width: 50rem) {

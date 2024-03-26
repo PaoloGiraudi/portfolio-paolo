@@ -97,7 +97,10 @@ html {
 
   --size-content-2: 40ch;
 
-  --font-size-9: 5rem;
-  --font-size-10: 6rem;
-  --font-size-11: 7rem;
+  --font-size-xs: clamp(var(--font-size-0), 0.625vw, var(--font-size-1));
+  --font-size-sm: clamp(var(--font-size-2), 0.75rem + 0.3125vw, var(--font-size-4));
+  --font-size-md: clamp(var(--font-size-3), 0.5rem + 0.625vw, var(--font-size-5));
+  --font-size-lg: clamp(var(--font-size-4), 1.25vw, var(--font-size-6));
+  --font-size-xl: clamp(var(--font-size-6), 0.2vw + 1.825vw, var(--size-8));
+  --font-size-huge: clamp(6rem, 5vw, 8rem);
 }

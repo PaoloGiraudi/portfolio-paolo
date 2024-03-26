@@ -57,7 +57,7 @@
 
   small {
     position: absolute;
-    font-size: var(--font-size-0);
+    font-size: var(--font-size-xs);
     left: var(--size-5);
     bottom: var(--size-5);
     & a {
@@ -71,6 +71,7 @@
       position: relative;
       flex-basis: 50%;
     }
+
     figure {
       position: inherit;
       height: 80%;
@@ -107,7 +108,7 @@
       transform: translateX(80%);
     }
     small {
-      left: -6.25rem;
+      left: calc(var(--font-size-xs) * -8);
       bottom: var(--size-1);
     }
   }

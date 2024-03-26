@@ -59,7 +59,8 @@ h3,
 h4,
 a,
 p,
-li {
+li,
+small {
   color: var(--text-1);
   font-family: var(--font-serif);
 }
