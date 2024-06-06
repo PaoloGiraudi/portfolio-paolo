@@ -24,7 +24,7 @@ html {
   --surface-2-dark: var(--brand-light);
   --blend-mode-dark: initial;
 
-  --text-1-dark: var(--gray-3);
+  --text-1-dark: var(--gray-2);
   --text-2-dark: var(--gray-4);
 
   --accent-1-dark: oklch(42% 0.15 205);

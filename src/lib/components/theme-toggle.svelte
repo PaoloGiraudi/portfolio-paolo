@@ -33,6 +33,8 @@
     z-index: 20;
   }
   button {
+    display: grid;
+    place-items: center;
     padding: 0;
     background-color: transparent;
     border: none;

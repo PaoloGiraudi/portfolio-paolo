@@ -60,7 +60,8 @@ h4,
 a,
 p,
 li,
-small {
+small,
+time {
   color: var(--text-1);
   font-family: var(--font-serif);
 }
@@ -92,30 +93,13 @@ svg {
     overflow: hidden;
   }
 
-  /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: #2b2922 var(--surface-1);
-  }
-
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  *::-webkit-scrollbar-track {
-    background: var(--surface-1);
-  }
-
-  *::-webkit-scrollbar-thumb {
-    background-color: #2b2922;
-    border-radius: 0px;
-    border: 4px solid var(--surface-1);
-  }
-
   svg {
     width: var(--font-size-4);
     height: var(--font-size-4);
+  }
+
+  .scroller {
+    scrollbar-color: var(--frame) var(--surface-1);
+    scrollbar-width: none;
   }
 }
