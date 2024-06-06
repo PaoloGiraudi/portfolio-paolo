@@ -14,14 +14,9 @@ export const load: PageLoad = () => {
         url: 'https://www.switcheroo.dev/'
       },
       {
-        name: 'Kopli Sound Studio',
-        description: 'The perfect creative office in the heart of Tallinn.',
-        url: 'https://www.koplisoundstudio.ee/'
-      },
-      {
-        name: 'My Portfolio',
-        description: 'This very beautiful website.',
-        url: 'https://www.paologiraudi.com/'
+        name: 'CSS Clock',
+        description: 'A CSS powered clock experiment',
+        url: 'https://paologiraudi.github.io/css-clock/'
       }
     ]
   };

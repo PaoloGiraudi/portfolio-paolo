@@ -1,5 +1,8 @@
-export { default as Cursor } from './cursor.svelte';
-export { default as Portrait } from './portrait.svelte';
-export { default as Project } from './project.svelte';
-export { default as Footer } from './footer.svelte';
-export { default as ThemeToggle } from './theme-toggle.svelte';
+import Cursor from './cursor.svelte';
+import Portrait from './portrait.svelte';
+import Project from './project.svelte';
+import Footer from './footer.svelte';
+import ThemeToggle from './theme-toggle.svelte';
+import FancyName from './fancy-name.svelte';
+
+export { Cursor, Portrait, Project, Footer, ThemeToggle, FancyName };

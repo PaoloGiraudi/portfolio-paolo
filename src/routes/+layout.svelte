@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMouseMove } from '$lib/utils/on-mouse-move';
   import { onMount } from 'svelte';
-  import { Cursor, Portrait, ThemeToggle } from '$lib/components';
+  import { Cursor, ThemeToggle } from '$lib/components';
   import { theme, type Theme } from '$lib/stores/theme';
   import { installTwicpics } from '@twicpics/components/sveltekit';
   import '@fontsource-variable/eb-garamond/wght.css';
@@ -29,11 +29,6 @@
   }
 </script>
 
-<svelte:window
-  on:mousemove={screenWidth > 800 ? onMouseMove : null}
-  bind:innerWidth={screenWidth}
-/>
-
 <svelte:head>
   <title>Paolo Giraudi | Official website</title>
   <meta name="description" content="Paolo's personal portfolio, full of unecessary css gimmicks." />
@@ -43,15 +38,17 @@
   />
 </svelte:head>
 
+<svelte:window
+  on:mousemove={screenWidth > 800 ? onMouseMove : null}
+  bind:innerWidth={screenWidth}
+/>
+
 {#if screenWidth > 800}
   <Cursor />
 {/if}
-<main>
-  <Portrait />
+<main class="scroller">
   <ThemeToggle />
-  <div class="scroll-container">
-    <slot />
-  </div>
+  <slot />
 </main>
 
 <style>
@@ -72,23 +69,12 @@
     overflow-y: hidden;
   }
 
-  .scroll-container {
-    position: relative;
-    scroll-snap-align: start end;
-    width: 180vw;
-  }
-
   @media (min-width: 50rem) {
     main {
       overflow-x: hidden;
       direction: initial;
       display: flex;
-      align-items: center;
       justify-content: center;
-    }
-
-    .scroll-container {
-      display: contents;
     }
   }
 </style>
