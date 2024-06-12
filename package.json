@@ -2,7 +2,7 @@
   "name": "portfolio-paolo",
   "version": "0.0.1",
   "type": "module",
-  "packageManager": "yarn@4.2.2",
+  "packageManager": "pnpm@9.3.0",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
